@@ -27,7 +27,7 @@
   in
   {
 
-    homeConfigurations."codybense@cody-desktop" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."codybense@cody-laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
         modules = [
@@ -37,7 +37,7 @@
     };
 
   	nixosConfigurations = {
-		cody-desktop = nixpkgs.lib.nixosSystem {
+		cody-laptop = nixpkgs.lib.nixosSystem {
 			specialArgs = { inherit inputs system; };
 
 

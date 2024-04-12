@@ -87,30 +87,31 @@ in
 	};
  };
 
- wayland.windowManager.hyprland = {
-     enable = true;
-     settings = {
-      "$mod" = "SUPER";
-      bind = 
-       [
-        "$mod, F, exec, firefox"
-        "$mod, T, exec, kitty"
-       ]
-       ++ (
-        builtins.concatLists (builtins.genList (
-        x: let
-         ws = let
-          c = (x + 1) / 10;
-        in
-         builtins.toString (x + 1 - (c * 10));
-        in [
-         "$mod, ${ws}, workspaces, ${toString (x + 1)}"
-        ]
-        )
-        10)
-       );
-     };
- };
+ # wayland.windowManager.hyprland = {
+ #     enable = true;
+ #     settings = {
+ #      "$mod" = "SUPER";
+ #      bind = 
+ #       [
+ #        "$mod, F, exec, firefox"
+ #        "$mod, T, exec, kitty"
+	# "$mod, Q, kill"
+ #       ]
+ #       ++ (
+ #        builtins.concatLists (builtins.genList (
+ #        x: let
+ #         ws = let
+ #          c = (x + 1) / 10;
+ #        in
+ #         builtins.toString (x + 1 - (c * 10));
+ #        in [
+ #         "$mod, ${ws}, workspaces, ${toString (x + 1)}"
+ #        ]
+ #        )
+ #        10)
+ #       );
+ #     };
+ # };
 
  # enable gtk
  gtk.enable = true;

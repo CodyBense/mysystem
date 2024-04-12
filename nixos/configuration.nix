@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./systems/laptop/hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -26,7 +26,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "cody-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -66,6 +66,17 @@
     description = "CodyBense";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+  };
+
+  # Enable sound with pipewire
+  sound.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.driSupport32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
   };
 
   # Allow unfree packages
@@ -135,28 +146,28 @@
 
 
   # Nvidia stuff , move to module style
-  hardware.opengl = {
-  	enable = true;
-	driSupport = true;
-	driSupport32Bit = true;
-  };
+  #hardware.opengl = {
+  #	enable = true;
+  #	driSupport = true;
+  #	driSupport32Bit = true;
+  #};
 
   # Load nvidia drivers
-  services.xserver.videoDrivers = ["nvidia"];
+  #services.xserver.videoDrivers = ["nvidia"];
 
-  hardware.nvidia = {
-  	modesetting.enable = true;
+  #hardware.nvidia = {
+  #	modesetting.enable = true;
 
-	powerManagement.enable = true;
+#	powerManagement.enable = true;
 
-	powerManagement.finegrained = false;
+#	powerManagement.finegrained = false;
 
-	open = false;
+#	open = false;
 
-	nvidiaSettings = true;
+#	nvidiaSettings = true;
 
-	package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
+#	package = config.boot.kernelPackages.nvidiaPackages.stable;
+#  };
 
   # Hyprland
   programs.hyprland = {
@@ -166,7 +177,7 @@
   };
 
   environment.sessionVariables = {
-   WLR_NO_HARDWARE_CURSORS = "1";
+  # WLR_NO_HARDWARE_CURSORS = "1";
    NIXOS_OZONE_WL = "1";
   };
 
