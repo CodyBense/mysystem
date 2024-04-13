@@ -3,7 +3,7 @@
 let
     imgLink = "https://github.com/CodyBense/wallpapers.com/gruvbox-mountain-village.jpg";
 
-    imgage = pkgs.fetchurl {
+    image = pkgs.fetchurl {
         url = imgLink;
         sha256 = "1wg74qln4k9m58z3lyw30cvk5nchfq0p91ihzli1fmxjw1krv9fa";
     };
