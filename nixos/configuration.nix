@@ -98,6 +98,8 @@
 	firefox
 	networkmanagerapplet
 
+    curl
+
     # fonts
     nerdfonts
 
