@@ -102,6 +102,7 @@
 
     # fonts
     nerdfonts
+    font-awesome
 
     # File manager
     dolphin
