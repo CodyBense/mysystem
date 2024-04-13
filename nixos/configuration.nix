@@ -56,6 +56,12 @@
 
   # Configure keymap in X11
   services.xserver = {
+    # sddm theme
+    enable = true;
+    displayManager = {
+        sddm.enable = true;
+        sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+    };
     layout = "us";
     xkbVariant = "";
   };
