@@ -1,11 +1,11 @@
 { pkgs }:
 
 let
-    imgLink = "https://github.com/CodyBense/wallpapers/gruvbox-mountain-village.png";
+    imgLink = "https://github.com/CodyBense/sddm-wallpapers/gruvbox-mountain-village.png";
 
     image = pkgs.fetchurl {
         url = imgLink;
-        sha256 = "sha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
+        sha256 = "sha256-PGw/DzFwvwf9xkVF5HCNKIE/eKTgHlxcMHkKnoO/6CA=";
     };
 in
 pkgs.stdenv.mkDerivation {
@@ -14,7 +14,7 @@ pkgs.stdenv.mkDerivation {
         owner = "MarianArlt";
         repo = "sddm-sugar-dark";
         rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
-        sha256 = "sha256-SVorwMlHJlQkgxGtNMAGr//ozT6rt6gQ5RFA2cy3nZI=";
+        sha256 = "0153z1kylbhc9d12nxy9vpn0spxgrhgy36wy37pk6ysq7akaqlvy";
     };
     installPhase = ''
     mkdir -p $out
