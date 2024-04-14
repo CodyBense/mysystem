@@ -146,6 +146,9 @@
     ## needed for sddm theme
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
+
+    # Code
+    python3
   ];
 
   # Fonts
