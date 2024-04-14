@@ -129,7 +129,7 @@ in
  # enable qt
  qt.enable = true;
 
- # platform thheme "gtk" or "gnome"
+ # platform theme "gtk" or "gnome"
  qt.platformTheme = "gtk";
 
  # name of the qt theme
