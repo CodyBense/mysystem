@@ -98,6 +98,7 @@
 	firefox
 	networkmanagerapplet
     killall
+    fzf
 
     curl
 
