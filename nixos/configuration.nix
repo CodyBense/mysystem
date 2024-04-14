@@ -100,9 +100,12 @@
 
     curl
 
-    # fonts
+    # fonts and stuff
     nerdfonts
     font-awesome
+    jetbrains-mono
+    bibata-cursors
+    # bibata-extra-cursors
 
     # File manager
     dolphin
@@ -134,6 +137,12 @@
     ## needed for sddm theme
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
+  ];
+
+  # Fonts
+  fonts.packages = with pkgs; [
+    font-awesome
+    jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
