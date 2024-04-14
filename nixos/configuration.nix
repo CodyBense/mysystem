@@ -97,6 +97,7 @@
 	home-manager
 	firefox
 	networkmanagerapplet
+    killall
 
     curl
 
