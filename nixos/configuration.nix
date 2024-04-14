@@ -100,10 +100,17 @@
 
     curl
 
-    # fonts and stuff
+    # fonts, icons, and cursors
     nerdfonts
     font-awesome
     jetbrains-mono
+    cascadia-code
+    maple-mono-NF
+    mononoki
+    noto-fonts-cjk-sans
+
+    material-design-icons
+
     bibata-cursors
     # bibata-extra-cursors
 
@@ -143,6 +150,10 @@
   fonts.packages = with pkgs; [
     font-awesome
     jetbrains-mono
+    cascadia-code
+    maple-mono-NF
+    mononoki
+    noto-fonts-cjk-sans
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
