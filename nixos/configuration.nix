@@ -141,6 +141,7 @@
     # QT
     qt5ct
     qt6ct
+    gsettings-qt
 
     ## needed for sddm theme
     libsForQt5.qt5.qtquickcontrols2
