@@ -99,6 +99,7 @@
 	networkmanagerapplet
     killall
     fzf
+    oh-my-posh
 
     curl
 
