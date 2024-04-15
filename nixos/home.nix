@@ -88,6 +88,20 @@ in
 	};
  };
 
+ programs.bash = {
+     enable = true;
+     shellAliases = {
+         c = "clear";
+         v = "nvim";
+         sv = "sudo nvim";
+         ll = "ls -l";
+         ".." = "cd ..";
+         "2." = "cd ../..";
+         "3." = "cd ../../..";
+         "4." = "cd ../../../..";
+     };
+ };
+
  # wayland.windowManager.hyprland = {
  #     enable = true;
  #     settings = {
