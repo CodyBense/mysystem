@@ -220,7 +220,7 @@
    enable = true;
    #nvidiaPatches = true;
    xwayland.enable = true;
-   # package = inputs.hyprland.packages."${pkgs.system?}".hyprland;
+   package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
 
   environment.sessionVariables = {
