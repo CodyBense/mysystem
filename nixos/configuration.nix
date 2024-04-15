@@ -100,7 +100,8 @@
     killall
     fzf
     oh-my-posh
-    xpdf
+    # xpdf
+    sioyek
 
     curl
 
