@@ -99,6 +99,7 @@ in
 	userName = "codybense";
 	userEmail = "codybense@gmail.com";
 	aliases = {
+        a = "add";
 		pu = "push";
 		co = "checkout";
 		cm = "commit";
