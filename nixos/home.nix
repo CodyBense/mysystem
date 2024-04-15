@@ -102,6 +102,12 @@ in
      };
  };
 
+ programs.oh-my-posh = {
+     enable = true;
+     enableBashIntegration = true;
+     useTheme = "gruvbox";
+ };
+
  # wayland.windowManager.hyprland = {
  #     enable = true;
  #     settings = {
