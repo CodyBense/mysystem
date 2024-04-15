@@ -100,6 +100,7 @@
     killall
     fzf
     oh-my-posh
+    xpdf
 
     curl
 
