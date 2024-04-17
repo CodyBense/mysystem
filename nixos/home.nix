@@ -1,3 +1,4 @@
+# /PROGRAMS to get to dotfile configuration control
 { config, pkgs, ... }:
 
 let 
@@ -77,6 +78,9 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+
+ # PROGRAMS
+  ## kitty
   programs.kitty = {
       enable = true;
       font = {
@@ -94,6 +98,7 @@ in
       };
   };
 
+  ## git
   programs.git = {
  	enable = true;
 	userName = "codybense";
@@ -106,6 +111,7 @@ in
 	};
  };
 
+ ## bachrc
  programs.bash = {
      enable = true;
      shellAliases = {
@@ -120,12 +126,14 @@ in
      };
  };
 
+ ## oh-my-posh
  programs.oh-my-posh = {
      enable = true;
      enableBashIntegration = true;
      useTheme = "gruvbox";
  };
 
+ ## hyprland
  # wayland.windowManager.hyprland = {
  #     enable = true;
  #     settings = {
@@ -460,6 +468,11 @@ exec = hyprctl setcursor Bibata-Modern-Ice 20
 exec = gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
 exec = gsettings set org.gnome.desktop.interface cursor-size 20
  '';
+
+ ## waybar
+ # programs.waybar = {
+ #     enable = true;
+ # };
 
  # enable gtk
  gtk.enable = true;
