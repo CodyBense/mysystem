@@ -105,10 +105,12 @@
 
     ## PDF
     # xpdf
-    sioyek
+    sioyek # viewer
 
     ## IMG
-    swayimg
+    swayimg # from terminal using swayimg command
+    feh
+
 
     ## Video
     vlc
