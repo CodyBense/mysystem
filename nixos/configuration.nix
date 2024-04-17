@@ -131,6 +131,7 @@
 
     # File manager
     dolphin
+    lf
 
 	# Hyprland stuff
 	## bar
