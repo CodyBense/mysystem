@@ -228,7 +228,7 @@
 #	package = config.boot.kernelPackages.nvidiaPackages.stable;
 #  };
 
-  Hyprland
+  # Hyprland
   programs.hyprland = {
    enable = true;
    #nvidiaPatches = true;
