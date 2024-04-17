@@ -103,6 +103,9 @@
     spotify
     curl
 
+    ## Terminal stuff
+    tmux
+
     ## PDF
     # xpdf
     sioyek # viewer
@@ -110,7 +113,6 @@
     ## IMG
     swayimg # from terminal using swayimg command
     feh
-
 
     ## Video
     vlc
