@@ -101,10 +101,17 @@
     fzf
     oh-my-posh
     spotify
+    curl
+
+    ## PDF
     # xpdf
     sioyek
 
-    curl
+    ## IMG
+    swayimg
+
+    ## Video
+    vlc
 
     # fonts, icons, and cursors
     nerdfonts
