@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./systems/laptop/hardware-configuration.nix
-      ./modules/hyprland.nix
       inputs.home-manager.nixosModules.home-manager
     ];
 
