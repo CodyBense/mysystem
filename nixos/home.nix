@@ -126,6 +126,12 @@ in
         };
     };
 
+## fzf
+    programs.fzf = {
+        enable = true;
+        enableBashIntegration = true;
+    };
+
 ## oh-my-posh
     programs.oh-my-posh = {
         enable = true;
