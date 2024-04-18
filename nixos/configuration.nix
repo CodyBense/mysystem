@@ -11,8 +11,8 @@ in
 {
     imports =
         [ # Include the results of the hardware scan.
-# ./systems/laptop/hardware-configuration.nix
-        ./systems/${hostName}/hardware-configuration.nix
+            # ./systems/laptop/hardware-configuration.nix
+            ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
             ./modules/hyprland.nix
         ];
@@ -179,11 +179,11 @@ in
 # Fonts
     fonts.packages = with pkgs; [
         font-awesome
-            jetbrains-mono
-            cascadia-code
-            maple-mono-NF
-            mononoki
-            noto-fonts-cjk-sans
+        jetbrains-mono
+        cascadia-code
+        maple-mono-NF
+        mononoki
+        noto-fonts-cjk-sans
     ];
 
 # Some programs need SUID wrappers, can be configured further or are
