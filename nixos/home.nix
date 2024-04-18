@@ -487,8 +487,8 @@ in
     gtk.cursorTheme.package = pkgs.bibata-cursors;
     gtk.cursorTheme.name = "Bibata-Modern-Ice";
 
-    gtk.theme.package = pkgs.adw-gtk3;
-    gtk.theme.name = "adw-gtk3";
+    gtk.theme.package = pkgs.gruvbox-gtk-theme;
+    gtk.theme.name = "gruvbox-gtk";
 
     gtk.iconTheme.package = gruvboxPlus;
     gtk.iconTheme.name = "GruvboxPlus";
