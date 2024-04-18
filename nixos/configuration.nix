@@ -173,6 +173,7 @@ in
 
     # Code
     python3
+    cargo
   ];
 
   # Fonts
