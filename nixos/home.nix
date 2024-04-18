@@ -101,7 +101,7 @@ in
 ## git
     programs.git = {
         enable = true;
-        userName = "codybense";
+        userName = "CodyBense";
         userEmail = "codybense@gmail.com";
         aliases = {
             a = "add";
