@@ -12,7 +12,7 @@ in
   imports =
     [ # Include the results of the hardware scan.
       # ./systems/laptop/hardware-configuration.nix
-      ./systems/${hostName/hardware-configuration.nix
+      ./systems/${hostName}/hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
       ./modules/hyprland.nix
     ];
