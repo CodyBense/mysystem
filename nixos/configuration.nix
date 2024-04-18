@@ -5,227 +5,227 @@
 { inputs, config, pkgs, ... }:
 
 let 
-    hostName = "laptop";
+hostName = "laptop";
 in
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      # ./systems/laptop/hardware-configuration.nix
-      ./systems/${hostName}/hardware-configuration.nix
-      inputs.home-manager.nixosModules.home-manager
-      ./modules/hyprland.nix
-    ];
+    imports =
+        [ # Include the results of the hardware scan.
+# ./systems/laptop/hardware-configuration.nix
+        ./systems/${hostName}/hardware-configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+            ./modules/hyprland.nix
+        ];
 
-    # Home manager
+# Home manager
     home-manager = {
-    	extraSpecialArgs = { inherit inputs; };
-	users = {
-		codybense = import ./home.nix;
-	};
+        extraSpecialArgs = { inherit inputs; };
+        users = {
+            codybense = import ./home.nix;
+        };
     };
 
-    # Enable the flake feature and the accompying nix command-line tool
+# Enable the flake feature and the accompying nix command-line tool
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+# Bootloader.
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "${hostName}";
-  # networking.hostName = "cody-laptop"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    networking.hostName = "${hostName}";
+# networking.hostName = "cody-laptop"; # Define your hostname.
+# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+# Configure network proxy if necessary
+# networking.proxy.default = "http://user:password@proxy:port/";
+# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+# Enable networking
+    networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/New_York";
+# Set your time zone.
+    time.timeZone = "America/New_York";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+# Select internationalisation properties.
+    i18n.defaultLocale = "en_US.UTF-8";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  # Configure keymap in X11
-  services.xserver = {
-    # sddm theme
-    enable = true;
-    displayManager = {
-        sddm.enable = true;
-        sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+    i18n.extraLocaleSettings = {
+        LC_ADDRESS = "en_US.UTF-8";
+        LC_IDENTIFICATION = "en_US.UTF-8";
+        LC_MEASUREMENT = "en_US.UTF-8";
+        LC_MONETARY = "en_US.UTF-8";
+        LC_NAME = "en_US.UTF-8";
+        LC_NUMERIC = "en_US.UTF-8";
+        LC_PAPER = "en_US.UTF-8";
+        LC_TELEPHONE = "en_US.UTF-8";
+        LC_TIME = "en_US.UTF-8";
     };
-    layout = "us";
-    xkbVariant = "";
-  };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.codybense = {
-    isNormalUser = true;
-    description = "CodyBense";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
+# Configure keymap in X11
+    services.xserver = {
+# sddm theme
+        enable = true;
+        displayManager = {
+            sddm.enable = true;
+            sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+        };
+        layout = "us";
+        xkbVariant = "";
+    };
 
-  # Enable sound with pipewire
-  sound.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-  };
+# Define a user account. Don't forget to set a password with ‘passwd’.
+    users.users.codybense = {
+        isNormalUser = true;
+        description = "CodyBense";
+        extraGroups = [ "networkmanager" "wheel" ];
+        packages = with pkgs; [];
+    };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+# Enable sound with pipewire
+    sound.enable = true;
+    security.rtkit.enable = true;
+    services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+    };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  	# programs
-  	neovim
-	git
-	home-manager
-	firefox
-	networkmanagerapplet
-    killall
-    fzf
-    oh-my-posh
-    spotify
-    curl
+# Allow unfree packages
+    nixpkgs.config.allowUnfree = true;
 
-    ## Terminal stuff
-    tmux
+# List packages installed in system profile. To search, run:
+# $ nix search wget
+    environment.systemPackages = with pkgs; [
+# programs
+        neovim
+            git
+            home-manager
+            firefox
+            networkmanagerapplet
+            killall
+            fzf
+            oh-my-posh
+            spotify
+            curl
 
-    ## PDF
-    # xpdf
-    sioyek # viewer
+## Terminal stuff
+            tmux
 
-    ## IMG
-    swayimg # from terminal using swayimg command
-    feh
+## PDF
+# xpdf
+            sioyek # viewer
 
-    ## Video
-    vlc
+## IMG
+            swayimg # from terminal using swayimg command
+            feh
 
-    # fonts, icons, and cursors
-    nerdfonts
-    font-awesome
-    jetbrains-mono
-    cascadia-code
-    maple-mono-NF
-    mononoki
-    noto-fonts-cjk-sans
+## Video
+            vlc
 
-    material-design-icons
+# fonts, icons, and cursors
+            nerdfonts
+            font-awesome
+            jetbrains-mono
+            cascadia-code
+            maple-mono-NF
+            mononoki
+            noto-fonts-cjk-sans
 
-    bibata-cursors
-    # bibata-extra-cursors
+            material-design-icons
 
-    # File manager
-    dolphin
-    lf
+            bibata-cursors
+# bibata-extra-cursors
 
-	# Hyprland stuff
-	## bar
-	waybar
-	## notifiations
-	dunst
-	libnotify
-	## wallpaper
-	swww
-	## terminal
-	kitty
-	## app launcher
-	rofi-wayland
-    ## login screen
-    sddm
+# File manager
+            dolphin
+            lf
 
-    # GTK
-    gtk2
-    gtk3
-    gtk4
+# Hyprland stuff
+## bar
+            waybar
+## notifiations
+            dunst
+            libnotify
+## wallpaper
+            swww
+## terminal
+            kitty
+## app launcher
+            rofi-wayland
+## login screen
+            sddm
 
-    # QT
-    qt5ct
-    qt6ct
-    gsettings-qt
+# GTK
+            gtk2
+            gtk3
+            gtk4
 
-    ## needed for sddm theme
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects
+# QT
+            qt5ct
+            qt6ct
+            gsettings-qt
 
-    # Code
-    python3
-    cargo
-  ];
+## needed for sddm theme
+            libsForQt5.qt5.qtquickcontrols2
+            libsForQt5.qt5.qtgraphicaleffects
 
-  # Fonts
-  fonts.packages = with pkgs; [
-    font-awesome
-    jetbrains-mono
-    cascadia-code
-    maple-mono-NF
-    mononoki
-    noto-fonts-cjk-sans
-  ];
+# Code
+            python3
+            cargo
+            ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+# Fonts
+    fonts.packages = with pkgs; [
+        font-awesome
+            jetbrains-mono
+            cascadia-code
+            maple-mono-NF
+            mononoki
+            noto-fonts-cjk-sans
+    ];
 
-  # List services that you want to enable:
+# Some programs need SUID wrappers, can be configured further or are
+# started in user sessions.
+# programs.mtr.enable = true;
+# programs.gnupg.agent = {
+#   enable = true;
+#   enableSSHSupport = true;
+# };
 
-  # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
+# List services that you want to enable:
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+# Enable the OpenSSH daemon.
+    services.openssh.enable = true;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+# Open ports in the firewall.
+# networking.firewall.allowedTCPPorts = [ ... ];
+# networking.firewall.allowedUDPPorts = [ ... ];
+# Or disable the firewall altogether.
+# networking.firewall.enable = false;
+
+# This value determines the NixOS release from which the default
+# settings for stateful data, like file locations and database versions
+# on your system were taken. It‘s perfectly fine and recommended to leave
+# this value at the release version of the first install of this system.
+# Before changing this value read the documentation for this option
+# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+    system.stateVersion = "23.11"; # Did you read the comment?
 
 
-  # Nvidia stuff , move to module style
-  #hardware.opengl = {
-  #	enable = true;
-  #	driSupport = true;
-  #	driSupport32Bit = true;
-  #};
+# Nvidia stuff , move to module style
+#hardware.opengl = {
+#	enable = true;
+#	driSupport = true;
+#	driSupport32Bit = true;
+#};
 
-  # Load nvidia drivers
-  #services.xserver.videoDrivers = ["nvidia"];
+# Load nvidia drivers
+#services.xserver.videoDrivers = ["nvidia"];
 
-  #hardware.nvidia = {
-  #	modesetting.enable = true;
+#hardware.nvidia = {
+#	modesetting.enable = true;
 
 #	powerManagement.enable = true;
 
@@ -237,20 +237,4 @@ in
 
 #	package = config.boot.kernelPackages.nvidiaPackages.stable;
 #  };
-
-  # Hyprland
-  # programs.hyprland = {
-  #  enable = true;
-  #  #nvidiaPatches = true;
-  #  xwayland.enable = true;
-  #  package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-  # };
-  #
-  # environment.sessionVariables = {
-  # # WLR_NO_HARDWARE_CURSORS = "1";
-  #  NIXOS_OZONE_WL = "1";
-  # };
-  #
-  # xdg.portal.enable = true;
-  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }

@@ -1,50 +1,50 @@
 {
-  description = "My NixOS flake";
+    description = "My NixOS flake";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    inputs = {
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-    	url = "github:nix-community/home-manager";
-	inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            url = "github:nix-community/home-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        hyprland.url = "github:hyprwm/Hyprland";
+
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
+        let
+        system = "x86_64-linux";
 
-  };
+    pkgs = import nixpkgs {
+        inherit system;
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
-  let
-  	system = "x86_64-linux";
-
-	pkgs = import nixpkgs {
-		inherit system;
-
-		config = {
-			allowUnfree = true;
-		};
-	};
-  in
-  {
-
-    homeConfigurations."codybense@cody-laptop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-        modules = [
-            hyprland.homeManagerModules.default
-            {wayland.windowManager.hyprland.enable = true;}
-        ];
+        config = {
+            allowUnfree = true;
+        };
     };
+    in
+    {
 
-  	nixosConfigurations = {
-		cody-laptop = nixpkgs.lib.nixosSystem {
-			specialArgs = { inherit inputs system; };
+        homeConfigurations."codybense@cody-laptop" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+            modules = [
+                hyprland.homeManagerModules.default
+                {wayland.windowManager.hyprland.enable = true;}
+            ];
+        };
+
+        nixosConfigurations = {
+            cody-laptop = nixpkgs.lib.nixosSystem {
+                specialArgs = { inherit inputs system; };
 
 
-			modules = [
-				./nixos/configuration.nix
-			];
-		};
-	};
-  };
+                modules = [
+                    ./nixos/configuration.nix
+                ];
+            };
+        };
+    };
 }
