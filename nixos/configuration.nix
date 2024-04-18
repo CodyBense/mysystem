@@ -4,10 +4,15 @@
 
 { inputs, config, pkgs, ... }:
 
+let 
+    hostName = "laptop";
+in
+
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./systems/laptop/hardware-configuration.nix
+      # ./systems/laptop/hardware-configuration.nix
+      ./systems/${hostName/hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
       ./modules/hyprland.nix
     ];
@@ -27,7 +32,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "cody-laptop"; # Define your hostname.
+  networking.hostName = ${hostName};
+  # networking.hostName = "cody-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
