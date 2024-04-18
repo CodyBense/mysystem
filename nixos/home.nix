@@ -119,6 +119,7 @@ in
             v = "nvim";
             sv = "sudo nvim";
             ll = "ls -l";
+            la = "ls -a";
             ".." = "cd ..";
             "2." = "cd ../..";
             "3." = "cd ../../..";
