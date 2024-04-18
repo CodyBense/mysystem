@@ -5,9 +5,9 @@ imgLink = "https://github.com/CodyBense/sddm-wallpapers/main/gruvbox-mountain-vi
 
 image = pkgs.fetchurl {
     url = imgLink;
-# sha256 = "sha256-6vbgW4zCXZJRrK2Cqg+sSx1+LS2nX7U14/IwdvWx1cY=";
+    sha256 = "sha256-6vbgW4zCXZJRrK2Cqg+sSx1+LS2nX7U14/IwdvWx1cY=";
 # sha256 = "sha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
-    sha256 = "19gdk6jwl51zs1w4y55nw6cklb3pn47v2rz3xjvn2qnawdk9xaga";
+# sha256 = "19gdk6jwl51zs1w4y55nw6cklb3pn47v2rz3xjvn2qnawdk9xaga";
 
 };
 in
