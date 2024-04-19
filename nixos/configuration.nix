@@ -164,7 +164,7 @@ in
             gtk4
 
 # QT
-            # qt5ct
+            qt5ct
             # qt6ct
             # gsettings-qt
 
