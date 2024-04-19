@@ -499,11 +499,11 @@ in
     qt.enable = true;
 
 # platform theme "gtk" or "gnome"
-    qt.platformTheme = "gtk";
+    qt.platformTheme = "gnome";
 
 # name of the qt theme
-    # qt.style.name = "adwaita-dark";
+    qt.style.name = "adwaita-dark";
 
 # packages to use
-    # qt.style.package = pkgs.adwaita-qt;
+    qt.style.package = pkgs.adwaita-qt;
 }
