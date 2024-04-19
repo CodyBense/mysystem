@@ -144,6 +144,14 @@ in
 # wayland.windowManager.hyprland = {
 #     enable = true;
 #     settings = {
+#         monitor = ",preferred,auto,auto";
+#         "exec-once" = "bash ~/.config/hypr/start.sh";
+#         "$terminal" = "kitty";
+#         "$fileManager" = "dolphin";
+#         "$menu" = "rofi -show drun -show-items";
+#         "$browser" = "firefox";
+#
+#
 #     };
 # };
 
@@ -174,7 +182,7 @@ in
 # ██▄ █░▀█ ▀▄▀
 # Some default env vars.
         env = XCURSOR_SIZE,24
-# env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
+        env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
         env = PATH,$PATH:$scrPath
         env = XDG_CURRENT_DESKTOP,Hyprland
         env = XDG_SESSION_TYPE,wayland
