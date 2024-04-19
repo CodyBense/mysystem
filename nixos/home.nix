@@ -490,8 +490,10 @@ in
     gtk.theme.package = pkgs.gruvbox-gtk-theme;
     gtk.theme.name = "gruvbox-gtk";
 
-    gtk.iconTheme.package = gruvboxPlus;
-    gtk.iconTheme.name = "GruvboxPlus";
+    # gtk.iconTheme.package = gruvboxPlus;
+    # gtk.iconTheme.name = "GruvboxPlus";
+    gtk.iconTheme.package = pkgs.gruvbox-dark-icons-gtk;
+    gtk.iconTheme.name = "Grvbox-dark-icon";
 
 # enable qt
     qt.enable = true;
