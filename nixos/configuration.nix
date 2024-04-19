@@ -165,7 +165,7 @@ in
 
 # QT
             qt5ct
-            qt6ct
+            # qt6ct
             gsettings-qt
 
 ## needed for sddm theme
