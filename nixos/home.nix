@@ -152,6 +152,20 @@ in
 #         "$browser" = "firefox";
 #
 #
+#         env = [
+#             "XCURSOR_SIZE,24"
+#             "QT_QPA_PLATFORMTHEME,qt5ct" # change to qt6ct if you have that
+#             "PATH,$PATH:$scrPath"
+#             "XDG_CURRENT_DESKTOP,Hyprland"
+#             "XDG_SESSION_TYPE,wayland"
+#             "XDG_SESSION_DESKTOP,Hyprland"
+#             "QT_QPA_PLATFORM,wayland"
+#             "QT_QPA_PLATFORMTHEME,qt6ct"
+#             "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+#             "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+#             "MOZ_ENABLE_WAYLAND,1"
+#             "GDK_SCALE,1"
+#         ];
 #     };
 # };
 
@@ -188,7 +202,7 @@ in
         env = XDG_SESSION_TYPE,wayland
         env = XDG_SESSION_DESKTOP,Hyprland
         env = QT_QPA_PLATFORM,wayland
-        env = QT_QPA_PLATFORMTHEME,qt6ct
+        env = QT_QPA_PLATFORMTHEME,qt5ct
         env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
         env = QT_AUTO_SCREEN_SCALE_FACTOR,1
         env = MOZ_ENABLE_WAYLAND,1

@@ -132,7 +132,9 @@ in
             maple-mono-NF
             mononoki
             noto-fonts-cjk-sans
+
             material-design-icons
+
             bibata-cursors
 # bibata-extra-cursors
 
@@ -163,7 +165,7 @@ in
 
 # QT
             qt5ct
-            qt6ct
+            # qt6ct
             gsettings-qt
 
 ## needed for sddm theme
