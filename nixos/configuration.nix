@@ -108,6 +108,7 @@ in
             fzf
             oh-my-posh
             spotify
+            spotify-qt
             curl
 
 ## Terminal stuff
