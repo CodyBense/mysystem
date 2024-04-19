@@ -141,6 +141,7 @@ in
 # File manager
             dolphin
             lf
+            xfce.thunar
 
 # Hyprland stuff
 ## bar
