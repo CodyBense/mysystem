@@ -502,7 +502,7 @@ in
     qt.platformTheme = "gtk";
 
 # name of the qt theme
-    qt.style.name = "adwaita-dark";
+    qt.style.name = "Adwaita-Dark";
 
 # packages to use
     qt.style.package = pkgs.adwaita-qt;
