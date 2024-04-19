@@ -499,7 +499,7 @@ in
     qt.enable = true;
 
 # platform theme "gtk" or "gnome"
-    qt.platformTheme = "gnome";
+    qt.platformTheme = "gtk";
 
 # name of the qt theme
     qt.style.name = "adwaita-dark";
