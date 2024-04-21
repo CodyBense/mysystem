@@ -169,7 +169,7 @@ in
             # qt6ct
             gsettings-qt
 
-            polkit-kde-agnet
+            polkit-kde-agent
 
 ## needed for sddm theme
             libsForQt5.qt5.qtquickcontrols2
