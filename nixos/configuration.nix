@@ -158,6 +158,10 @@ in
             rofi-wayland
 ## login screen
             sddm
+## Swaylock
+            swaylock
+## Wlogout
+            wlogout
 
 # GTK
             gtk2
