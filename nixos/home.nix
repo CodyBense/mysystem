@@ -547,8 +547,8 @@ programs.swaylock = {
         grace=2;
         grace-no-mouse=true;
         grace-no-touch=true;
-        datestr=%a, %B %e;
-        timestr=%I:%M %p;
+        datestr="%a, %B %e";
+        timestr="%I:%M %p";
         fade-in=0.3;
         ignore-empty-password=true;
     };
