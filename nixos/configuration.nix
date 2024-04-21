@@ -107,7 +107,6 @@ in
             killall
             fzf
             oh-my-posh
-            spotify
             curl
 
 ## Terminal stuff
