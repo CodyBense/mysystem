@@ -1,7 +1,7 @@
 { inputs, lib, config, pkgs, ...}:
 {
     options = {
-        nvidia_mudule.enable = lib.mkEnableOption "enables nvidia_module"; 
+        nvidia_module.enable = lib.mkEnableOption "enables nvidia_module"; 
     };
 
     config = lib.mkIf config.nvidia_module.enable{
