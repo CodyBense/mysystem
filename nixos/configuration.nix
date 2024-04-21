@@ -109,6 +109,7 @@ in
             oh-my-posh
             spotify
             curl
+            brightnessctl
 
 ## Terminal stuff
             tmux
