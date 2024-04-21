@@ -14,8 +14,11 @@ in
             # ./systems/laptop/hardware-configuration.nix
             ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
-            ./modules/hyprland.nix
+            ./modules/hyprland_module.nix
         ];
+
+# Module selection
+hyprland_module.enable = true;
 
 # Home manager
     home-manager = {
