@@ -424,7 +424,7 @@ bind = $mainMod, A, exec, $menu
 bind = $mainMod, P, pseudo, # dwindle
 # bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, F, exec, $browser
-bind = $mainMod, M, exec, Spotify
+bind = $mainMod, M, exec, spotify
 
 # Move focus with mainMod + vim motions
 bind = $mainMod, H, movefocus, l
