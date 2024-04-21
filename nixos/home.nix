@@ -218,7 +218,7 @@ in
                 kb_options =
                 kb_rules =
 
-                follow_mouse = 1
+                follow_mouse = 2
 
                 touchpad {
                     natural_scroll = no
@@ -492,8 +492,8 @@ bind = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bind = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 # Brightness control
-bind = , XF86MonBrightnessDown, exec, brightnessctl s 5%-
-bind = , XF86MonBrightnessUp, exec, brightnessctl s +5%
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
 
 #█▀▀ █░█ █▀█ █▀ █▀█ █▀█
 #█▄▄ █▄█ █▀▄ ▄█ █▄█ █▀▄
