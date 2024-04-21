@@ -422,7 +422,6 @@ bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating, 
 bind = $mainMod, A, exec, $menu
 bind = $mainMod, P, pseudo, # dwindle
-# bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, F, exec, $browser
 bind = $mainMod, M, exec, spotify
 
@@ -491,6 +490,10 @@ bindm = $mainMod, mouse:273, resizewindow
 bind = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bind = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bind = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+# Brightness control
+bind = ,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+bind = ,XF86MonBrightnessUp,exec,brightnessctl set +5%
 
 #█▀▀ █░█ █▀█ █▀ █▀█ █▀█
 #█▄▄ █▄█ █▀▄ ▄█ █▄█ █▀▄
