@@ -169,6 +169,8 @@ in
             # qt6ct
             gsettings-qt
 
+            polkit-kde-agnet
+
 ## needed for sddm theme
             libsForQt5.qt5.qtquickcontrols2
             libsForQt5.qt5.qtgraphicaleffects
