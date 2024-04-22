@@ -20,8 +20,10 @@ in
 
 # Module selection
 # hyprland_module.enable = true;
-if (hostName == "desktop"); then nivdia_module.enable = true;
-
+nivdia_module = 
+if (hostName == "desktop")
+    then true
+    else false;
 
 # Home manager
     home-manager = {
