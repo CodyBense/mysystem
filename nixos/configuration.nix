@@ -20,7 +20,7 @@ in
 
 # Module selection
 # hyprland_module.enable = true;
-nivdia_module = 
+nivdia_module.enable = 
 if (hostName == "desktop")
     then true
     else false;
