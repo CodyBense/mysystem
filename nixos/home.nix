@@ -114,6 +114,7 @@ in
 ## bachrc
     programs.bash = {
         enable = true;
+        enableCompletion = true;
         shellAliases = {
             c = "clear";
             v = "nvim";
@@ -125,6 +126,9 @@ in
             "3." = "cd ../../..";
             "4." = "cd ../../../..";
         };
+        bashrcExtra = ''
+            eval "${zoxide init bash}"
+        '';
     };
 
 ## fzf
