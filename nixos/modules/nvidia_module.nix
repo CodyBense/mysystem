@@ -8,7 +8,7 @@
         hardware.opengl = {
             enable = true;
             driSupport = true;
-            driSupport32Bith = true;
+            driSupport32Bit = true;
         };
 
         # Load nvidia driver
