@@ -114,6 +114,7 @@ if (hostName == "desktop")
             networkmanagerapplet
             killall
             fzf
+            zoxide
             oh-my-posh
             spotify
             curl
