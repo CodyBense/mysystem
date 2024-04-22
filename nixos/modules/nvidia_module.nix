@@ -12,7 +12,7 @@
         };
 
         # Load nvidia driver
-        services.xserver.videoDirvers = ["nvidia"];
+        services.xserver.videoDrivers = ["nvidia"];
 
         hardware.nvidia = {
             modesetting.enable = true;
