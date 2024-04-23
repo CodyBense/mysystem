@@ -190,6 +190,7 @@ if (hostName == "desktop")
 # Code
             python3
             cargo
+            go
             ];
 
 # Fonts
