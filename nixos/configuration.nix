@@ -119,6 +119,7 @@ if (hostName == "desktop")
             spotify
             curl
             brightnessctl
+            direnv
 
 ## Terminal stuff
             tmux
