@@ -109,6 +109,7 @@ if (hostName == "desktop")
 # programs
         neovim
             vimPlugins.nvim-lspconfig
+            lua54Packages.luasnip
             home-manager
             firefox
             networkmanagerapplet
