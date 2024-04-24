@@ -1152,6 +1152,11 @@ stroke: var(--toolbar-color) !important;
     };
 };
 
+programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+};
+
 # enable gtk
     gtk.enable = true;
 
