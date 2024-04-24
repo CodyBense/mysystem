@@ -108,8 +108,7 @@ if (hostName == "desktop")
     environment.systemPackages = with pkgs; [
 # programs
         neovim
-            nvim-lspconfig
-            git
+            vimplugin-nvim-lspconfig
             home-manager
             firefox
             networkmanagerapplet
