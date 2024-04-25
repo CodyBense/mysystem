@@ -190,7 +190,6 @@ if (hostName == "desktop")
             libsForQt5.qt5.qtgraphicaleffects
 
 # Code
-            python3
             cargo
             go
             ];
