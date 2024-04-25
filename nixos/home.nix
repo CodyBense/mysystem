@@ -126,6 +126,7 @@ in
             "3." = "cd ../../..";
             "4." = "cd ../../../..";
             py = "python3";
+            pm = "./pm_cli.sh"
         };
         bashrcExtra = ''
             eval "$(zoxide init bash)"
