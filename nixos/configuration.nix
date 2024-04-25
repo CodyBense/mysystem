@@ -16,7 +16,7 @@ in
             inputs.home-manager.nixosModules.home-manager
             # ./modules/hyprland_module.nix
             ./modules/module_bundle.nix
-            ./moudles/code_bundle.nix
+            ./modules/code_bundle.nix
         ];
 
 # Module selection
