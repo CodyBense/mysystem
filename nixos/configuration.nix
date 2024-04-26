@@ -75,8 +75,12 @@ if (hostName == "desktop")
             sddm.enable = true;
             sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
         };
-        layout = "us";
-        xkbVariant = "";
+        # layout = "us";
+        # xkbVariant = "";
+        xkb = {
+            layout = "us";
+            variant = "";
+        };
     };
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
