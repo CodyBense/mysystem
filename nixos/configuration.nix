@@ -102,6 +102,9 @@ if (hostName == "desktop")
         jack.enable = true;
     };
 
+# Swaylock
+    security.pam.swaylock = {};
+
 # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
@@ -233,29 +236,4 @@ if (hostName == "desktop")
 # Before changing this value read the documentation for this option
 # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "23.11"; # Did you read the comment?
-
-
-# Nvidia stuff , move to module style
-#hardware.opengl = {
-#	enable = true;
-#	driSupport = true;
-#	driSupport32Bit = true;
-#};
-
-# Load nvidia drivers
-#services.xserver.videoDrivers = ["nvidia"];
-
-#hardware.nvidia = {
-#	modesetting.enable = true;
-
-#	powerManagement.enable = true;
-
-#	powerManagement.finegrained = false;
-
-#	open = false;
-
-#	nvidiaSettings = true;
-
-#	package = config.boot.kernelPackages.nvidiaPackages.stable;
-#  };
 }
