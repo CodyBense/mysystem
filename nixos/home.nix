@@ -529,6 +529,7 @@ programs.swaylock = {
         show-failed-attempts=true;
         clock=true ;
         # screenshot;
+        image = "~/mysystem/wallpapers/latios_latias.jpg";
         effect-blur="15x15";
         effect-vignette="1:1";
         color="1f1d2e80";
