@@ -526,12 +526,12 @@ exec = gsettings set org.gnome.desktop.interface cursor-size 20
 programs.swaylock = {
     enable = true;
     settings = {
-        indicator;
-        ignore-empty-password;
+        indicator=true;
+        ignore-empty-password=true;
         indicator-thickness=15;
         indicator-radius=150;
         image=~/mysystem/wallpaper/latios_latias.jpg;
-        clock;
+        clock=true;
         effect-blur=7x5;
         effect-vignettee=0.5:0.5;
         ring-color=98971a;
