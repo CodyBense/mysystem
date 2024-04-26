@@ -1,5 +1,5 @@
 
-{ pkgs, lib, ... }: {
+{ lib, ... }: {
     imports = [
         ./python_module.nix
     ];
