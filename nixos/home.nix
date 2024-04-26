@@ -186,7 +186,8 @@ in
 
 # █░░ ▄▀█ █░█ █▄░█ █▀▀ █░█
 # █▄▄ █▀█ █▄█ █░▀█ █▄▄ █▀█
-        exec-once = bash ~/mysystem/scripts/start.sh
+        # exec-once = bash ~/mysystem/scripts/start.sh
+        exec-once = bash $scrPath/start.sh
         
 
 # █▀ █▀█ █░█ █▀█ █▀▀ █▀▀
