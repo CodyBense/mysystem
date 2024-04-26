@@ -432,6 +432,7 @@ bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, F, exec, $browser
 bind = $mainMod, M, exec, spotify
 bind = $mainMod, BACKSPACE, exec, $scrPath/logout_launch.sh
+bind = $mainMod SHIFT, L, exec, swaylock
 
 # Move focus with mainMod + vim motions
 bind = $mainMod, H, movefocus, l
