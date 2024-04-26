@@ -176,7 +176,7 @@ if (hostName == "desktop")
 ## login screen
             sddm
 ## Swaylock
-            swaylock
+            swaylock-effects
 ## Wlogout
             wlogout
 
