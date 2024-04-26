@@ -186,13 +186,14 @@ in
 
 # █░░ ▄▀█ █░█ █▄░█ █▀▀ █░█
 # █▄▄ █▀█ █▄█ █░▀█ █▄▄ █▀█
-        exec-once = bash ~/.config/hypr/start.sh
+        exec-once = bash $scrPath/start.sh
         
 
 # █▀ █▀█ █░█ █▀█ █▀▀ █▀▀
 # ▄█ █▄█ █▄█ █▀▄ █▄▄ ██▄
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
+        $scrPath = $HOME/mysystem/scripts
 
 # Set programs that you use
         $terminal = kitty
@@ -432,7 +433,7 @@ bind = $mainMod, A, exec, $menu
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, F, exec, $browser
 bind = $mainMod, M, exec, spotify
-bind = $mainMod, BACKSPACE, ~/.config/hypr/logout_launch.sh
+bind = $mainMod, BACKSPACE, $scrPath/logout_launch.sh
 
 # Move focus with mainMod + vim motions
 bind = $mainMod, H, movefocus, l
