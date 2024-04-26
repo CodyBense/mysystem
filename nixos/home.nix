@@ -183,13 +183,6 @@ in
 # █░▀░█ █▄█ █░▀█ █ ░█░ █▄█ █▀▄
         monitor=,preferred,auto,auto
 
-
-# █░░ ▄▀█ █░█ █▄░█ █▀▀ █░█
-# █▄▄ █▀█ █▄█ █░▀█ █▄▄ █▀█
-        # exec-once = bash ~/mysystem/scripts/start.sh
-        exec-once = bash $scrPath/start.sh
-        
-
 # █▀ █▀█ █░█ █▀█ █▀▀ █▀▀
 # ▄█ █▄█ █▄█ █▀▄ █▄▄ ██▄
 # Source a file (multi-file configs)
@@ -201,6 +194,11 @@ in
         $fileManager = dolphin
         $menu = rofi -show drun -show-items
         $browser = firefox
+
+# █░░ ▄▀█ █░█ █▄░█ █▀▀ █░█
+# █▄▄ █▀█ █▄█ █░▀█ █▄▄ █▀█
+# exec-once = bash ~/mysystem/scripts/start.sh
+        exec-once = bash $scrPath/start.sh
 
 # █▀▀ █▄░█ █░█
 # ██▄ █░▀█ ▀▄▀
