@@ -103,7 +103,7 @@ if (hostName == "desktop")
     };
 
 # Swaylock
-    security.pam.swaylock = {};
+    security.pam.services.swaylock = {};
 
 # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
