@@ -538,6 +538,7 @@ programs.swaylock = {
         key-hl-color="cc241d";
         line-color="00000000";
         inside-color="00000088";
+        inside-clear-color="00000088";
         text-color="d79921";
         text-clear-color="daa520";
         ring-clear-color="890051";
