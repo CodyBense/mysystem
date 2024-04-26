@@ -186,7 +186,7 @@ in
 
 # █░░ ▄▀█ █░█ █▄░█ █▀▀ █░█
 # █▄▄ █▀█ █▄█ █░▀█ █▄▄ █▀█
-        exec-once = bash ~mysystem/scripts/start.sh
+        exec-once = bash ~/mysystem/scripts/start.sh
         
 
 # █▀ █▀█ █░█ █▀█ █▀▀ █▀▀
@@ -433,7 +433,8 @@ bind = $mainMod, A, exec, $menu
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, F, exec, $browser
 bind = $mainMod, M, exec, spotify
-bind = $mainMod, BACKSPACE, exec, ~/mysystem/scripts/logout_launch.sh
+# bind = $mainMod, BACKSPACE, exec, ~/mysystem/scripts/logout_launch.sh
+bind = $mainMod, BACKSPACE, exec, $scrPath/logout_launch.sh
 
 # Move focus with mainMod + vim motions
 bind = $mainMod, H, movefocus, l
