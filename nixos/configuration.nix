@@ -11,16 +11,13 @@ in
 {
     imports =
         [ # Include the results of the hardware scan.
-            # ./systems/laptop/hardware-configuration.nix
             ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
-            # ./modules/hyprland_module.nix
             ./modules/module_bundle.nix
             ./modules/code_bundle.nix
         ];
 
 # Module selection
-# hyprland_module.enable = true;
 nvidia_module.enable = 
 if (hostName == "desktop")
     then true
@@ -122,6 +119,7 @@ if (hostName == "desktop")
             curl
             brightnessctl
             direnv
+            wlogout
 
 ## Terminal stuff
             tmux
