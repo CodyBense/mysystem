@@ -432,7 +432,7 @@ bind = $mainMod, A, exec, $menu
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, F, exec, $browser
 bind = $mainMod, M, exec, spotify
-bind = $mainMod, BACKSPACE, wlogout
+bind = $mainMod, BACKSPACE, ~/.config/hypr/logout_launch.sh
 
 # Move focus with mainMod + vim motions
 bind = $mainMod, H, movefocus, l
