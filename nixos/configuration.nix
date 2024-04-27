@@ -14,7 +14,8 @@ in
             ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
             ./modules/module_bundle.nix
-            ./modules/code_bundle.nix
+            # ./modules/code_bundle.nix
+            ./modules/python_module.nix
         ];
 
 # Module selection
