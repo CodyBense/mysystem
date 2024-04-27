@@ -1,7 +1,7 @@
 
 {  lib, config, pkgs, ... }:
 {
-    enviroment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs; [
     python3
     python311Packages.mysql-connector
     python311Packages.typer
