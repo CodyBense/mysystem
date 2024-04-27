@@ -525,6 +525,7 @@ exec = gsettings set org.gnome.desktop.interface cursor-size 20
 ## swaylock
 programs.swaylock = {
     enable = true;
+    package = pkgs.swaylock-effects;
     settings = {
         indicator=true;
         ignore-empty-password=true;
