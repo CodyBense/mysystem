@@ -1,10 +1,14 @@
 # /PROGRAMS to get to dotfile configuration control
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 let 
 gruvboxPlus = import ./hm_modules/gruvbox-plus.nix { inherit pkgs; };
 in
 {
+# import home-manager modules
+    imports = [
+        # ./hm_modules/
+    ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
     home.username = "codybense";
