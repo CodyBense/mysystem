@@ -2,11 +2,11 @@
 {  lib, config, pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
-    python311Full
-    python311Packages.mysql-connector
-    python311Packages.typer
-    python311Packages.inquirer
+        python311Packages.mysql-connector
+        python311Packages.typer
+        python311Packages.inquirer
     ];
+
     # options = {
     #     python_module.enable = lib.mkEnableOption "enables python_module";
     # };
