@@ -2,7 +2,7 @@
 { config, pkgs, ... }:
 
 let 
-gruvboxPlus = import ./gruvbox-plus.nix { inherit pkgs; };
+gruvboxPlus = import ./hm_modules/gruvbox-plus.nix { inherit pkgs; };
 in
 {
 # Home Manager needs a bit of information about you and the paths it should
