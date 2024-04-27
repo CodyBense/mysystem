@@ -23,6 +23,8 @@ if (hostName == "desktop")
     then true
     else false;
 
+code_bundle.enable = true;
+
 # Home manager
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
