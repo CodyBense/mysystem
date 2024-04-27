@@ -4,5 +4,5 @@
         ./python_module.nix
     ];
 
-    python_module.enable = lib.mkDefault true;
+    # python_module.enable = lib.mkDefault true;
 }
