@@ -7,7 +7,7 @@ in
 {
 # import home-manager modules
     imports = [
-        # ./hm_modules/
+         ./hm_modules/firefox.nix
     ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
