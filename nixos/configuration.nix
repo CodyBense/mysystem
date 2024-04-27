@@ -5,7 +5,7 @@
 { inputs, config, pkgs, ... }:
 
 let 
-hostName = "laptop";
+    hostName = "laptop";
 in
 
 {
@@ -18,12 +18,10 @@ in
         ];
 
 # Module selection
-nvidia_module.enable = 
-if (hostName == "desktop")
-    then true
-    else false;
-
-# python_module.enable = true;
+    nvidia_module.enable = 
+    if (hostName == "desktop")
+        then true
+        else false;
 
 # Home manager
     home-manager = {
