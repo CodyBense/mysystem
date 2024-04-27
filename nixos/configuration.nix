@@ -23,7 +23,7 @@ if (hostName == "desktop")
     then true
     else false;
 
-code_bundle.enable = true;
+python_module.enable = true;
 
 # Home manager
     home-manager = {
