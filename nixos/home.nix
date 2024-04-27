@@ -527,32 +527,32 @@ exec = gsettings set org.gnome.desktop.interface cursor-size 20
 # };
 
 ## swaylock
-programs.swaylock = {
-    enable = true;
-    package = pkgs.swaylock-effects;
-    settings = {
-        indicator=true;
-        ignore-empty-password=true;
-        indicator-thickness=15;
-        indicator-radius=150;
-        image="~/mysystem/wallpapers/gruvbox-mountian-village.png";
-        clock=true;
-        effect-blur="7x5";
-        effect-vignettee="0.5:0.5";
-        ring-color="98971a";
-        key-hl-color="cc241d";
-        line-color="00000000";
-        inside-color="00000088";
-        inside-clear-color="00000088";
-        text-color="d79921";
-        text-clear-color="daa520";
-        ring-clear-color="890051";
-        separator-color="00000000";
-        grace="0";
-        fade-in="0.5";
-        font="Caskaydia Cove Nerd Font Mono";
-    };
-};
+# programs.swaylock = {
+#     enable = true;
+#     package = pkgs.swaylock-effects;
+#     settings = {
+#         indicator=true;
+#         ignore-empty-password=true;
+#         indicator-thickness=15;
+#         indicator-radius=150;
+#         image="~/mysystem/wallpapers/gruvbox-mountian-village.png";
+#         clock=true;
+#         effect-blur="7x5";
+#         effect-vignettee="0.5:0.5";
+#         ring-color="98971a";
+#         key-hl-color="cc241d";
+#         line-color="00000000";
+#         inside-color="00000088";
+#         inside-clear-color="00000088";
+#         text-color="d79921";
+#         text-clear-color="daa520";
+#         ring-clear-color="890051";
+#         separator-color="00000000";
+#         grace="0";
+#         fade-in="0.5";
+#         font="Caskaydia Cove Nerd Font Mono";
+#     };
+# };
 
 # programs.firefox = {
 #     enable = true;
