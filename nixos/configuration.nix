@@ -14,8 +14,8 @@ in
             ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
             ./modules/module_bundle.nix
-            # ./modules/code_bundle.nix
-            ./modules/python_module.nix
+            ./modules/code_bundle.nix
+            # ./modules/python_module.nix
         ];
 
 # Module selection
@@ -198,7 +198,6 @@ in
 
 # Code
             python3
-        python311Packages.mysql-connector
             cargo
             go
             ];
