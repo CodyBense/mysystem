@@ -131,6 +131,7 @@ in
 
 ## Terminal stuff
             tmux
+            gh
 
 ## PDF
 # xpdf
@@ -151,9 +152,7 @@ in
             maple-mono-NF
             mononoki
             noto-fonts-cjk-sans
-
             material-design-icons
-
             bibata-cursors
 # bibata-extra-cursors
 
