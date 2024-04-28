@@ -7,7 +7,7 @@
 
     config = lib.mkIf config.python_module.enable {
         environment.systemPackages = with pkgs; [
-            # python311Packages.pymysql
+            python311Packages.pymysql
             python311Packages.mysql-connector
             python311Packages.typer
             python311Packages.inquirer
