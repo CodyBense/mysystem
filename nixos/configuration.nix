@@ -198,6 +198,7 @@ in
 
 # Code
             python3
+        python311Packages.mysql-connector
             cargo
             go
             ];
