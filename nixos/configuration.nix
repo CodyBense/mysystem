@@ -24,6 +24,8 @@ in
         then true
         else false;
 
+programs.npm.enable = true
+
 # Home manager
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
