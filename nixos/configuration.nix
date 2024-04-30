@@ -177,6 +177,7 @@ in
             sddm
 ## Swaylock
             swaylock-effects
+            hyprlock
 ## Wlogout
             wlogout
 
