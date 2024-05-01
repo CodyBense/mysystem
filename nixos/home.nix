@@ -572,11 +572,11 @@ programs.direnv = {
     gtk.theme.package = pkgs.adw-gtk3;
     gtk.theme.name = "adw-gtk3";
 
-    gtk.iconTheme.package = gruvboxPlus;
-    gtk.iconTheme.name = "GruvboxPlus";
+    # gtk.iconTheme.package = gruvboxPlus;
+    # gtk.iconTheme.name = "GruvboxPlus";
 
-    # gtk.iconTheme.package = pkgs.gruvbox-dark-icons-gtk;
-    # gtk.iconTheme.name = "gruvbox-dark-icons-gtk";
+    gtk.iconTheme.package = pkgs.gruvbox-dark-icons-gtk;
+    gtk.iconTheme.name = "gruvbox-dark-icons-gtk";
 
 # enable qt
     qt.enable = true;
