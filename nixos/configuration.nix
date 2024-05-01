@@ -10,7 +10,7 @@ in
 
 {
     environment.sessionVariables = {
-        FLAKE = "/home/codybense/mysystem";
+        FLAKE = "/home/codybense/mysystem/";
     };
 
     imports =
