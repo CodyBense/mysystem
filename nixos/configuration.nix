@@ -9,6 +9,9 @@ let
 in
 
 {
+    environment.sessionVariables = {
+        FLAKE = "/home/codybense/mysystem";
+    };
     imports =
         [ # Include the results of the hardware scan.
             ./systems/${hostName}/hardware-configuration.nix
