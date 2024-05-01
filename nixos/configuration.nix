@@ -130,6 +130,7 @@ programs.npm.enable = true;
             brightnessctl
             direnv
             wlogout
+            unzip
 
 ## Terminal stuff
             tmux
