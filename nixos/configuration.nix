@@ -131,6 +131,7 @@ programs.npm.enable = true;
             direnv
             wlogout
             unzip
+            nh
 
 ## Terminal stuff
             tmux
