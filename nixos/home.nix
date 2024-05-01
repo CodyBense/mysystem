@@ -566,13 +566,14 @@ programs.direnv = {
     gtk.cursorTheme.package = pkgs.bibata-cursors;
     gtk.cursorTheme.name = "Bibata-Modern-Ice";
 
-    # gtk.theme.package = pkgs.gruvbox-gtk-theme;
-    # gtk.theme.name = "gruvbox-gtk-theme";
+    gtk.theme.package = pkgs.gruvbox-gtk-theme;
+    gtk.theme.name = "gruvbox-gtk-theme";
 
-# gtk.iconTheme.package = gruvboxPlus;
-# gtk.iconTheme.name = "GruvboxPlus";
-    gtk.iconTheme.package = pkgs.gruvbox-dark-icons-gtk;
-    gtk.iconTheme.name = "gruvbox-dark-icons-gtk";
+    gtk.iconTheme.package = gruvboxPlus;
+    gtk.iconTheme.name = "GruvboxPlus";
+
+    # gtk.iconTheme.package = pkgs.gruvbox-dark-icons-gtk;
+    # gtk.iconTheme.name = "gruvbox-dark-icons-gtk";
 
 # enable qt
     qt.enable = true;
