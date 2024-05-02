@@ -56,7 +56,7 @@
             general = {
                 gaps_in = "3";
                 border_size = "2";
-                "col.active_border" = "rgb(98971) rgb(ebdbb2) 45deg";
+                "col.active_border" = "rgb(98971a) rgb(ebdbb2) 45deg";
                 "col.inactive_border" = "rgb(282828) rgb(ebdbb2) 45deg";
                 layout = "dwindle";
                 allow_tearing = "true";
@@ -81,7 +81,7 @@
                     new_optimizations = "on";
                     ignore_opacity = "on";
                     xray = "false";
-                    special = "ture";
+                    special = "true";
                 };
             };
             
