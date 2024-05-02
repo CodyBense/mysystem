@@ -582,7 +582,7 @@ programs.direnv = {
     qt.enable = true;
 
 # platform theme "gtk" or "gnome"
-    qt.platformTheme = "gtk";
+    qt.platformTheme = "qtct";
 
 # name of the qt theme
     qt.style.name = "adwaita-dark";
