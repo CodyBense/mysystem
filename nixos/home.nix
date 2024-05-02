@@ -158,6 +158,9 @@ in
         env = QT_AUTO_SCREEN_SCALE_FACTOR,1
         env = MOZ_ENABLE_WAYLAND,1
         env = GDK_SCALE,1
+#
+        env = GDK_BACKEND,wayland
+        env = GTK_USE_PORTAL,1
 
 # █ █▄░█ █▀█ █░█ ▀█▀
 # █ █░▀█ █▀▀ █▄█ ░█░
