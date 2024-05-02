@@ -241,6 +241,7 @@
                 "$mainMod CTRL, K, resizeactive, 0 30"
 
                 "$mainMod, 1, workspace, 1"
+                "$mainMod, 2, workspace, 2"
                 "$mainMod, 3, workspace, 3"
                 "$mainMod, 4, workspace, 4"
                 "$mainMod, 5, workspace, 5"
