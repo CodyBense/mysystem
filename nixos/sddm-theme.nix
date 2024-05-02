@@ -6,9 +6,9 @@ imgLink = "https://github.com/CodyBense/sddm-wallpapers/blob/main/gruvbox-mounta
 image = pkgs.fetchurl {
     url = imgLink;
     # sha256 = "sha256-O0aIzBRPyfrkp1YWRyST62UqZY1KE8L8NXn1OxY5f+8=";
-    sha256 = "sha256-eT9dv3nymcCsbyp2S7pQ6KbwZuex/YuXo9r+YuAWQ9Q=";
+    # sha256 = "sha256-eT9dv3nymcCsbyp2S7pQ6KbwZuex/YuXo9r+YuAWQ9Q=";
     # sha256 = "180smfqpazclh2f1yx87bmpl58w25fbji0rrngyjhwkvikjpp51l";
-    # sha256 = "1b05qhfhh8bvza1yrgfbw1sxpg142h99p8pckh0ps0qfpk4m8czz";
+    sha256 = "1kl6ysf8mfa00s3yfwlhziffbwy923bwn4m3mklvdzym984m7rhb";
 };
 in
 pkgs.stdenv.mkDerivation {
