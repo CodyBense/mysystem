@@ -8,6 +8,13 @@ in
 # import home-manager modules
     imports = [
          ./hm_modules/firefox.nix
+         ./hm_modules/kitty.nix
+         ./hm_modules/git.nix
+         ./hm_modules/bashrc.nix
+         ./hm_modules/fzf.nix
+         ./hm_modules/fzf.nix
+         ./hm_modules/oh-my-posh.nix
+         ./hm_modules/direnv.nix
     ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
@@ -84,73 +91,6 @@ in
 
 
 # PROGRAMS
-## kitty
-    programs.kitty = {
-        enable = true;
-        font = {
-            name = "JetBrains Mono";
-            package = pkgs.jetbrains-mono;
-            size = 9;
-        };
-        theme = "Gruvbox Material Dark Hard";
-        settings = {
-            window_padding_width = 25;
-            enable_audio_bell = false;
-# bold_font = auto;
-# italic_font = auto;
-# bold_italic_font = auto;
-        };
-    };
-
-## git
-    programs.git = {
-        enable = true;
-        userName = "CodyBense";
-        userEmail = "codybense@gmail.com";
-        aliases = {
-            a = "add";
-            pu = "push";
-            co = "checkout";
-            cm = "commit";
-        };
-    };
-
-## bachrc
-    programs.bash = {
-        enable = true;
-        enableCompletion = true;
-        shellAliases = {
-            c = "clear";
-            v = "nvim";
-            sv = "sudo nvim";
-            ll = "ls -l";
-            la = "ls -a";
-            ".." = "cd ..";
-            "2." = "cd ../..";
-            "3." = "cd ../../..";
-            "4." = "cd ../../../..";
-            py = "python3";
-            pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
-        };
-        bashrcExtra = ''
-            eval "$(zoxide init bash)"
-            eval "$(direnv hook bash)"
-        '';
-    };
-
-## fzf
-    programs.fzf = {
-        enable = true;
-        enableBashIntegration = true;
-    };
-
-## oh-my-posh
-    programs.oh-my-posh = {
-        enable = true;
-        enableBashIntegration = true;
-        useTheme = "gruvbox";
-    };
-
 ## hyprland
 # wayland.windowManager.hyprland = {
 #     enable = true;
@@ -555,10 +495,6 @@ exec = gsettings set org.gnome.desktop.interface cursor-size 20
 #     };
 # };
 
-programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-};
 
 # enable gtk
     gtk.enable = true;
