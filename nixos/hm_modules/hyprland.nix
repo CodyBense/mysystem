@@ -85,8 +85,6 @@
                 };
             };
             
-            "layerrule" = "blur,waybar";
-
             animations = {
                 enabled = "yes";
                 bezier = [
@@ -208,6 +206,7 @@
                 "blur,swaync-control-center"
                 "ignorezero,swaync-control-center"
                 "blur,logout_dialog"
+                "blur,waybar"
             ];
 
             "$mainMod" = "SUPER";
