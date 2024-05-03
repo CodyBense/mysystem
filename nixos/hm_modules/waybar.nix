@@ -11,7 +11,7 @@
 
                 modules-left = ["custom/launcher" "clock" "clock#date"];
                 modules-center = ["hyprland/workspaces"];
-                modules-right = ["pulseaudio" "network" "battery" "custom/powermenu"];
+                modules-right = ["cutom/keybindings" "pulseaudio" "network" "battery" "custom/powermenu"];
 
                 "hyprland/workspaces" = {
                     format = "{icon}";
@@ -38,6 +38,12 @@
 # "on-click" = "pkill rofi || rofi --show drun --term=kitty --width=20% --height=50% --columns 1 -I";
                     on-click = "pkill rofi || rofi -show drun -show-items";
                     tooltip = false;
+                };
+
+                "custom/keybindings" = {
+                    tooltip = false;
+                    format = "";
+                    on-click = "sleep 0.01 && list-hypr-bindings";
                 };
 
                 "clock" = {
@@ -128,6 +134,7 @@
             #network,
             #battery,
             #workspaces,
+            #custom-keybindings,
             #custom-powermenu {
                 color: #${base05};
                 background: #${base01};
