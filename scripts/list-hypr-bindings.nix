@@ -13,7 +13,7 @@ pkgs.writeShellScriptBin "list-hypr-bindings" ''
   --timeout-indicator=right \
   " = Windows/Super" "Modifier Key, used for keybindings" "Doesn't really execute anything by itself." \
   " + T" "Terminal" "kitty" \
-  " + SHIFT + ENTER" "Rofi App Launcher" "rofi -show drun" \
+  " + SPACE" "Rofi App Launcher" "rofi -show drun" \
   " + Q" "Kill Focused Window" "killactive" \
   " + F" "Launch Web Browser" "firefox" \
   " + E" "Launch New File Browser Window" "thunar" \
