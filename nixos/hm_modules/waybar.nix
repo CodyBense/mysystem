@@ -98,15 +98,13 @@
                 };
 
                 "custom/powermenu" = {
-                    format = "";
-# on-click = "pkill wofi || sh .config/wofi/scripts/powermenu.sh 'everforest-light' '--height=17% -o $MAIN_DISPLAY'";
+                    format = ""; # on-click = "pkill wofi || sh .config/wofi/scripts/powermenu.sh 'everforest-light' '--height=17% -o $MAIN_DISPLAY'";
                     tooltip = false;
                 };
             };
             };
 
-        style = ''
-
+        style = with config.colorScheme.colors; ''
             @import "../waybar/colors/gruv-box.css";
 
             * {
@@ -118,8 +116,8 @@
             }
 
             window#waybar {
-                background-color: @bg;
-                color: @fg1;
+                background-color: #${base00};
+                color: #${base06};
             }
 
             #clock,
@@ -131,8 +129,8 @@
             #battery,
             #workspaces,
             #custom-powermenu {
-                color: @fg2;
-                background: #433e3c;
+                color: #${base05};
+                background: #${base01};
                 padding: 0 0.6em;
                 margin-right: 4px; 
                 margin-left: 2px;
@@ -144,13 +142,13 @@
 
 
             #workspaces button.active {
-                color: @fg1;
-                background: @bg3;
+                color: #${base06};
+                background: #${base03};
             }
 
             #custom-launcher {
-                background-color: @green;
-                color: @bg;
+                background-color: #${base0B};
+                color: #${base00};
                 border-bottom-color: #556a35;
 
                 margin-left: 15px;
@@ -159,8 +157,8 @@
             }
 
             #custom-powermenu {
-                background-color: @red;
-                color: @bg;
+                background-color: #${base08};
+                color: #${base00};
                 border-bottom-color: #951c1f;
 
                 margin-right: 15px;
