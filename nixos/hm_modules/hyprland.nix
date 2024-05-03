@@ -6,7 +6,7 @@
         settings = {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
-            exec-once = "bash ~/config/hypr/start.sh";
+            exec-once = "bash ~/.config/hypr/start.sh";
             "$terminal" = "kitty";
             "$fileManager" = "dolphin";
             "$menu" = "rofi -show drun -show-items";
