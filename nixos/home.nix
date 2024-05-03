@@ -7,6 +7,7 @@ in
 {
 # import home-manager modules
     imports = [
+         inputs.nix-colors.homeManagerModules.default
          ./hm_modules/firefox.nix
          ./hm_modules/kitty.nix
          ./hm_modules/git.nix
