@@ -136,6 +136,7 @@ programs.npm.enable = true;
             wlogout
             unzip
             nh
+            yad
 
 ## Terminal stuff
             tmux
