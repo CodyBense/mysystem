@@ -20,6 +20,7 @@ in
             ./modules/module_bundle.nix
             ./modules/code_bundle.nix
             # ./modules/python_module.nix
+            ./../scripts/list-hypr-bindings.nix
         ];
 
 # Module selection
@@ -207,6 +208,9 @@ programs.npm.enable = true;
 
 ##Code
             nodejs_21
+
+# Scripts
+            list-hypr-bindings
             ];
 
 # Fonts
