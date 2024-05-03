@@ -139,7 +139,7 @@
         "type": "github"
       }
     },
-    "nix-color": {
+    "nix-colors": {
       "inputs": {
         "base16-schemes": "base16-schemes",
         "nixpkgs-lib": "nixpkgs-lib"
@@ -209,7 +209,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "nix-color": "nix-color",
+        "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2"
       }
     },
