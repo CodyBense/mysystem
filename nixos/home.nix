@@ -17,6 +17,7 @@ in
          ./hm_modules/direnv.nix
          ./hm_modules/hyprland.nix
          ./hm_modules/waybar.nix
+         ./hm_modules/hyprlock.nix
     ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
