@@ -276,6 +276,8 @@
                 "$mainMod, S, togglespecialworkspace, magic"
                 "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
+                "$mainMod SHIFT, I, toggltsplit,"
+
                 "$mainMod, mouse_down, workspace, e+1"
                 "$mainMod, mouse_up, workspace, e-1"
 
