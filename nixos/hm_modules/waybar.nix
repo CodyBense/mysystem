@@ -105,6 +105,7 @@
             };
 
         style = with config.colorScheme.colors; ''
+        style = ''
             @import "../waybar/colors/gruv-box.css";
 
             * {
@@ -116,8 +117,8 @@
             }
 
             window#waybar {
-                background-color: #${base00};
-                color: #${base06};
+                background-color: @bg;
+                color: @fg1;
             }
 
             #clock,
@@ -129,8 +130,8 @@
             #battery,
             #workspaces,
             #custom-powermenu {
-                color: #${base05};
-                background: #${base01};
+                color: @fg2;
+                background: #433e3c;
                 padding: 0 0.6em;
                 margin-right: 4px; 
                 margin-left: 2px;
@@ -142,13 +143,13 @@
 
 
             #workspaces button.active {
-                color: #${base06};
-                background: #${base03};
+                color: @fg1;
+                background: @bg3;
             }
 
             #custom-launcher {
-                background-color: #${base0B};
-                color: #${base00};
+                background-color: @green;
+                color: @bg;
                 border-bottom-color: #556a35;
 
                 margin-left: 15px;
@@ -157,8 +158,8 @@
             }
 
             #custom-powermenu {
-                background-color: #${base08};
-                color: #${base00};
+                background-color: @red;
+                color: @bg;
                 border-bottom-color: #951c1f;
 
                 margin-right: 15px;

@@ -3,7 +3,7 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
-        settings = {
+        settings = with config.colorScheme.colors; {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
             exec-once = "bash ~/.config/hypr/start.sh";
@@ -56,17 +56,17 @@
             general = {
                 gaps_in = "3";
                 border_size = "2";
-                "col.active_border" = "rgb(98971a) rgb(ebdbb2) 45deg";
-                "col.inactive_border" = "rgb(282828) rgb(ebdbb2) 45deg";
+                "col.active_border" = "rgb(${base0B}) rgb(${base06}) 45deg";
+                "col.inactive_border" = "rgb(${base00}) rgb(${base06}) 45deg";
                 layout = "dwindle";
                 allow_tearing = "true";
                 resize_on_border = "true";
             };
 
             group = {
-                "col.border_active" = "rgb(98971a) rgb(ebdbb2) 45deg";
-                "col.border_inactive" = "rgb(282828) rgb(ebdbb2) 45deg";
-                "col.border_locked_active" = "rgb(98971a) rgb(ebdbb2) 45deg";
+                "col.border_active" = "rgb(${base0B}) rgb(${base06}) 45deg";
+                "col.border_inactive" = "rgb(${base00}) rgb(${base06}) 45deg";
+                "col.border_locked_active" = "rgb(${base0B}) rgb(${base06}) 45deg";
                 "col.border_locked_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
             };
 
