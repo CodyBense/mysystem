@@ -90,7 +90,7 @@ in
 # EDITOR = "emacs";
     };
 
-        colorScheme = inputs.nix-colors.colorScheme.gruvbox-dark-medium;
+        colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
