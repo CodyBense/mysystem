@@ -11,7 +11,7 @@
 
         hyprland.url = "github:hyprwm/Hyprland";
 
-        nix-color.url = "github:misterio77/nix-colors";
+        nix-colors.url = "github:misterio77/nix-colors";
 
     };
 
