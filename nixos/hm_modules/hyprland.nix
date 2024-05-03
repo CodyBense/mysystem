@@ -7,7 +7,7 @@
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
             # exec-once = "bash ~/.config/hypr/start.sh";
-            exec-once = "pkgs.start-hyprland";
+            exec-once = "start-hyprland";
             "$terminal" = "kitty";
             "$fileManager" = "dolphin";
             "$menu" = "rofi -show drun -show-items";

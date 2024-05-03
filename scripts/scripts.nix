@@ -6,7 +6,7 @@ let
 
 in
 {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = [
         list-hypr-bindings
         start-hyprland
     ];
