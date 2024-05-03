@@ -3,7 +3,7 @@
     programs.waybar = {
         enable = true;
         settings = {
-            height = "28";
+            height = 28;
             layer = "bottom";
             position = "top";
             reload_style_on_changes = "true";
