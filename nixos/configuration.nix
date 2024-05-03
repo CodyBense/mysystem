@@ -6,7 +6,6 @@
 
 let 
     hostName = "laptop";
-    list-hypr-bindings = import ./../scripts/list-hypr-bindings.nix { inherit pkgs; };
 in
 
 {
@@ -20,7 +19,7 @@ in
             inputs.home-manager.nixosModules.home-manager
             ./modules/module_bundle.nix
             ./modules/code_bundle.nix
-            # ./modules/python_module.nix
+            ./../scripts/scripts.nix
         ];
 
 # Module selection
@@ -208,9 +207,6 @@ programs.npm.enable = true;
 
 ##Code
             nodejs_21
-
-# Scripts
-            list-hypr-bindings
             ];
 
 # Fonts
