@@ -6,6 +6,7 @@
 
 let 
     hostName = "laptop";
+    list-hypr-bindings = import ./../scripts/list-hypr-bindings.nix { inherit pkgs; };
 in
 
 {
@@ -20,7 +21,6 @@ in
             ./modules/module_bundle.nix
             ./modules/code_bundle.nix
             # ./modules/python_module.nix
-            ./../scripts/list-hypr-bindings.nix
         ];
 
 # Module selection
