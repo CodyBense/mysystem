@@ -5,7 +5,7 @@
         settings = {
             mainBar = {
                 height = 28;
-                layer = "bottom";
+                layer = "top";
                 position = "top";
                 reload_style_on_changes = "true";
 
