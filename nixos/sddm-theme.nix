@@ -1,12 +1,12 @@
 { pkgs }:
 
 let
-imgLink = "https://github.com/CodyBense/sddm-wallpapers/blob/main/gruvbox-mountain-village.png";
+    imgLink = "https://github.com/CodyBense/sddm-wallpapers/blob/main/gruvbox-mountain-village.png";
 
-image = pkgs.fetchurl {
-    url = imgLink;
-    sha256 = "sha256-Z5vCqC1kQd2Qhcz4SimKqClOFmHpv/WaUWdzyNG3eDs=";
-};
+    image = pkgs.fetchurl {
+        url = imgLink;
+        sha256 = "sha256-Z5vCqC1kQd2Qhcz4SimKqClOFmHpv/WaUWdzyNG3eDs=";
+    };
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
