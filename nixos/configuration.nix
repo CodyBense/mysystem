@@ -81,7 +81,7 @@ programs.npm.enable = true;
         displayManager = {
             sddm = {
                 enable = true;
-                theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+                # theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
                 wayland.enable = true;
             };
         };
@@ -121,6 +121,7 @@ programs.npm.enable = true;
 # List packages installed in system profile. To search, run:
 # $ nix search wget
     environment.systemPackages = with pkgs; [
+        (callPackage ./sddm-theme.nix)
 # programs
         neovim
             vimPlugins.nvim-lspconfig
