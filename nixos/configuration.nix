@@ -80,7 +80,8 @@ programs.npm.enable = true;
         enable = true;
         displayManager = {
             sddm.enable = true;
-            sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+            # sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+            sddm.theme = "${import ./sddm-theme/sddm-sugar-dark.nix }";
         };
         # layout = "us";
         # xkbVariant = "";
