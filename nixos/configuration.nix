@@ -133,6 +133,7 @@ programs.npm.enable = true;
             zoxide
             oh-my-posh
             spotify
+            spicetify-cli
             curl
             brightnessctl
             direnv
