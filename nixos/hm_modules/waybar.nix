@@ -105,6 +105,7 @@
 
                 "custom/powermenu" = {
                     format = ""; # on-click = "pkill wofi || sh .config/wofi/scripts/powermenu.sh 'everforest-light' '--height=17% -o $MAIN_DISPLAY'";
+                    on-click = "wlogout";
                     tooltip = false;
                 };
             };
