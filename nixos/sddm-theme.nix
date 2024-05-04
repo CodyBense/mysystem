@@ -5,10 +5,7 @@ imgLink = "https://github.com/CodyBense/sddm-wallpapers/blob/main/gruvbox-mounta
 
 image = pkgs.fetchurl {
     url = imgLink;
-    # sha256 = "sha256-O0aIzBRPyfrkp1YWRyST62UqZY1KE8L8NXn1OxY5f+8=";
-    sha256 = "sha256-eT9dv3nymcCsbyp2S7pQ6KbwZuex/YuXo9r+YuAWQ9Q=";
-    # sha256 = "180smfqpazclh2f1yx87bmpl58w25fbji0rrngyjhwkvikjpp51l";
-    # sha256 = "1kl6ysf8mfa00s3yfwlhziffbwy923bwn4m3mklvdzym984m7rhb";
+    sha256 = "sha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
 };
 in
 pkgs.stdenv.mkDerivation {
@@ -19,11 +16,11 @@ pkgs.stdenv.mkDerivation {
     rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
     sha256 = "0153z1kylbhc9d12nxy9vpn0spxgrhgy36wy37pk6ysq7akaqlvy";
   };
-  installPhase = ''
-    mkdir -p $out
-    cp -R ./* $out/
-    cd $out/
-    rm Background.jpg
-    cp -r ${image} $out/Background.jpg
+    installPhase = ''
+        mkdir -p $out
+        cp -R ./* $out/
+        cd $out/
+        rm Background.jpg
+        cp -r ${image} $out/Background.jpg
    '';
 }
