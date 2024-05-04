@@ -9,7 +9,8 @@
             # exec-once = "bash ~/.config/hypr/start.sh";
             exec-once = "start-hyprland";
             "$terminal" = "kitty";
-            "$fileManager" = "dolphin";
+            # "$fileManager" = "dolphin";
+            "$fileManager" = "thunar";
             "$menu" = "rofi -show drun -show-items";
             "$browser" = "firefox";
 
