@@ -1,4 +1,4 @@
-{ pkgs, stdenv, fetchFromGitHub }:
+{ pkgs, stdenv, fetchFromGitHub, ... }:
 {
   sddm-sugar-dark = stdenv.mkDerivation rec {
     pname = "sddm-sugar-dark-theme";
