@@ -141,6 +141,7 @@ programs.npm.enable = true;
             unzip
             nh
             yad
+            pywal
 
 ## Terminal stuff
             tmux
