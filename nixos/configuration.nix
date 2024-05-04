@@ -79,9 +79,11 @@ programs.npm.enable = true;
 # sddm theme
         enable = true;
         displayManager = {
-            sddm.enable = true;
-            sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-            # sddm.theme = "${import ./sddm-theme/sddm-sugar-dark.nix { inherit pkgs; }}";
+            sddm = {
+                enable = true;
+                theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+                wayland.enable = true;
+            };
         };
         # layout = "us";
         # xkbVariant = "";
