@@ -1,7 +1,7 @@
 { pkgs }:
 
 let
-    imgLink = "https://github.com/CodyBense/sddm-wallpapers/blob/main/gruvbox-mountain-village.png";
+    imgLink = "https://github.com/CodyBense/wallpapers/blob/main/gruvbox-mountian-village.jpg";
 
     image = pkgs.fetchurl {
         url = imgLink;
