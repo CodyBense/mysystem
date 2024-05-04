@@ -1,6 +1,6 @@
-{  stdenv, fetchFromGitHub, ... }:
+{  pkgs, ... }:
 {
-  sddm-sugar-dark = stdenv.mkDerivation rec {
+  sddm-sugar-dark = pkgs.stdenv.mkDerivation rec {
     pname = "sddm-sugar-dark-theme";
     version = "1.2";
     dontBuild = true;
@@ -8,7 +8,7 @@
       mkdir -p $out/share/sddm/themes
       cp -aR $src $out/share/sddm/themes/sugar-dark
     '';
-    src = fetchFromGitHub {
+    src = pkgs.fetchFromGitHub {
       owner = "MarianArlt";
       repo = "sddm-sugar-dark";
       rev = "v${version}";
