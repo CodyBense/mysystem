@@ -13,7 +13,7 @@
             "2." = "cd ../..";
             "3." = "cd ../../..";
             "4." = "cd ../../../..";
-            py = "python3";
+            # py = "python3";
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
         bashrcExtra = ''
