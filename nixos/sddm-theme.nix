@@ -8,6 +8,7 @@ let
         sha256 = "sha256-Z5vCqC1kQd2Qhcz4SimKqClOFmHpv/WaUWdzyNG3eDs=";
     };
 in
+{
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
   src = pkgs.fetchFromGitHub {
@@ -23,4 +24,6 @@ pkgs.stdenv.mkDerivation {
         rm Background.jpg
         cp -r ${image} $out/Background.jpg
    '';
+};
 }
+# { stdenv, fetchFromGithub, .. }:
