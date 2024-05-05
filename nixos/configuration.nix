@@ -142,6 +142,7 @@ programs.npm.enable = true;
             nh
             yad
             pywal
+            eww-wayland
 
 ## Terminal stuff
             tmux
