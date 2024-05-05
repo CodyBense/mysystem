@@ -86,7 +86,7 @@
 # QT
         # qt5ct
         # qt6ct
-        gsettings-qt
+        # gsettings-qt
 
 
 ## needed for sddm theme
