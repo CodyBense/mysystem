@@ -89,10 +89,10 @@ in {
 
   gtk.enable = true;
 
-  gtk.theme.package = pkgs.gruvbox-gtk-theme;
-  gtk.theme.name = "gruvbox-gtk-theme";
-  # gtk.theme.package = pkgs.adw-gtk3;
-  # gtk.theme.name = "adw-gtk3";
+  # gtk.theme.package = pkgs.gruvbox-gtk-theme;
+  # gtk.theme.name = "gruvbox-gtk-theme";
+  gtk.theme.package = pkgs.adw-gtk3;
+  gtk.theme.name = "adw-gtk3";
 
   gtk.cursorTheme.package = pkgs.bibata-cursors;
   gtk.cursorTheme.name = "Bibata-Modern-Ice";
@@ -115,8 +115,8 @@ in {
   # qt.platformTheme = "kde";
 
 # name of the qt theme
-  # qt.style.name = "adwaita-dark";
-  qt.style.name = "gruvbox-gtk-theme";
+  qt.style.name = "adwaita-dark";
+  # qt.style.name = "gruvbox-gtk-theme";
 
 # packages to use
   # qt.style.package = pkgs.adwaita-qt;
