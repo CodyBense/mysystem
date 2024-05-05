@@ -13,7 +13,7 @@
 
         nix-colors.url = "github:misterio77/nix-colors";
 
-        stylix.url = "github:danth/stylix";
+        # stylix.url = "github:danth/stylix";
 
     };
 
@@ -47,7 +47,7 @@
 
                 modules = [
                     ./nixos/configuration.nix
-                    stylix.nixosModules.stylix
+                    # stylix.nixosModules.stylix
                 ];
             };
         };
