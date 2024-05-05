@@ -84,8 +84,8 @@
         gtk4
 
 # QT
-        qt5ct
-        qt6ct
+        # qt5ct
+        # qt6ct
         gsettings-qt
 
 
