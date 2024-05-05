@@ -13,9 +13,11 @@
 
         nix-colors.url = "github:misterio77/nix-colors";
 
+        stylix.url = "github:danth/stylix";
+
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
+    outputs = { self, nixpkgs, home-manager, hyprland, stylix, ... }@inputs: 
         let
         system = "x86_64-linux";
 
@@ -45,6 +47,7 @@
 
                 modules = [
                     ./nixos/configuration.nix
+                    stylix.nixosModules.stylix
                 ];
             };
         };
