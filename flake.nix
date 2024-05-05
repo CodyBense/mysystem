@@ -17,7 +17,8 @@
 
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, stylix, ... }@inputs: 
+# add stylix to outputs when i want to use it
+    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
         let
         system = "x86_64-linux";
 
