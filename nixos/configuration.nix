@@ -17,7 +17,7 @@ in
         [ # Include the results of the hardware scan.
             ./systems/${hostName}/hardware-configuration.nix
             inputs.home-manager.nixosModules.home-manager
-            ./modules/module_bundle.nix
+            ./modules/de_bundle.nix
             ./modules/code_bundle.nix
             ./../scripts/scripts.nix
         ];

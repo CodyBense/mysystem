@@ -1,9 +1,9 @@
 
 {  lib, ... }: {
     imports = [
-        ./python_module.nix
-        ./rust_module.nix
-        ./go_module.nix
+        ./code/python_module.nix
+        ./code/rust_module.nix
+        ./code/go_module.nix
     ];
 
     python_module.enable = lib.mkDefault true;
