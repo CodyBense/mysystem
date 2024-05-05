@@ -84,9 +84,9 @@
         gtk4
 
 # QT
-        # qt5ct
-        # qt6ct
-        # gsettings-qt
+        qt5ct
+        qt6ct
+        gsettings-qt
 
 
 ## needed for sddm theme
