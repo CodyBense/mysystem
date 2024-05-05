@@ -21,6 +21,7 @@ in
             ./modules/code_bundle.nix
             ./modules/packages.nix
             ./../scripts/scripts.nix
+            ./sddm-theme/default.nix
         ];
 
 # Module selection
