@@ -1,11 +1,11 @@
 { pkgs }:
 
 let
-    imgLink = "https://github.com/CodyBense/wallpapers/blob/main/gruvbox-mountian-village.jpg";
+    imgLink = "https://raw.githubusercontent.com/Goxore/dotfiles/50db864d56d49768f1d4d0a8c1bd7a5c74dd629e/home/Wallpapers/gruvbox-mountain-village.png";
 
     image = pkgs.fetchurl {
         url = imgLink;
-        sha256 = "sha256-T195nmuVm+TpRN83QDhk7ZVF5igei4gV+QVTm3soxiw=";
+        sha256 = "ha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
     };
 in
 
