@@ -8,6 +8,8 @@
     config = lib.mkIf config.python_module.enable {
         environment.systemPackages = with pkgs; [
             python3
+            python311Packages.dbus-python
+            python311Packages.pygobject3
             ## List of python packages to pull from
             # python311Packages.pymysql
             # python311Packages.mysql-connector
