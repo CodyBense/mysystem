@@ -15,6 +15,7 @@
             "$browser" = "firefox";
 
             env = [
+                "QT_STYLE_OVERRIDE,ADWAITA-DARK"
                 "XCURSOR_SIZE,24"
                 "QT_QPA_PLATFORTHEME,qt5ct"
                 "PATH,$PATH:$scrPath"
