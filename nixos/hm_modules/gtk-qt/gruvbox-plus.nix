@@ -1,11 +1,14 @@
 { pkgs }:
+let
+ link = "https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v3.1/gruvbox-plus-icon-pack-3.1.zip";
+in
 
 pkgs.stdenv.mkDerivation {
     name = "gruvbox-plus";
 
     src  = pkgs.fetchurl {
-        url = "https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v5.2/gruvbox-plus-icon-pack-5.2.zip";
-        sha256 = "15qhpg45wyzsqq228fvnyby3386kffbzlhx37q0g1p4bdb64wsd3";
+        url = link;
+        sha256 = "sha256-i/AzhYz/ACeXsG5j0kDVfvfA4TwxA3KZJTPwCO4BKmc=";
     };
 
     dontUnpack = true;
