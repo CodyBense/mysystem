@@ -76,23 +76,23 @@ programs.npm.enable = true;
     };
 
 # Configure keymap in X11
-    services.xserver = {
-# sddm theme
-        enable = true;
-        displayManager = {
-            sddm = {
-                enable = true;
-                theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-                wayland.enable = true;
-            };
-        };
-        # layout = "us";
-        # xkbVariant = "";
-        xkb = {
-            layout = "us";
-            variant = "";
-        };
-    };
+#     services.xserver = {
+# # sddm theme
+#         enable = true;
+#         displayManager = {
+#             sddm = {
+#                 enable = true;
+#                 theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+#                 wayland.enable = true;
+#             };
+#         };
+#         # layout = "us";
+#         # xkbVariant = "";
+#         xkb = {
+#             layout = "us";
+#             variant = "";
+#         };
+#     };
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.codybense = {
