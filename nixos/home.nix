@@ -1,9 +1,6 @@
 # PROGRAMS to get to dotfile configuration control
 { config, inputs, pkgs, ... }:
 
-let 
-gruvboxPlus = import ./hm_modules/gruvbox-plus.nix { inherit pkgs; };
-in
 {
 # import home-manager modules
     imports = [
@@ -19,7 +16,7 @@ in
          ./hm_modules/hyprland.nix
          ./hm_modules/waybar.nix
          ./hm_modules/hyprlock.nix
-         ./hm_modules/gtk-qt.nix
+         ./hm_modules/gtk-qt/default.nix
     ];
 
     home.username = "codybense";
