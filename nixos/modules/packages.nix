@@ -66,6 +66,7 @@
         libnotify
 ## wallpaper
         swww
+        hyprpaper
 ## terminal
         kitty
 ## app launcher
