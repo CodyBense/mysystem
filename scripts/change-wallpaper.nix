@@ -1,18 +1,19 @@
 { pkgs, ... }:
 
 pkgs.writeShellScriptBin "change-wallpaper" ''
-  
-DIR = "$"HOME/mysystem/wallpapers/
-PICS=($(ls "$"{DIR}))
+#!/usr/bin/env bash
 
-RANDOMPICS="$"{PICS[ $RANDOM % "$"{"#"PICS[@]} ]}
+DIR=$HOME/mysystem/wallpapers/
+PICS=($(ls ''${DIR}))
 
-if [[ $(pidof swaybg) ]]; then
+RANDOMPICS=''${PICS[ $RANDOM % ''${#PICS[@]} ]}
+
+if [[ ''$(pidof swaybg) ]]; then
   pkill swaybg
 fi
 
 swww query || swww-daemon
 
 #change-wallpaper using swww
-swww img "$"{DIR}/"$"{RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+swww img ''${DIR}/''${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
 ''
