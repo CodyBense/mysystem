@@ -36,7 +36,7 @@ if [[ $(pidof swaybg) ]]; then
 fi
 
 ## Wofi Command
-rofi_command="wofi --show dmenu \
+rofi_command="rofi --show dmenu \
 			--prompt choose...
 			--conf $CONFIG --style $STYLE --color $COLORS \
 			--width=$WIDTH% --height=$HEIGHT% \
