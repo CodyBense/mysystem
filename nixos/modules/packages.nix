@@ -4,31 +4,32 @@
 
     environment.systemPackages = with pkgs; [
 # programs
+## To be labled
         neovim
         vimPlugins.nvim-lspconfig
         lua54Packages.luasnip
         home-manager
         firefox
-        networkmanagerapplet
-        killall
-        fzf
-        zoxide
-        oh-my-posh
         spotify
         spicetify-cli
         curl
-        brightnessctl
-        direnv
-        wlogout
-        unzip
         nh
         yad
-        pywal
-        eww
+
+# Utility
+        brightnessctl
+        networkmanagerapplet
+        killall
+        direnv
+        unzip
+        tlp
 
 ## Terminal stuff
         tmux
         gh
+        fzf
+        zoxide
+        oh-my-posh
 
 ## PDF
 # xpdf
@@ -59,6 +60,10 @@
         xfce.thunar
 
 # Hyprland stuff
+## Color stuff
+        pywal # unsupported
+## eww
+        eww
 ## bar
         waybar
 ## notifiations
@@ -73,12 +78,11 @@
         rofi-wayland
 ## login screen
         sddm
-## Swaylock
+## Lock
         swaylock-effects
         hyprlock
-## Wlogout
+## Logout
         wlogout
-
 # GTK
         gtk2
         gtk3
