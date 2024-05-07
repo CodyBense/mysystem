@@ -11,7 +11,7 @@
 
                 modules-left = ["custom/launcher" "clock" "clock#date"];
                 modules-center = ["hyprland/workspaces"];
-                modules-right = ["custom/keybindings" "pulseaudio" "network" "battery" "custom/powermenu"];
+                modules-right = ["tray" "custom/keybindings" "pulseaudio" "network" "battery" "custom/powermenu"];
 
                 "hyprland/workspaces" = {
                     format = "{icon}";
