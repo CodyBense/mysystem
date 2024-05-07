@@ -23,6 +23,7 @@
         direnv
         unzip
         tlp
+        dmenu
 
 ## Terminal stuff
         tmux
