@@ -290,7 +290,7 @@
                 ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
                 ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
 
-                "$mainMod SHIFT, W, exec, ~/mysystem/scripts/change-wallpaper.sh"
+                "$mainMod SHIFT, W, exec, change-wallpaper"
             ];
 
             bindm = [
