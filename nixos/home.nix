@@ -17,6 +17,7 @@
          ./hm_modules/waybar.nix
          ./hm_modules/hyprlock.nix
          ./hm_modules/gtk-qt/default.nix
+         ./hm_modules/lf.nix
     ];
 
     home.username = "codybense";
