@@ -14,6 +14,7 @@
             "$menu" = "rofi -show drun -show-items";
             "$browser" = "firefox";
             "$changeWallpaper" = "change-wallpaper";
+            "$wallpaperSwitcher" = "wallpaper-switcher";
 
             env = [
                 "XCURSOR_SIZE,24"
@@ -292,6 +293,7 @@
                 ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
 
                 "$mainMod SHIFT, W, exec, $changeWallpaper"
+                "$mainMod CTRL, W, exec, $wallpaperSwitcher"
             ];
 
             bindm = [
