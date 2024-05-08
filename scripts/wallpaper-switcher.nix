@@ -110,11 +110,6 @@ TIMEOUT=720
       exit
     else
       cd ''${wallpaperDir}
-      if [ -d ".git" ]; then
-        git pull
-      else
-        notify-send -t 9000 "The wallpaper directory is expected to be a Git repository. Exiting Wallsetter."
-        exit
       fi
     fi
   while true;
