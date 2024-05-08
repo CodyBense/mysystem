@@ -5,7 +5,7 @@
         font = {
             name = "JetBrains Mono";
             package = pkgs.jetbrains-mono;
-            size = 9;
+            size = 10;
         };
         theme = "Gruvbox Material Dark Hard";
         settings = {
@@ -15,5 +15,6 @@
             italic_font = "auto";
             bold_italic_font = "auto";
         };
+        shellIntegration.enableBashIntegration = true;
     };
 }
