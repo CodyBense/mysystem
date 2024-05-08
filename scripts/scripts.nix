@@ -5,6 +5,7 @@ let
     start-hyprland = import ./start-hyprland.nix { inherit pkgs; };
     change-wallpaper = import ./change-wallpaper.nix { inherit pkgs; };
     wallpaper-switcher = import ./wallpaper-switcher.nix { inherit pkgs; };
+    rofi-wifi = import ./rofi-wifi.nix { inherit pkgs; };
 
 in
 {
@@ -13,5 +14,6 @@ in
         start-hyprland
         change-wallpaper
         wallpaper-switcher
+        rofi-wifi
     ];
 }
