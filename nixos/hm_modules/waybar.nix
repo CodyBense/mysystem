@@ -58,6 +58,7 @@
                     format-wifi = " {signalStrength}%";
                     format-ethernet = " {signalStrength}%";
                     format-disconnected = "󰤭";
+                    on-click = "rofi-wifi";
                 };
 
 
