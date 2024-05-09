@@ -1,0 +1,1 @@
+nixos/colors/color_schemes/nord.nix
