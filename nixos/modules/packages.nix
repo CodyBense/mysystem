@@ -3,20 +3,18 @@
 {
 
     environment.systemPackages = with pkgs; [
-# programs
-## To be labled
-        neovim
-        vimPlugins.nvim-lspconfig
-        lua54Packages.luasnip
-        home-manager
+# Programs
         firefox
         spotify
         spicetify-cli
-        curl
-        nh
-        yad
+
+# Neovim
+        neovim
+        vimPlugins.nvim-lspconfig
+        lua54Packages.luasnip
 
 # Utility
+        home-manager
         brightnessctl
         networkmanagerapplet
         killall
@@ -24,23 +22,26 @@
         unzip
         tlp
         dmenu
+        curl
+        nh
+        yad
 
-## Terminal stuff
+# Terminal stuff
         tmux
         gh
         fzf
         zoxide
         oh-my-posh
 
-## PDF
+# PDF
 # xpdf
         sioyek # viewer
 
-## IMG
+# IMG
         swayimg # from terminal using swayimg command
         feh
 
-## Video
+# Video
         vlc
 
 # fonts, icons, and cursors
@@ -99,6 +100,5 @@
         libsForQt5.qt5.qtquickcontrols   
         libsForQt5.qt5.qtquickcontrols2   
         libsForQt5.qt5.qtgraphicaleffects
-##Code
             ];
 }
