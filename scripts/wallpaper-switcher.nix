@@ -8,5 +8,6 @@ for e in ''${arr[@]}; do
     filenames=("''${filenames[@]}" ''${e##*/}) 
 done
 choice=$(printf "%s\n" "''${filenames[@]}" | rofi -dmenu) 
-swww img ''${DIR}/''${choice} --transition-type any --transition-duration 3 --resize fit
+swww img ''${DIR}/''${choice} --transition-fps 30 --transition-type any --transition-duration 3 --resize crop
+
 ''
