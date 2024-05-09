@@ -4,7 +4,7 @@
 {
 # import home-manager modules
     imports = [
-         inputs.nix-colors.homeManagerModules.default
+         # inputs.nix-colors.homeManagerModules.default
          ./hm_modules/firefox.nix
          ./hm_modules/kitty.nix
          ./hm_modules/git.nix
@@ -18,6 +18,7 @@
          ./hm_modules/hyprlock.nix
          ./hm_modules/gtk-qt/default.nix
          ./hm_modules/lf.nix
+         ./colors/colors.nix
     ];
 
     home.username = "codybense";
@@ -39,7 +40,7 @@
     home.sessionVariables = {
     };
 
-    colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+    # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
