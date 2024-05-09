@@ -1,1 +1,6 @@
-/home/codybense/mysystem/nixos/colors/color_schemes/nord.nix
+{ inputs, ... }:
+{
+    imports = [
+        ./color_schemes/nord.nix
+    ];
+}
