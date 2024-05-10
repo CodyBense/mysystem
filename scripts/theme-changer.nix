@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-pkgs.writeShellScriptsBin "theme-changer" ''
+pkgs.writeShellScriptBin "theme-changer" ''
 DIR=$HOME/mysystem/nixos/colors/color_schemes
 arr=($DIR/*)
 # arr=ls -1 | sed -e 's/\.nix$//'
