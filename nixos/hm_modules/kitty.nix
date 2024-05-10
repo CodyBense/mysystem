@@ -20,8 +20,8 @@
             selection_background = "#${base03}";
             selction_foreground = "#${base04}";
             #black
-            color0 = "#${base01}";
-            color8 = "#${base01}";
+            color0 = "#${base03}";
+            color8 = "#${base03}";
             #red
             color1 = "#${base08}";
             color9 = "#${base08}";
