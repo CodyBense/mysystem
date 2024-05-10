@@ -11,4 +11,4 @@ choice=$(printf "%s\n" "${themes[@]}" | rofi -dmenu)
 echo ${choice}
 ln -s -r -f ~/mysystem/nixos/colors/color_schemes/${choice} ~/mysystem/nixos/colors/colors.nix 
 
-# echo "ZSe45rdx##" | sudo -S nixos-rebuild switch --flake ~/mysystem
+echo "ZSe45rdx##" | sudo -S nixos-rebuild switch --flake ~/mysystem
