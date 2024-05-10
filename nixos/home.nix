@@ -18,6 +18,7 @@
          ./hm_modules/hyprlock.nix
          ./hm_modules/gtk-qt/default.nix
          ./hm_modules/lf.nix
+         ./hm_modules/wlogout.nix
          ./colors/colors.nix
     ];
 
