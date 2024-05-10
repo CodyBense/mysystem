@@ -1,4 +1,4 @@
-{ lib, config, inputs, pkgs, ... }:
+{ ... }:
 {
     home.file.".config/hypr/hyprlock.conf".text = ''
         background {

@@ -1,4 +1,4 @@
-{ lib, config, inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
     programs.kitty = {
         enable = true;
