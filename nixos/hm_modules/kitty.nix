@@ -43,6 +43,14 @@
             #white
             color7 = "#${base05}";
             color15 = "#${base05}";
+
+            mark1_foreground = "#${base03}";
+            mark2_foreground = "#${base03}";
+            mark3_foreground = "#${base03}";
+
+            mark1_background = "#98d3cb";
+            mark2_background = "#f2dcd3";
+            mark3_background = "#f274bc";
         };
         shellIntegration.enableBashIntegration = true;
     };
