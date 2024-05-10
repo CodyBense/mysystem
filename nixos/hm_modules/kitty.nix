@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
     programs.kitty = {
         enable = true;
@@ -7,13 +7,14 @@
             package = pkgs.jetbrains-mono;
             size = 10;
         };
-        theme = "Gruvbox Material Dark Hard";
-        settings = {
+        # theme = "Gruvbox Material Dark Hard";
+        settings = with config.colorScheme.colors;{
             window_padding_width = 25;
             enable_audio_bell = false;
             bold_font = "auto";
             italic_font = "auto";
             bold_italic_font = "auto";
+            background = "${base00}";
         };
         shellIntegration.enableBashIntegration = true;
     };
