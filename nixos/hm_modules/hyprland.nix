@@ -225,7 +225,7 @@
                 "$mainMod, P, pseudo, "# dwindle
                 "$mainMod, F, exec, $browser"
                 "$mainMod, M, exec, spotify"
-                "$mainMod, BACKSPACE, exec, $scrPath/logout_launch.sh"
+                "$mainMod, BACKSPACE, exec, wlogout"
 
                 "$mainMod ALT, L, exec, hyprlock"
 
