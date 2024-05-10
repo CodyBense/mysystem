@@ -6,6 +6,7 @@ let
     change-wallpaper = import ./change-wallpaper.nix { inherit pkgs; };
     wallpaper-switcher = import ./wallpaper-switcher.nix { inherit pkgs; };
     rofi-wifi = import ./rofi-wifi.nix { inherit pkgs; };
+    theme-changer = import ./theme-changer { inherit pkgs; };
 
 in
 {
@@ -15,5 +16,6 @@ in
         change-wallpaper
         wallpaper-switcher
         rofi-wifi
+        theme-changer
     ];
 }
