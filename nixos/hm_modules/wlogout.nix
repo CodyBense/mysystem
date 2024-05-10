@@ -73,53 +73,53 @@
                 color: #${base08};
             }
 
-#lock {
+            #lock {
                 background-image: image(url("./assets/wlogout/lock.png"));
             }
-#lock:focus {
+            #lock:focus {
                 background-image: image(url("./assets/wlogout/lock-hover.png"));
             }
-#lock:hover {
+            #lock:hover {
                 background-image: image(url("./assets/wlogout/lock-hover.png"));
             }
 
-#logout {
+            #logout {
                 background-image: image(url(".assets/wlogout/logout.png"));
             }
-#logout:focus {
+            #logout:focus {
                 background-image: image(url("./assets/wlogout/logout-hover.png"));
             }
-#logout:hover {
+            #logout:hover {
                 background-image: image(url("./assets/wlogout/logout-hover.png"));
             }
 
-#suspend {
+            #suspend {
                 background-image: image(url("./assets/wlogout/sleep.png"));
             }
-#suspend:focus {
+            #suspend:focus {
                 background-image: image(url("./assets/wlogout/sleep-hover.png"));
             }
-#suspend:hover {
+            #suspend:hover {
                 background-image: image(url("./assets/wlogout/sleep-hover.png"));
             }
 
-#shutdown {
+            #shutdown {
                 background-image: image(url("./assets/wlogout/power.png"));
             }
-#shutdown:focus {
+            #shutdown:focus {
                 background-image: image(url("./assets/wlogout/power-hover.png"));
             }
-#shutdown:hover {
+            #shutdown:hover {
                 background-image: image(url("./assets/wlogout/power-hover.png"));
             }
 
-#reboot {
+            #reboot {
                 background-image: image(url("./assets/wlogout/restart.png"));
             }
-#reboot:focus {
+            #reboot:focus {
                 background-image: image(url("./assets/wlogout/restart-hover.png"));
             }
-#reboot:hover {
+            #reboot:hover {
                 background-image: image(url("./assets/wlogout/restart-hover.png"));
             }
         '';
