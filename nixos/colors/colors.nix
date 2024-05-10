@@ -1,1 +1,1 @@
-color_schemes/nord.nix
+color_schemes
