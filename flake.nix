@@ -22,23 +22,24 @@
 
 # add stylix to outputs when i want to use it
     outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
-        let
+    let
         system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-        inherit system;
+        pkgs = import nixpkgs {
+            inherit system;
 
-        config = {
-            allowUnfree = true;
+            config = {
+                allowUnfree = true;
+            };
         };
-    };
     in
     {
 
         homeConfigurations."codybense@laptop" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.${system};
+            # pkgs = nixpkgs.legacyPackages.${system};
+            inherit pkgs;
 
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = { inherit inputs spicetify-nix; };
 
             modules = [
                 hyprland.homeManagerModules.default
