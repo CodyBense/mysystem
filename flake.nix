@@ -39,7 +39,7 @@
             # pkgs = nixpkgs.legacyPackages.${system};
             inherit pkgs;
 
-            extraSpecialArgs = { inherit inputs spicetify-nix; };
+            extraSpecialArgs = { inherit spicetify-nix; };
 
             modules = [
                 hyprland.homeManagerModules.default
