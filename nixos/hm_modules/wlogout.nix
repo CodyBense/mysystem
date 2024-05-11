@@ -74,53 +74,53 @@
             }
 
             #lock {
-                background-image: image(url("./assets/wlogout/lock.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/lock.png"));
             }
             #lock:focus {
-                background-image: image(url("./assets/wlogout/lock-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/lock-hover.png"));
             }
             #lock:hover {
-                background-image: image(url("./assets/wlogout/lock-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/lock-hover.png"));
             }
 
             #logout {
-                background-image: image(url(".assets/wlogout/logout.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/logout.png"));
             }
             #logout:focus {
-                background-image: image(url("./assets/wlogout/logout-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/logout-hover.png"));
             }
             #logout:hover {
-                background-image: image(url("./assets/wlogout/logout-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/logout-hover.png"));
             }
 
             #suspend {
-                background-image: image(url("./assets/wlogout/sleep.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/sleep.png"));
             }
             #suspend:focus {
-                background-image: image(url("./assets/wlogout/sleep-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/sleep-hover.png"));
             }
             #suspend:hover {
-                background-image: image(url("./assets/wlogout/sleep-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/sleep-hover.png"));
             }
 
             #shutdown {
-                background-image: image(url("./assets/wlogout/power.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/power.png"));
             }
             #shutdown:focus {
-                background-image: image(url("./assets/wlogout/power-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/power-hover.png"));
             }
             #shutdown:hover {
-                background-image: image(url("./assets/wlogout/power-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/power-hover.png"));
             }
 
             #reboot {
-                background-image: image(url("./assets/wlogout/restart.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/restart.png"));
             }
             #reboot:focus {
-                background-image: image(url("./assets/wlogout/restart-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/restart-hover.png"));
             }
             #reboot:hover {
-                background-image: image(url("./assets/wlogout/restart-hover.png"));
+                background-image: image(url("~/mysystem/nixos/hm_modules/assets/wlogout/restart-hover.png"));
             }
         '';
     };
