@@ -38,7 +38,7 @@
         homeConfigurations."codybense@laptop" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.${system};
 
-            extraSpecialArgs = 
+            extraSpecialArgs = { inherit inputs spicetify-nix; };
 
             modules = [
                 hyprland.homeManagerModules.default
