@@ -61,6 +61,8 @@
         dolphin
         lf
         xfce.thunar
+## thunar plugins
+        xfce.thunar-archive-plugin
 
 # Hyprland stuff
 ## Color stuff
