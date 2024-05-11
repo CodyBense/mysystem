@@ -44,7 +44,6 @@
             modules = [
                 hyprland.homeManagerModules.default
                 {wayland.windowManager.hyprland.enable = true;}
-                ./nixos/hm_modules/spicetify.nix
             ];
         };
 
