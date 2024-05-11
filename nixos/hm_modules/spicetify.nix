@@ -101,7 +101,7 @@ in
         # changes to make to config-xpui.ini for this theme:
         patches = {
           "xpui.js_find_8008" = ",(\\w+=)32,";
-          "xpui.js_repl_8008" = ",$\{1}56,";
+          "xpui.js_repl_8008" = ",$\\{1}56,";
         };
         injectCss = true;
         replaceColors = true;
