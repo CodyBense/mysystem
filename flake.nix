@@ -16,10 +16,12 @@
 
         # stylix.url = "github:danth/stylix";
 
+        spicetify-nix.url = "github:the-argus/spicetify-nix";
+
     };
 
 # add stylix to outputs when i want to use it
-    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
+    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
         let
         system = "x86_64-linux";
 
@@ -35,6 +37,8 @@
 
         homeConfigurations."codybense@laptop" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.${system};
+
+            extraSpecialArgs = 
 
             modules = [
                 hyprland.homeManagerModules.default
