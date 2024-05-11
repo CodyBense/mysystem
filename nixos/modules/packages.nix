@@ -7,6 +7,7 @@
         firefox
         spotify
         spicetify-cli
+        desmume
 
 # Neovim
         neovim
