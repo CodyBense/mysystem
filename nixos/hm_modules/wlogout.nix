@@ -70,7 +70,7 @@
 
             button:focus {
                 background-color: #${base08};
-                color: #${base00};
+                color: #${base09};
             }
 
             #lock {
