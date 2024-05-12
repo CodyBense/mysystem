@@ -16,7 +16,7 @@
 
         # stylix.url = "github:danth/stylix";
 
-       # spicetify-nix.url = "github:the-argus/spicetify-nix";
+       spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
 # add stylix to outputs when i want to use it
@@ -43,7 +43,7 @@
             modules = [
                 hyprland.homeManagerModules.default
                 {wayland.windowManager.hyprland.enable = true;}
-                # ./nixos/hm_modules/spicetify.nix
+                ./nixos/hm_modules/spicetify.nix
             ];
         };
 
