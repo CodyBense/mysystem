@@ -19,7 +19,7 @@
          ./hm_modules/gtk-qt/default.nix
          ./hm_modules/lf.nix
          ./hm_modules/wlogout.nix
-         # ./hm_modules/spicetify.nix
+         ./hm_modules/spicetify.nix
          ./colors/colors.nix
     ];
 
