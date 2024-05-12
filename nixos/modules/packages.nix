@@ -5,7 +5,7 @@
     environment.systemPackages = with pkgs; [
 # Programs
         firefox
-        # spotify
+        spotify
         ncspot
         # spicetify-cli
         desmume
