@@ -16,7 +16,7 @@
 
         # stylix.url = "github:danth/stylix";
 
-       # spicetify-nix.url = "github:the-argus/spicetify-nix";
+       spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
 # add stylix to outputs when i want to use it
