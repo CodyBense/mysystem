@@ -20,7 +20,7 @@
     };
 
 # add stylix to outputs when i want to use it
-    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
+    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
     let
         system = "x86_64-linux";
 
@@ -38,7 +38,7 @@
             # pkgs = nixpkgs.legacyPackages.${system};
             inherit pkgs;
 
-            extraSpecialArgs = { inherit spicetify-nix; };
+            # extraSpecialArgs = { inherit spicetify-nix; };
 
             modules = [
                 hyprland.homeManagerModules.default
