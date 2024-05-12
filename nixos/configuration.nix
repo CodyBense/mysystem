@@ -34,7 +34,7 @@ programs.npm.enable = true;
 
 # Home manager
     home-manager = {
-        extraSpecialArgs = { inherit inputs spicetify-nix; };
+        extraSpecialArgs = { inherit inputs; };
         users = {
             codybense = import ./home.nix;
         };
