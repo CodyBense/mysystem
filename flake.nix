@@ -38,7 +38,10 @@
             # pkgs = nixpkgs.legacyPackages.${system};
             inherit pkgs;
 
-            extraSpecialArgs = { inherit inputs spicetify-nix; };
+            extraSpecialArgs = { 
+                inherit inputs;
+                inherit spicetify-nix; 
+            };
 
             modules = [
                 hyprland.homeManagerModules.default
@@ -49,7 +52,10 @@
 
         nixosConfigurations = {
             laptop = nixpkgs.lib.nixosSystem {
-                specialArgs = { inherit inputs system; };
+                specialArgs = { 
+                    inherit inputs;
+                    inherit system;
+                };
 
 
                 modules = [
