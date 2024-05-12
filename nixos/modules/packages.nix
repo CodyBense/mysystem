@@ -9,6 +9,7 @@
         ncspot
         # spicetify-cli
         desmume
+        pokemon-colorscripts-mac
 
 # Neovim
         neovim
