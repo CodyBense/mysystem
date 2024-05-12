@@ -10,6 +10,7 @@
         # spicetify-cli
         desmume
         pokemon-colorscripts-mac
+        pokemonsay
 
 # Neovim
         neovim
