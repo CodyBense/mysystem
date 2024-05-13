@@ -19,7 +19,7 @@
         bashrcExtra = ''
             eval "$(zoxide init bash)"
             eval "$(direnv hook bash)"
-            pokeget --hide-name gengar
+            randomPokemon
         '';
     };
 }
