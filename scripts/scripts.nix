@@ -7,7 +7,7 @@ let
     wallpaper-switcher = import ./wallpaper-switcher.nix { inherit pkgs; };
     rofi-wifi = import ./rofi-wifi.nix { inherit pkgs; };
     theme-changer = import ./theme-changer.nix { inherit pkgs; };
-    randomPokemon = importy ./randomPokemon.nix { inherit pkgs; };
+    randomPokemon = import ./randomPokemon.nix { inherit pkgs; };
 
 in
 {
