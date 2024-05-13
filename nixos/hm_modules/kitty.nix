@@ -2,6 +2,7 @@
 {
     programs.kitty = {
         enable = true;
+        shellIntegration.enableBashIntegration = true;
         font = {
             name = "JetBrains Mono";
             package = pkgs.jetbrains-mono;
