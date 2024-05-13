@@ -39,6 +39,7 @@
         fzf
         zoxide
         oh-my-posh
+        oh-my-zsh
 
 # PDF
 # xpdf
