@@ -53,6 +53,5 @@
             mark2_background = "#f2dcd3";
             mark3_background = "#f274bc";
         };
-        shellIntegration.enableBashIntegration = true;
     };
 }
