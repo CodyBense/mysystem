@@ -6,5 +6,5 @@ pokemon=("gengar" "latios" "charizard" "typhlosion")
 size=''${#pokemon[@]}
 index=''$(($RANDOM % $size))
 
-pokeget ''${pokemon[$index]}
+pokeget --hide-name ''${pokemon[$index]}
 ''
