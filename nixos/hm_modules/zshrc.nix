@@ -33,4 +33,8 @@
         };
     };
 
+    oh-my-zsh = {
+        enable = true;
+        theme = "half-life";
+    };
 }
