@@ -13,8 +13,6 @@
         ncspot
         # spicetify-cli
         desmume
-        pokemon-colorscripts-mac
-        pokemonsay
         pokeget-rs
 
 # Neovim
