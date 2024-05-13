@@ -32,6 +32,10 @@ in
 
 programs.npm.enable = true;
 
+# Shell
+programs.zsh.enable = true;
+users.defaultUserShell = pkgs.zsh;
+
 # Home manager
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
