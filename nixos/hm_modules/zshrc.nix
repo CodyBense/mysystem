@@ -1,10 +1,23 @@
-{ pkgs, ... }:
+{ ... }:
 {
     programs.zsh = {
         enable = true;
+        enableCompletion = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
-        enableAutosuggestions = true;
-        historySubstringSearch = true;
+
+        initExtra = ''
+            eval "$(zoxide init zsh)"
+            eval "$(direnv hook zsh)"
+            randomPokemon
+            '';
+
+        initExtraFirst = ''
+            HISTFILE=~/.histfile
+            HISTSIZE=1000
+            SAVEHIST=1000
+        '';
+
         shellAliases = {
             c = "clear";
             v = "nvim";
@@ -18,11 +31,6 @@
             py = "python3";
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
-        initExtraFirst = ''
-            eval "$(zoxide init zsh)"
-            eval "$(direnv hook zsh)"
-            randomPokemon
-        '';
     };
 
 }
