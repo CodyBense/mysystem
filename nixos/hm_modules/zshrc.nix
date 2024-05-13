@@ -18,7 +18,7 @@
             py = "python3";
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
-        initExtra = ''
+        initExtraFirst = ''
             eval "$(zoxide init zsh)"
             eval "$(direnv hook zsh)"
             randomPokemon
