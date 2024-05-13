@@ -8,7 +8,7 @@
          ./hm_modules/firefox.nix
          ./hm_modules/kitty.nix
          ./hm_modules/git.nix
-         ./hm_modules/bashrc.nix
+         # ./hm_modules/bashrc.nix
          ./hm_modules/fzf.nix
          ./hm_modules/fzf.nix
          ./hm_modules/oh-my-posh.nix
