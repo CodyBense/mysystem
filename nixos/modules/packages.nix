@@ -15,6 +15,7 @@
         desmume
         pokemon-colorscripts-mac
         pokemonsay
+        pokeget-rs
 
 # Neovim
         neovim
