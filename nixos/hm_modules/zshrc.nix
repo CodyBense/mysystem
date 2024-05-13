@@ -31,10 +31,11 @@
             py = "python3";
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
+
+        oh-my-zsh = {
+            enable = true;
+            theme = "half-life";
+        };
     };
 
-    oh-my-zsh = {
-        enable = true;
-        theme = "half-life";
-    };
 }
