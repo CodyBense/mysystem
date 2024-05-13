@@ -33,8 +33,8 @@
         };
     };
 
-    oh-my-zsh = {
-        enable = true;
-        theme = "half-life";
-    };
+    # oh-my-zsh = {
+    #     enable = true;
+    #     theme = "half-life";
+    # };
 }
