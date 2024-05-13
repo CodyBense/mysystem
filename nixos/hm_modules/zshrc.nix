@@ -1,8 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
-    programs.bash = {
+    programs.zsh = {
         enable = true;
-        enableCompletion = true;
         shellAliases = {
             c = "clear";
             v = "nvim";
@@ -16,10 +15,11 @@
             py = "python3";
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
-        bashrcExtra = ''
-            eval "$(zoxide init bash)"
-            eval "$(direnv hook bash)"
+        envExtra = ''
+            eval "$(zoxide init zsh)"
+            eval "$(direnv hook zsh)"
             randomPokemon
         '';
     };
+
 }
