@@ -2,7 +2,6 @@
 {
     programs.zsh = {
         enable = true;
-        dotDir = "~/.zshrc";
         enableCompletion = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
