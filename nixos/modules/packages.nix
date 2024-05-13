@@ -2,6 +2,10 @@
 
 {
 
+    imports = [
+        # ./customPackages.nix
+    ];
+
     environment.systemPackages = with pkgs; [
 # Programs
         firefox
