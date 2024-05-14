@@ -11,13 +11,13 @@
                 blur_size = 1
         }
 
-    image {
-        monitor =
-        path = ~/mysystem/wallpapers/latios_latias.jpg
-            rounding = -1
-            border_size = 2
-            border_color = rgba(80, 73, 69, 1)
-    }
+    # image {
+    #     monitor =
+    #     path = ~/mysystem/wallpapers/latios_latias.jpg
+    #         rounding = -1
+    #         border_size = 2
+    #         border_color = rgba(80, 73, 69, 1)
+    # }
 
     input-field {
         size = 200 30
