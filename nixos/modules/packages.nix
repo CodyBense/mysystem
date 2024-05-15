@@ -111,5 +111,7 @@
         libsForQt5.qt5.qtquickcontrols   
         libsForQt5.qt5.qtquickcontrols2   
         libsForQt5.qt5.qtgraphicaleffects
-            ];
+# Code
+        node2nix
+    ];
 }
