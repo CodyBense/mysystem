@@ -30,7 +30,7 @@ in
         then true
         else false;
 
-programs.npm.enable = true;
+# programs.npm.enable = true;
 
 # Shell
 programs.zsh.enable = true;
