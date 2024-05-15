@@ -115,7 +115,7 @@ in {
   # qt.platformTheme = "kde";
 
 # name of the qt theme
-  qt.style.name = "adwaita-dark";
+  # qt.style.name = "adwaita-dark";
   # qt.style.name = "gruvbox-gtk-theme";
 
 # packages to use
