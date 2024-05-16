@@ -9,6 +9,7 @@
         initExtra = ''
             eval "$(zoxide init zsh)"
             eval "$(direnv hook zsh)"
+            export PATH=$PATH:$HOME/go/bin
             randomPokemon
             '';
 
