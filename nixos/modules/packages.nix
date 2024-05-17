@@ -94,6 +94,8 @@
 ## Lock
         swaylock-effects
         hyprlock
+### Idle thingy
+        hypridle
 ## Logout
         wlogout
 # GTK
