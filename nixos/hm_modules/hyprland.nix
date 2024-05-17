@@ -8,6 +8,7 @@
             "$scrPath" = "$HOME/mysystem/scripts"; 
             # exec-once = "bash ~/.config/hypr/start.sh";
             exec-once = "start-hyprland";
+            # exec-once = "hypridle";
             "$terminal" = "kitty";
             # "$fileManager" = "dolphin";
             "$fileManager" = "thunar";
