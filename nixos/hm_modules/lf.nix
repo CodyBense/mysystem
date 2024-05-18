@@ -29,7 +29,7 @@
                         *) echo \"Unsupported format\" ;;
                         esac}}";
             trash = "\${{
-                    files=$(printf \"$\"fx | tr '\"\n\"' ';')
+                    files=$(printf \"$\"fx | tr '\n' ';')
                     while [\"$files\"]; do
                         file=\"$\"{files%%;*}
 
