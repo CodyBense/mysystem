@@ -16,10 +16,23 @@
             mkfile = "\${{printf \"File name: \"
                      read ans
                      $EDITOR $ans}}";
+            unarchive = "\${{
+                        case \"$f\" in
+                            *.zip) unzip \"$f\" ;;
+                            *.rar) unrar x \"$f\" ;;
+                            *.tar.gz) tar -xzvf \"$f\" ;;
+                            *.tar.bz2) tar -xjvf \"$f\" ;;
+                            *.tar) tar -xvf \"$f\" ;;
+                            *.7z) 7z e \"$f\" ;;
+                        *) echo \"Unsupported format\" ;;
+                        esac}}";
         };
         keybindings = {
-            md = "mkdir";
+            # c = null;
+            # d = null;
             m = null;
+            mf = "mkfile";
+            md = "mkdir";
         };
     };
 }
