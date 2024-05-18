@@ -71,8 +71,8 @@
             # c = null;
             # d = null;
             m = null;
-            mf = "mkfile";
-            md = "mkdir";
+            # mf = "mkfile";
+            # md = "mkdir";
         };
     };
 }
