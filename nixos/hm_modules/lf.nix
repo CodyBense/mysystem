@@ -14,8 +14,8 @@
                      read ans
                      mkdir $ans}}";
         };
-        cmdKeybindings = {
-            "md" = "mkdir";
+        keybindings = {
+            md = "mkdir";
         };
     };
 }
