@@ -7,10 +7,19 @@
         syntaxHighlighting.enable = true;
 
         initExtra = ''
+            randomPokemon
+            '';
+
+        initExtraFirst = ''
+            HISTFILE=~/.histfile
+            HISTSIZE=1000
+            SAVEHIST=1000
             eval "$(zoxide init zsh)"
             eval "$(direnv hook zsh)"
             export PATH=$PATH:$HOME/go/bin
-            randomPokemon
+            '';
+
+        envExtra = ''
 # file types (with matching order)
             ln             # LINK
             or             # ORPHAN
@@ -26,6 +35,22 @@
             sg      g       # SETGID
             ex             # EXEC
             fi             # FILE
+
+# disable some default filetype icons, let them choose icon by filename
+# ln             # LINK
+# or             # ORPHAN
+# tw              # STICKY_OTHER_WRITABLE
+# ow              # OTHER_WRITABLE
+# st              # STICKY
+# di             # DIR
+# pi              # FIFO
+# so              # SOCK
+# bd              # BLK
+# cd              # CHR
+# su              # SETUID
+# sg              # SETGID
+# ex              # EXEC
+# fi             # FILE
 
 # file extensions (vim-devicons)
             *.styl          
@@ -352,12 +377,6 @@
 # other formats
             *.pdf   
             '';
-
-        initExtraFirst = ''
-            HISTFILE=~/.histfile
-            HISTSIZE=1000
-            SAVEHIST=1000
-        '';
 
         shellAliases = {
             c = "clear";
