@@ -36,7 +36,7 @@
                         ";
             trash = "
                     \${{
-                        files=$(printf \"$fx\" | tr '\n' ';')
+                        files=$(printf \"$fx\" | tr '\"\n\"' ';')
                         while [ \"$files\" ]; do
                             trashy put \"$(basename \"$file\")\"
                             if [ \"$files\" = \"$file\" ]; then
