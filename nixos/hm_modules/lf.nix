@@ -36,7 +36,7 @@
                         ";
             trash = "
                     \${{
-                        files=$(printf \"$fx\" | tr '\"\n\"' ';')
+                        files=$(printf \"$fx\" | tr '\n' ';')
                         while [ \"$files\" ]; do
                             trashy put \"$(basename \"$file\")\"
                             if [ \"$files\" = \"$file\" ]; then
@@ -53,7 +53,13 @@
                             text/*) lf -remote \"send $id \$nvim \$fx\";;
                             *) xdg-open \"$f\"
                        esac
-                   }}";
+                   }}
+                   ";
+            on-select = "
+                        &{{
+                            lf -remote \"send $id set statfmt \"\"$(exa -ld --color=always \"$f\")\"\"
+                        }}
+                        ";
         };
         keybindings = {
             # c = null;
