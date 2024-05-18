@@ -28,7 +28,7 @@
                             *.7z) 7z e \"$f\" ;;
                         *) echo \"Unsupported format\" ;;
                         esac}}";
-            trash = "\${{
+            trash = "${{
                     files=\"$\"(printf \"$\"fx | tr '\n' ';')
                     while [\"$files\"]; do
                         file=\"$\"{files%%;*}
