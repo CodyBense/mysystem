@@ -1,6 +1,6 @@
 { ... }:
 {
-    import = [ ./lf-icons.nix ];
+    imports = [ ./lf-icons.nix ];
     home.file = {
         ".config/lf/lfrc" = {
             source = ./source/lfrc;
