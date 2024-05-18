@@ -11,8 +11,9 @@ in
 {
     environment.sessionVariables = {
         FLAKE = "/home/codybense/mysystem";
-        EDITOR = "nvim"; 
     };
+
+    environment.variables.EDITOR = "nvim";
 
     imports =
         [ # Include the results of the hardware scan.
