@@ -16,7 +16,7 @@
          ./hm_modules/waybar.nix
          ./hm_modules/hyprlock.nix
          ./hm_modules/gtk-qt/default.nix
-         # ./hm_modules/lf.nix
+         ./hm_modules/lf.nix
          ./hm_modules/wlogout.nix
          ./hm_modules/zshrc.nix
          # ./hm_modules/spicetify.nix
