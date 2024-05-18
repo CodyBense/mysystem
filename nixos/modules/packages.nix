@@ -35,6 +35,7 @@
         nh
         yad
         fastfetch
+        trashy
 
 # Terminal stuff
         tmux
