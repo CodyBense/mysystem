@@ -15,7 +15,7 @@
                      mkdir $ans}}";
         };
         cmdKeybindings = {
-            md = mkdir;
+            "md" = "mkdir";
         };
     };
 }
