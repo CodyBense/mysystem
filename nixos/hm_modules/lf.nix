@@ -34,12 +34,25 @@
                         *) echo \"Unsupported format\" ;;
                         esac}}
                         ";
+            trash = "
+                    \${{
+                        files=$(printf \"$fx\" | tr '\n' ';')
+                        while [ \"$files\" ]; do
+                            trashy put \"$(basename \"$file\")\"
+                            if [ \"$files\" = \"$file\" ]; then
+                                files=''
+                            else
+                                files=\"$\"{files#*;}\"\"
+                            fi
+                        done
+                    }};
+                    ";
             open = "
                    &{{
                        case $(file --mime-type -Lb $f) in
-                        text/*) lf -remote \"send $id \$nvim \$fx\";;
-                        *) xdg-open \"$f\"
-                        esac
+                            text/*) lf -remote \"send $id \$nvim \$fx\";;
+                            *) xdg-open \"$f\"
+                       esac
                    }}";
         };
         keybindings = {
