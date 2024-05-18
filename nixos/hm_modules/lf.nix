@@ -1,5 +1,6 @@
 { ... }:
 {
+    import = [ ./lf-icons.nix ];
     programs.lf = {
         enable = true;
         settings = {
