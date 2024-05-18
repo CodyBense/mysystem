@@ -55,11 +55,17 @@
                        esac
                    }}
                    ";
-            on-select = "
-                        &{{
-                            lf -remote \"send $id set statfmt \"\"$(exa -ld --color=always \"$f\")\"\"
-                        }}
-                        ";
+            # on-select = "
+            #             &{{
+            #                 lf -remote \"send $id set statfmt \"\"$(exa -ld --color=always \"$f\")\"\"
+            #             }}
+            #             ";
+            
+            fzf_search = "
+                       \${{
+
+                       }};
+                       ";
         };
         keybindings = {
             # c = null;
