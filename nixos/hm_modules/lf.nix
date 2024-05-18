@@ -10,10 +10,12 @@
             rulerfmt = "%d  |%a  |%p  |\033[7;31m %m \033[0m  |\033[7;33m %c \033[0m  |\033[7;35m %s \033[0m  |\033[7;34m %f \033[0m  |%i/%t";
         };
         commands = {
-            mkdir = "\${{printf \"Directory name: \"
+            mkdir = "\${{
+                     printf \"Directory name: \"
                      read ans
                      mkdir $ans}}";
-            mkfile = "\${{printf \"File name: \"
+            mkfile = "\${{
+                     printf \"File name: \"
                      read ans
                      $EDITOR $ans}}";
             unarchive = "\${{
@@ -26,6 +28,13 @@
                             *.7z) 7z e \"$f\" ;;
                         *) echo \"Unsupported format\" ;;
                         esac}}";
+            trash = "\${{
+                    files=$(printf \"$fx\" | tr '\n' ';')
+                    while [\"$files\"]; do
+                        file=\"$\"{files%%;*}
+
+                        trashy put ""$\"(basename \"$\"file\")\"\"
+            ";
         };
         keybindings = {
             # c = null;
