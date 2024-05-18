@@ -15,6 +15,7 @@
         # spicetify-cli
         desmume
         pokeget-rs
+        obsidian
 
 # Neovim
         neovim
