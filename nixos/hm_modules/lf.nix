@@ -16,6 +16,7 @@
         };
         keybindings = {
             md = "mkdir";
+            m = null;
         };
     };
 }
