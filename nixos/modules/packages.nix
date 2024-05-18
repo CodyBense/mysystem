@@ -33,6 +33,7 @@
         curl
         nh
         yad
+        fastfetch
 
 # Terminal stuff
         tmux
