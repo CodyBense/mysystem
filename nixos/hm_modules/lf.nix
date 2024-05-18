@@ -28,13 +28,19 @@
                             *.7z) 7z e \"$f\" ;;
                         *) echo \"Unsupported format\" ;;
                         esac}}";
-            # trash = "\${{
-            #         files=$(printf \"$fx\" | tr '\n' ';')
-            #         while [\"$files\"]; do
-            #             file=\"$\"{files%%;*}
-            #
-            #             trashy put ""$\"(basename \"$\"file\")\"\"
-            #         ";
+            trash = "\${{
+                    files=$(printf \"$fx\" | tr '\n' ';')
+                    while [\"$files\"]; do
+                        file=\"$\"{files%%;*}
+
+                        trashy put ""$\"(basename \"$\"file\")\"\"
+                        if [ \"$files\" = \"$file\" ]; then
+                            files=''
+                        else
+                            files=\"\"$\"{files#*;};\"
+                        fi
+                        done
+            }}";
         };
         keybindings = {
             # c = null;
