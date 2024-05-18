@@ -7,6 +7,19 @@
         syntaxHighlighting.enable = true;
 
         initExtra = ''
+            randomPokemon
+            '';
+
+        initExtraFirst = ''
+            HISTFILE=~/.histfile
+            HISTSIZE=1000
+            SAVEHIST=1000
+            eval "$(zoxide init zsh)"
+            eval "$(direnv hook zsh)"
+            export PATH=$PATH:$HOME/go/bin
+            '';
+
+        envExtra = ''
 # lf icons
             export LF_ICONS="\
             tw=:\
@@ -170,19 +183,6 @@
             *.pdf=:\
             *.nix=:\
             "
-            randomPokemon
-            '';
-
-        initExtraFirst = ''
-            HISTFILE=~/.histfile
-            HISTSIZE=1000
-            SAVEHIST=1000
-            eval "$(zoxide init zsh)"
-            eval "$(direnv hook zsh)"
-            export PATH=$PATH:$HOME/go/bin
-            '';
-
-        envExtra = ''
             '';
 
         shellAliases = {
