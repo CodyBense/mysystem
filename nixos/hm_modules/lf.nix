@@ -13,6 +13,9 @@
             mkdir = "\${{printf \"Directory name: \"
                      read ans
                      mkdir $ans}}";
+            mkfile = "\${{printf \"File name: \"
+                     read ans
+                     $EDITOR $ans}}";
         };
         keybindings = {
             md = "mkdir";

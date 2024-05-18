@@ -31,6 +31,7 @@ in
         else false;
 
 # programs.npm.enable = true;
+programs.neovim.defaultEditor = true;
 
 # Shell
 programs.zsh.enable = true;
