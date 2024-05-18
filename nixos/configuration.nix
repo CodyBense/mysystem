@@ -11,6 +11,7 @@ in
 {
     environment.sessionVariables = {
         FLAKE = "/home/codybense/mysystem";
+        EDITOR = "nvim"; 
     };
 
     imports =
@@ -31,10 +32,6 @@ in
         else false;
 
 # programs.npm.enable = true;
-programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-};
 
 # Shell
 programs.zsh.enable = true;
