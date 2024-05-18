@@ -5,7 +5,7 @@
         settings = {
             hidden = true;
             ignorecase = true;
-            icon = true;
+            icons = true;
             sixel = true;
         };
     };
