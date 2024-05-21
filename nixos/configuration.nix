@@ -38,6 +38,8 @@ in
 programs.zsh.enable = true;
 users.defaultUserShell = pkgs.zsh;
 
+stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+
 # Home manager
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
