@@ -39,6 +39,7 @@ programs.zsh.enable = true;
 users.defaultUserShell = pkgs.zsh;
 
 stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+stylix.image = null;
 
 # Home manager
     home-manager = {
