@@ -52,8 +52,7 @@
         nixosConfigurations = {
             laptop = nixpkgs.lib.nixosSystem {
                 specialArgs = { 
-                    inherit inputs;
-                    inherit system;
+                    inherit inputs system;
                 };
 
 
