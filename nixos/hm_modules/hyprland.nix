@@ -4,7 +4,7 @@
     wayland.windowManager.hyprland = {
         enable = true;
         # settings = with config.colorScheme.colors; {
-        settings = with config.stylix.base16Schem; {
+        settings = with config.stylix.base16Scheme; {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
             # exec-once = "bash ~/.config/hypr/start.sh";
