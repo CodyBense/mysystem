@@ -22,6 +22,7 @@ in
             ./modules/de_bundle.nix
             ./modules/code_bundle.nix
             ./modules/packages.nix
+            ./modules/stylix.nix
             ./../scripts/scripts.nix
             ./sddm-theme/default.nix
         ];
@@ -38,25 +39,6 @@ in
 programs.zsh.enable = true;
 users.defaultUserShell = pkgs.zsh;
 
-stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-stylix.image = null;
-stylix.cursor.package = pkgs.bibata-cursors;
-stylix.cursor.name = "Bibata-Modern-Ice";
-
-stylix.fonts = {
-monospace = {
-  package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-  name = "JetBrainsMono Nerd Font Mono";
-};
-sansSerif = {
-  package = pkgs.dejavu_fonts;
-  name = "DejaVu Sans";
-};
-serif = {
-  package = pkgs.dejavu_fonts;
-  name = "DejaVu Serif";
-};
-};
 
 # Home manager
     home-manager = {
