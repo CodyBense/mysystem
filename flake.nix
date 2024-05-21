@@ -19,7 +19,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, stylix, ... }@inputs: 
+    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
     let
         system = "x86_64-linux";
 
@@ -59,7 +59,7 @@
 
                 modules = [
                     ./nixos/configuration.nix
-                    stylix.nixosModules.stylix
+                    inputs.stylix.nixosModules.stylix
                 ];
             };
         };
