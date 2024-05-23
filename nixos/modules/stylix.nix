@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
     stylix.image =  /home/codybense/mysystem/wallpapers/ign_wifu.png;
