@@ -5,5 +5,5 @@
         inputs.nix-colors.homeManagerModules.default
     ];
 
-    colorScheme = inputs.nix-colors.colorScheme.nord;
+    colorScheme = inputs.nix-colors.colorSchemes.nord;
 }
