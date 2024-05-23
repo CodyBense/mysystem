@@ -46,7 +46,7 @@
         oh-my-posh
         oh-my-zsh
 # Office Suite
-        onlyoffice
+        onlyoffice-bin
 # PDF
 # xpdf
         sioyek # viewer
