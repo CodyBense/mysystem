@@ -36,6 +36,7 @@
         yad
         fastfetch
         trashy
+        pandoc
 
 # Terminal stuff
         tmux
@@ -44,10 +45,13 @@
         zoxide
         oh-my-posh
         oh-my-zsh
-
+# Office Suite
+        onlyoffice
 # PDF
 # xpdf
         sioyek # viewer
+        zathura
+        okular
 
 # IMG
         swayimg # from terminal using swayimg command
@@ -55,6 +59,7 @@
 
 # Video
         vlc
+        mpv
 
 # fonts, icons, and cursors
         nerdfonts
