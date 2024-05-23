@@ -5,5 +5,5 @@
         inputs.nix-colors.homeManagerModules.default
     ];
 
-    colorScheme = inputs.nix-colors.colorScheme.gruvbox-dark-medium;
+    colorScheme = inputs.nix-colors.colorScheme.nord;
 }
