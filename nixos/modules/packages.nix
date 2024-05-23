@@ -76,7 +76,6 @@
         ueberzug
         graphicsmagick
         ffmpeg
-        gs
 ## thunar plugins
         xfce.thunar-archive-plugin
 
