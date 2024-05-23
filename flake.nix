@@ -56,10 +56,9 @@
                     inherit system;
                 };
 
-
                 modules = [
                     ./nixos/configuration.nix
-                    # inputs.stylix.nixosModules.stylix
+                    inputs.stylix.nixosModules.stylix
                 ];
             };
         };
