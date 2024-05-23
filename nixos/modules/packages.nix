@@ -72,6 +72,11 @@
         dolphin
         lf
         xfce.thunar
+## lf plugins
+        ueberzug
+        graphicsmagick
+        ffmpeg
+        gs
 ## thunar plugins
         xfce.thunar-archive-plugin
 
