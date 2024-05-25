@@ -3,6 +3,6 @@
 {
     enable = true;
     presets = [
-        "gruvbox-rainbow";
+        "gruvbox-rainbow"
     ];
 }
