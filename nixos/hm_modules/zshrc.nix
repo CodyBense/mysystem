@@ -36,10 +36,10 @@
             pm = "~/Code/password_manager_cli/result/bin/pm_cli.py";
         };
 
-        oh-my-zsh = {
-            enable = true;
-            theme = "robbyrussell";
-        };
+        # oh-my-zsh = {
+        #     enable = true;
+        #     theme = "robbyrussell";
+        # };
     };
 
 }
