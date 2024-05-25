@@ -37,6 +37,7 @@
         fastfetch
         trashy
         pandoc
+        wl-clipboard-rs
 
 # Terminal stuff
         tmux
