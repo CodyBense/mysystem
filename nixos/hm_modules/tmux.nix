@@ -9,6 +9,7 @@
         keyMode = "vi";
         extraConfig = ''
             set -g renumber-windows on
+            set -g @plugin 'omerxx/tmux-sessionx'
             '';
         plugins = with pkgs; [
             tmuxPlugins.sensible
@@ -22,12 +23,6 @@
             tmuxPlugins.yank
             tmuxPlugins.resurrect
             tmuxPlugins.continuum
-            {
-                plugin = tmuxPlugins.sessionx;
-                extraConfig = ''
-                    set -g @plguin 'omerxx/tmux-sessionx'
-                '';
-            }
         ];
         sensibleOnTop = true;
     };
