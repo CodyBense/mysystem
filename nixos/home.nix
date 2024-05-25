@@ -19,6 +19,7 @@
          ./hm_modules/lf.nix
          ./hm_modules/wlogout.nix
          ./hm_modules/zshrc.nix
+         ./hm_modules/starship.nix
          # ./hm_modules/spicetify.nix
          ./hm_modules/tmux.nix
          ./colors/colors.nix
