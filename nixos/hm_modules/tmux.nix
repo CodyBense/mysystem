@@ -15,13 +15,19 @@
             {
                 plugin = tmuxPlugins.gruvbox;
                 extraConfig = ''
-                set -g @plugin 'egel/tmux-gruvbox'
-                set -g @plugin 'egel/tmux-gruvbox'
+                    set -g @plugin 'egel/tmux-gruvbox'
+                    set -g @plugin 'egel/tmux-gruvbox'
                 '';
             }
             tmuxPlugins.yank
             tmuxPlugins.resurrect
             tmuxPlugins.continuum
+            {
+                plugin = tmuxPlugins.sessionx;
+                extraConfig = ''
+                    set -g @plguin 'omerxx/tmux-sessionx'
+                '';
+            }
         ];
         sensibleOnTop = true;
     };
