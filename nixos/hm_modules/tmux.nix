@@ -7,7 +7,13 @@
         newSession = true;
         plugins = with pkgs; [
             tmuxPlugins.sensible
-            tmuxPlugins.gruvbox
+            {
+                plugin = tmuxPlugins.gruvbox;
+                extraConfig = ''
+                set -g @plugin 'egel/tmux-gruvbox'
+                set -g @plugin 'egel/tmux-gruvbox'
+                '';
+            }
         ];
         sensibleOnTop = true;
     };
