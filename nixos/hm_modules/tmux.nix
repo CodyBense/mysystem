@@ -7,6 +7,7 @@
         newSession = true;
         plugins = with pkgs; [
             tmuxPlugins.sensible
+            tmuxPlugins.gruvbox
         ];
         sensibleOnTop = true;
     };
