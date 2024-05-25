@@ -16,6 +16,7 @@
             SAVEHIST=1000
             eval "$(zoxide init zsh)"
             eval "$(direnv hook zsh)"
+            eval "$(starship init zsh)"
             export PATH=$PATH:$HOME/go/bin
             '';
 
