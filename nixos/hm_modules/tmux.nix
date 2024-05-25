@@ -5,7 +5,7 @@
         shell = "${pkgs.zsh}/bin/zsh";
         baseIndex = 1;
         newSession = true;
-        prefix = "^A";
+        prefix = "^a";
         keyMode = "vi";
         extraConfig = ''
             set -g renumber-windows on
