@@ -7,6 +7,9 @@
         newSession = true;
         prefix = "^A";
         keyMode = "vi";
+        extraConfig = ''
+            set -g renumber-windows on
+            '';
         plugins = with pkgs; [
             tmuxPlugins.sensible
             {
@@ -19,9 +22,5 @@
             tmuxPlugins.yank
         ];
         sensibleOnTop = true;
-        extraConfigBeforePlugins = ''
-            set -g renumber-windows on
-
-        '';
     };
 }
