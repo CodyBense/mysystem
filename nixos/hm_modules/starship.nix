@@ -5,7 +5,7 @@
         enable = true;
         enableZshIntegration = true;
         presets = [
-            "gruvbox-rainbow"
+            "Gruvbox Rainbow"
         ];
     };
 }
