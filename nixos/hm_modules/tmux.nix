@@ -9,7 +9,6 @@
         keyMode = "vi";
         extraConfig = ''
             set -g renumber-windows on
-            set -g @plugin 'omerxx/tmux-sessionx'
             '';
         plugins = with pkgs; [
             tmuxPlugins.sensible
