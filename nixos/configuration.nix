@@ -22,7 +22,7 @@ in
             ./modules/de_bundle.nix
             ./modules/code_bundle.nix
             ./modules/packages.nix
-            ./modules/stylix.nix
+            # ./modules/stylix.nix
             ./../scripts/scripts.nix
             ./sddm-theme/default.nix
         ];
