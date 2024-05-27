@@ -40,8 +40,7 @@
            }
         ];
 
-        # style = with config.colorScheme.colors;''
-        style = with config.stylix.base16Scheme; ''
+        style = with config.colorScheme.colors;''
             window {
                 font-family: BlexMono Nerd Font;
                 font-size: 13pt;
