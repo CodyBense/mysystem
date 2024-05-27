@@ -5,7 +5,7 @@
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
         home-manager = {
-            url = "github:nix-community/home-mamager";
+            url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
@@ -16,7 +16,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { nixpkgs, home-manager, ... }@inputs: 
+    outputs = { nixpkgs, home-manager, spicetify-nix, hyprland, ... }@inputs: 
     let
         system = "x86_64-linux";
 
@@ -53,7 +53,7 @@
 
                 modules = [
                     ./nixos/configuration.nix
-                    inputs.sylix.nixosModules.stylix
+                    inputs.stylix.nixosModules.stylix
                 ];
             };
         };
