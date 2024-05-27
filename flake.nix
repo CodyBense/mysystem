@@ -5,21 +5,18 @@
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
         home-manager = {
-            url = "github:nix-community/home-manager";
+            url = "github:nix-community/home-mamager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        # hyprland.url = "github:hyprwm/Hyprland";
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-        nix-colors.url = "github:misterio77/nix-colors";
 
         stylix.url = "github:danth/stylix";
 
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
+    outputs = { ... }@inputs: 
     let
         system = "x86_64-linux";
 
@@ -32,14 +29,12 @@
         };
     in
     {
-
         homeConfigurations."codybense@laptop" = home-manager.lib.homeManagerConfiguration {
-            # pkgs = nixpkgs.legacyPackages.${system};
             inherit pkgs;
 
-            extraSpecialArgs = { 
+            extraSpecialArgs = {
                 inherit inputs;
-                inherit spicetify-nix; 
+                inherit spicetify-nix;
             };
 
             modules = [
@@ -51,14 +46,14 @@
 
         nixosConfigurations = {
             laptop = nixpkgs.lib.nixosSystem {
-                specialArgs = { 
+                specialArgs = {
                     inherit inputs;
                     inherit system;
                 };
 
                 modules = [
                     ./nixos/configuration.nix
-                    # inputs.stylix.nixosModules.stylix
+                    inputs.sylix.nixosModules.stylix
                 ];
             };
         };

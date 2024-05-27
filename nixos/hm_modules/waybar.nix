@@ -112,7 +112,8 @@
             };
             };
 
-        style = with config.colorScheme.colors; ''
+        # style = with config.colorScheme.colors; ''
+        style = with config.stylix.base16Scheme; ''
             @import "../waybar/colors/gruv-box.css";
 
             * {
