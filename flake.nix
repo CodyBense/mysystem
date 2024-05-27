@@ -16,7 +16,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { ... }@inputs: 
+    outputs = { nixpkgs, ... }@inputs: 
     let
         system = "x86_64-linux";
 
