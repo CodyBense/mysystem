@@ -10,7 +10,8 @@
             size = 10;
         };
         # theme = "Gruvbox Material Dark Hard";
-        settings = with config.colorScheme.colors;{
+        # settings = with config.colorScheme.colors;{
+        setting = with config.kitty.base16Scheme; {
             window_padding_width = 25;
             enable_audio_bell = false;
             bold_font = "auto";
