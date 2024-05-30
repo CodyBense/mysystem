@@ -28,6 +28,7 @@ in
         ];
 
     virtualisation.docker.enable = true;
+    virtualisation.docker.enableOnBoot = true;
 
 # Module selection
     nvidia_module.enable = 
