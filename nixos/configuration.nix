@@ -27,6 +27,8 @@ in
             ./sddm-theme/default.nix
         ];
 
+    virtualisation.docker.enable = true;
+
 # Module selection
     nvidia_module.enable = 
     if (hostName == "desktop")

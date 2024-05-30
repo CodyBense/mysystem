@@ -16,6 +16,7 @@
         desmume
         pokeget-rs
         obsidian
+        docker
 
 # Neovim
         neovim
