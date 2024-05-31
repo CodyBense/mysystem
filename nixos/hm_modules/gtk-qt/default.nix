@@ -87,18 +87,29 @@ in {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
   };
 
-  gtk.enable = true;
-
-  # gtk.theme.package = pkgs.gruvbox-gtk-theme;
-  # gtk.theme.name = "gruvbox-gtk-theme";
-  gtk.theme.package = pkgs.adw-gtk3;
-  gtk.theme.name = "adw-gtk3";
-
-  gtk.cursorTheme.package = pkgs.bibata-cursors;
-  gtk.cursorTheme.name = "Bibata-Modern-Ice";
-
-  gtk.iconTheme.package = gruvboxPlus;
-  gtk.iconTheme.name = "GruvboxPlus";
+  gtk = {
+      enable = true;
+# gtk.theme.package = pkgs.gruvbox-gtk-theme;
+# gtk.theme.name = "gruvbox-gtk-theme";
+      theme = {
+          package = pkgs.adw-gtk3;
+          name = "adw-gtk3";
+      };
+      cursorTheme = {
+          package=pkgs.bibata-cursors;
+          name = "Bibata-Modern-Ice";
+      };
+      iconTheme = {
+          package = pkgs.papirus-icon-theme;
+          name = "Papirus-Dark";
+      };
+      gtk3.extraConfig = {
+          gtk-applications-prefer-dark-theme = 1;
+      };
+      gtk4.extraConfig = {
+          gtk-application-prefer-dark-theme = 1;
+      };
+  };
 
   xdg.configFile."gtk-4.0/gtk.css" = {
     text = cssContent;
@@ -108,16 +119,13 @@ in {
     text = cssContent;
   };
 
-  qt.enable = true;
+  qt = {
+      enable = true;
+      platformTheme = "gtk";
+      style = {
+          name = "adwaita-dark";
+          package = pkgs.adwaita-qt;
+      };
+  };
 
-# platform theme "gtk" or "gnome"
-  qt.platformTheme = "gtk";
-  # qt.platformTheme = "kde";
-
-# name of the qt theme
-  # qt.style.name = "adwaita-dark";
-  # qt.style.name = "gruvbox-gtk-theme";
-
-# packages to use
-  # qt.style.package = pkgs.adwaita-qt;
 }
