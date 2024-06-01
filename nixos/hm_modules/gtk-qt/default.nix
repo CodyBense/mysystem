@@ -89,19 +89,19 @@ in {
 
   gtk = {
       enable = true;
-# gtk.theme.package = pkgs.gruvbox-gtk-theme;
-# gtk.theme.name = "gruvbox-gtk-theme";
       theme = {
-          package = pkgs.adw-gtk3;
-          name = "adw-gtk3";
+          name = "gruvbox-gtk-theme";
+          package = pkgs.gruvbox-gtk-theme;
+          # name = "adw-gtk3";
+          # package = pkgs.adw-gtk3;
       };
       cursorTheme = {
-          package=pkgs.bibata-cursors;
           name = "Bibata-Modern-Ice";
+          package=pkgs.bibata-cursors;
       };
       iconTheme = {
-          package = pkgs.papirus-icon-theme;
           name = "Papirus-Dark";
+          package = pkgs.papirus-icon-theme;
       };
       gtk3.extraConfig = {
           gtk-applications-prefer-dark-theme = 1;
