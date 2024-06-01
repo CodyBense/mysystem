@@ -90,10 +90,10 @@ in {
   gtk = {
       enable = true;
       theme = {
-          name = "gruvbox-gtk-theme";
-          package = pkgs.gruvbox-gtk-theme;
-          # name = "adw-gtk3";
-          # package = pkgs.adw-gtk3;
+          # name = "gruvbox-gtk-theme";
+          # package = pkgs.gruvbox-gtk-theme;
+          name = "adw-gtk3";
+          package = pkgs.adw-gtk3;
       };
       cursorTheme = {
           name = "Bibata-Modern-Ice";
