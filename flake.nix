@@ -19,7 +19,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { self, nixpkgs, home-manager, hyprland, spicetify-nix, ... }@inputs: 
+    outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
     let
         system = "x86_64-linux";
 
@@ -39,7 +39,6 @@
 
             extraSpecialArgs = { 
                 inherit inputs;
-                inherit spicetify-nix; 
             };
 
             modules = [
