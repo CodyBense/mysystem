@@ -9,7 +9,7 @@
     environment.systemPackages = with pkgs; [
 # Programs
         firefox
-        # spotify
+        spotify
         ncspot
         # spotify-unwrapped
         # spicetify-cli
