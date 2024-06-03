@@ -11,7 +11,7 @@
         firefox
         # spotify
         ncspot
-        spotify-unwrapped
+        # spotify-unwrapped
         # spicetify-cli
         desmume
         pokeget-rs
