@@ -9,7 +9,7 @@
          ./hm_modules/kitty.nix
          ./hm_modules/git.nix
          # ./hm_modules/bashrc.nix
-# ./hm_modules/oh-my-posh.nix
+         # ./hm_modules/oh-my-posh.nix
          ./hm_modules/fzf.nix
          ./hm_modules/direnv.nix
          ./hm_modules/hyprland.nix
@@ -20,7 +20,7 @@
          ./hm_modules/wlogout.nix
          ./hm_modules/zshrc.nix
          # ./hm_modules/starship.nix
-         # ./hm_modules/spicetify.nix
+         ./hm_modules/spicetify.nix
          ./hm_modules/tmux.nix
          ./colors/colors.nix
     ];
