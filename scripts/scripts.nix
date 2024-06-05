@@ -8,6 +8,7 @@ let
     rofi-wifi = import ./rofi-wifi.nix { inherit pkgs; };
     theme-changer = import ./theme-changer.nix { inherit pkgs; };
     randomPokemon = import ./randomPokemon.nix { inherit pkgs; };
+    rofi-launch = import ./rofi-launch.nix { inherit pkgs; };
 
 in
 {
@@ -19,5 +20,6 @@ in
         rofi-wifi
         theme-changer
         randomPokemon
+        rofi-launch
     ];
 }
