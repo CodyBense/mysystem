@@ -22,7 +22,7 @@
     outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
     let
         system = "x86_64-linux";
-        username = "codybense";
+        host = "codybense";
 
         pkgs = import nixpkgs {
             inherit system;
