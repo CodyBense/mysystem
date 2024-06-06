@@ -1,5 +1,5 @@
 # PROGRAMS to get to dotfile configuration control
-{ config, inputs, pkgs, username, ... }:
+{ config, inputs, pkgs, ... }:
 let
     palette = config.colorScheme.palette;
     inherit (import ./variables.nix)
@@ -31,7 +31,7 @@ in
          ./colors/colors.nix
     ];
 
-    home.username = "${username}";
+    home.username = "codybense";
     home.homeDirectory = "/home/codybense";
 
     home.stateVersion = "23.11"; # Please read the comment before changing.
