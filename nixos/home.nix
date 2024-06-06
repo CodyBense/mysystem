@@ -1,5 +1,11 @@
 # PROGRAMS to get to dotfile configuration control
 { config, inputs, pkgs, ... }:
+let
+    palette = config.colorScheme.palette;
+    inherit (import ./variables.nix)
+        theme
+        ;
+in
 
 {
 # import home-manager modules
@@ -35,16 +41,18 @@
         home.packages = [
         ];
 
+    colorScheme = inputs.nix-colors.colorSchemes."{theme}";
+
 # Home Manager is pretty good at managing dotfiles. The primary way to manage
 # plain files is through 'home.file'.
     home.file = {
         ".icons/bibata-cursors".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice";
+        ".base16-theme".source = ../../config/base16-themes;
     };
 
     home.sessionVariables = {
     };
 
-    # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
 # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
