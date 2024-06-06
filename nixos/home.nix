@@ -47,7 +47,7 @@ in
 # plain files is through 'home.file'.
     home.file = {
         ".icons/bibata-cursors".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice";
-        ".base16-theme".source = ../../config/base16-themes;
+        ".base16-theme".source = ./colors/base16-themes;
     };
 
     home.sessionVariables = {
