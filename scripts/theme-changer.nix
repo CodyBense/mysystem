@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, host, ... }:
 
 # pkgs.writeShellScriptBin "theme-changer" ''
 # DIR=$HOME/mysystem/nixos/colors/color_schemes
@@ -22,7 +22,7 @@ pkgs.writeShellScriptBin "theme-changer" ''
     echo "No Theme Given"
   else
     replacement="$1"
-    sed -i "/^\s*theme[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$replacement\"/" /home/${username}/mysystem/nixos/variables.nix
-    kitty -e pkexec nixos-rebuild switch --flake /home/${username}/mysystem
+    sed -i "/^\s*theme[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$replacement\"/" /home/${host}/mysystem/nixos/variables.nix
+    kitty -e pkexec nixos-rebuild switch --flake /home/${host}/mysystem
   fi
 ''
