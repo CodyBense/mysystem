@@ -1,6 +1,6 @@
 { config,... }:
 let
-    palette = config.colorScheme.palette;
+    = config.colorScheme.palette;
 in
 {
     programs.waybar = {
@@ -115,7 +115,8 @@ in
             };
             };
 
-        style =  ''
+        # style =  ''
+        style = with config.colorScheme.colors; ''
             @import "../waybar/colors/gruv-box.css";
 
             * {
@@ -127,8 +128,8 @@ in
             }
 
             window#waybar {
-                background-color: #${palette.base00};
-                color: #${palette.base06};
+                background-color: #${base00};
+                color: #${base06};
             }
 
             #clock,
@@ -141,8 +142,8 @@ in
             #workspaces,
             #custom-keybindings,
             #custom-powermenu {
-                color: #${palette.base05};
-                background: #${palette.base01};
+                color: #${base05};
+                background: #${base01};
                 padding: 0 0.6em;
                 margin-right: 4px; 
                 margin-left: 2px;
@@ -154,13 +155,13 @@ in
 
 
             #workspaces button.active {
-                color: #${palette.base06};
-                background: #${palette.base03};
+                color: #${base06};
+                background: #${base03};
             }
 
             #custom-launcher {
-                background-color: #${palette.base0B};
-                color: #${palette.base00};
+                background-color: #${base0B};
+                color: #${base00};
 
                 margin-left: 15px;
                 padding-left: 20px;
@@ -168,8 +169,8 @@ in
             }
 
             #custom-powermenu {
-                background-color: #${palette.base08};
-                color: #${palette.base00};
+                background-color: #${base08};
+                color: #${base00};
 
                 margin-right: 15px;
                 padding-left: 20px;
