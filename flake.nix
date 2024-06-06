@@ -22,7 +22,7 @@
     outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
     let
         system = "x86_64-linux";
-        host = "codybense";
+        username = "codybense";
 
         pkgs = import nixpkgs {
             inherit system;
@@ -40,7 +40,7 @@
 
             extraSpecialArgs = { 
                 inherit inputs;
-                inherit host;
+                inherit username;
             };
 
             modules = [
@@ -55,7 +55,7 @@
                 specialArgs = { 
                     inherit inputs;
                     inherit system;
-                    inherit host;
+                    inherit username;
                 };
 
                 modules = [
