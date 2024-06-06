@@ -1,6 +1,6 @@
 { config,... }:
 let
-    = config.colorScheme.palette;
+   palette = config.colorScheme.palette;
 in
 {
     programs.waybar = {
