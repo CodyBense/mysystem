@@ -2,37 +2,32 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, username, ... }:
-
-let 
-    hostName = "laptop";
-in
+{ config, pkgs, host, inputs, username, options, ... }:
 
 {
+    imports =[ # Include the results of the hardware scan.
+        ./hardware-configuration.nix
+        inputs.home-manager.nixosModules.home-manager
+        ./modules/de_bundle.nix
+        ./modules/code_bundle.nix
+        ./modules/packages.nix
+        ./../scripts/scripts.nix
+        ./sddm-theme/default.nix
+        ];
+
     environment.sessionVariables = {
         FLAKE = "/home/codybense/mysystem";
     };
 
     environment.variables.EDITOR = "nvim";
 
-    imports =
-        [ # Include the results of the hardware scan.
-            ./systems/${hostName}/hardware-configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            ./modules/de_bundle.nix
-            ./modules/code_bundle.nix
-            ./modules/packages.nix
-            # ./modules/stylix.nix
-            ./../scripts/scripts.nix
-            ./sddm-theme/default.nix
-        ];
 
     virtualisation.docker.enable = true;
     virtualisation.docker.enableOnBoot = true;
 
 # Module selection
     nvidia_module.enable = 
-    if (hostName == "desktop")
+    if (host == "desktop")
         then true
         else false;
 
