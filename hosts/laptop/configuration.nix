@@ -54,7 +54,7 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    progarms = {
+    programs = {
         firefox.enable = true;
         thunar = {
             enable = true;
