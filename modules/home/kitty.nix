@@ -1,4 +1,9 @@
 { pkgs, config, ... }:
+let
+    palette = config.colorScheme.palette;
+    inherit (import ./variables.nix)
+    theme;
+in
 {
     # programs.kitty = {
     #     enable = true;
