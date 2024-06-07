@@ -38,7 +38,7 @@
                     ./hosts/${host}/configuration.nix
                         home-manager.nixosModules.home-manager
                         {
-                            home-manager.extraSpecailArgs = {
+                            home-manager.extraSpecialArgs = {
                                 inherit username;
                                 inherit inputs;
                                 inherit host;
