@@ -31,15 +31,15 @@ in
          ./colors/colors.nix
     ];
 
+    home.packages = [
+        (import ../../scripts/randomPokemon.nix {inherit pkgs;})
+    ];
+
     home.username = "codybense";
     home.homeDirectory = "/home/codybense";
 
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
-# The home.packages option allows you to install Nix packages into your
-# environment.
-        home.packages = [
-        ];
 
     # colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
