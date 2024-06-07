@@ -97,7 +97,7 @@
         swww
         hyprpaper
 ## terminal
-        kitty
+        # kitty
 ## app launcher
         rofi-wayland
 ## login screen
