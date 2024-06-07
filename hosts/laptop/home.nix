@@ -34,6 +34,7 @@ in
         ../../modules/home/direnv.nix
         ../../modules/home/lf.nix
         ../../modules/home/tmux.nix
+        ../../modules/home/hyprlock.nix
     ];
 
     # Define Settings For Xresources
