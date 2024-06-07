@@ -67,7 +67,7 @@ in
         font = {
             name = "JetBrainsMono Nerd Font";
             package = pkgs.jetbrains-mono;
-            size = 16;
+            size = 12;
         };
         settings = {
             scrollback_lines = 2000;
