@@ -5,7 +5,7 @@ pkgs.writeShellScriptBin "start-hyprland" ''
 swww-daemon &
 
 # set wallpaper
-# swww img ~/mysystem/wallpapers/latios_latias.jpg &
+# swww img ~/Pictures/Wallpapers/latios_latias.jpg &
 
 waybar &
 

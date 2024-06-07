@@ -25,9 +25,9 @@ in
         ../../config/waybar.nix
         ../../config/wlogout.nix
         ../../modules/home/gtk-qt/default.nix
+        ../../modules/home/git.nix
          # ./hm_modules/firefox.nix
          # ./hm_modules/kitty.nix
-         # ./hm_modules/git.nix
          # # ./hm_modules/bashrc.nix
          # # ./hm_modules/oh-my-posh.nix
          # ./hm_modules/fzf.nix
@@ -45,9 +45,9 @@ in
     ];
 
     # Define Settings For Xresources
-    # xresources.properties = {
-    #     "Xcursor.size" = 24;
-    # };
+    xresources.properties = {
+        "Xcursor.size" = 24;
+    };
 
     # Place Files Inside Home Directory
     home.file."Pictures/Wallpapers" = {
