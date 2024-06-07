@@ -1,1 +1,1 @@
-color_schemes/gruvbox.nix
+color_schemes

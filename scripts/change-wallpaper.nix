@@ -3,7 +3,7 @@
 pkgs.writeShellScriptBin "change-wallpaper" ''
 #!/usr/bin/env bash
 
-DIR=$HOME/mysystem/wallpapers/
+DIR=$HOME/Pictures/Wallpapers/
 PICS=($(ls ''${DIR}))
 
 RANDOMPICS=''${PICS[ $RANDOM % ''${#PICS[@]} ]}
