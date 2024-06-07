@@ -59,6 +59,7 @@ in
     # Scripts
     home.packages = [
         (import ../../scripts/randomPokemon.nix {inherit pkgs;})
+        (import ../../scirpts/start-hyprland.nix {inherit pkgs;})
     ];
 
 # Let Home Manager install and manage itself.
