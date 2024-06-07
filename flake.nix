@@ -34,7 +34,6 @@
                     inherit username;
                     inherit host;
                 };
-
                 modules = [
                     ./hosts/${host}/configuration.nix
                         home-manager.nixosModules.home-manager
@@ -49,8 +48,9 @@
                             home-manager.useUserPackages = true;
                             home-manager.backupFileExtension = "backup";
                             home-manager.users.${username} = import ./hosts/${host}/home.nix;
-                        };
+                        }
                 ];
             };
         };
-    }
+    };
+}
