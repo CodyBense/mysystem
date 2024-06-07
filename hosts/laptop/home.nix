@@ -64,6 +64,11 @@ in
     home.file.".emoji".source = ../../config/emoji;
     home.file.".config/starship.toml".source = ../../config/starship.toml;
 
+    # Scripts
+    home.packages = [
+        (import ../../scripts/randomPokemon.nix {inherit pkgs;})
+    ];
+
 # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
 }
