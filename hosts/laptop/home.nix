@@ -27,6 +27,7 @@ in
         ../../modules/home/gtk-qt/default.nix
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
+        ../../modules/home/starship.nix
          # ./hm_modules/firefox.nix
          # # ./hm_modules/bashrc.nix
          # # ./hm_modules/oh-my-posh.nix
@@ -38,7 +39,6 @@ in
          # ./hm_modules/lf.nix
          # ./hm_modules/wlogout.nix
          # ./hm_modules/zshrc.nix
-         # # ./hm_modules/starship.nix
          # # ./hm_modules/spicetify.nix
          # ./hm_modules/tmux.nix
          # ./colors/colors.nix

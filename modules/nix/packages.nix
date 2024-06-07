@@ -47,7 +47,7 @@
         zoxide
         oh-my-posh
         oh-my-zsh
-        starship
+        # starship
 # Office Suite
         onlyoffice-bin
 # PDF

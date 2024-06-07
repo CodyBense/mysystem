@@ -1,13 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     programs.starship = {
         enable = true;
+        package = pkgs.starship;
         enableZshIntegration = true;
-        settings = {
-            "$schema" = "https://starship.rs/config-schema.json";
-            format = [
-            ];
-        };
     };
 }
