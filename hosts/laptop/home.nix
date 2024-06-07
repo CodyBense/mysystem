@@ -65,11 +65,11 @@ in
         (import ../../scripts/list-hypr-bindings.nix {inherit pkgs;})
         (import ../../scripts/rofi-launch.nix {inherit pkgs;})
         (import ../../scripts/rofi-wifi.nix {inherit pkgs;})
-        (import ../../scripts/theme-changer.nix {
-             inherit pkgs;
-             inherit username;
-         })
-        (import ../../scripts/wallpaper-switcher.nix {inherit pkgs;})
+        (import ../../scripts/theme-changer.nix {inherit pkgs;})
+        (import ../../scripts/wallpaper-switcher.nix {
+            inherit pkgs;
+            inherit username;
+        })
     ];
 
 # Let Home Manager install and manage itself.
