@@ -8,11 +8,10 @@ let
         theme
         ;
 in
-
 {
     # Home Manager settings
-    home.username = "codybense";
-    home.homeDirectory = "/home/codybense";
+    home.username = "${username}";
+    home.homeDirectory = "/home/${username}";
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
     # Set the Colorscheme
@@ -25,7 +24,6 @@ in
         ../../config/hyprland.nix
         ../../config/waybar.nix
         ../../config/wlogout.nix
-         # # inputs.nix-colors.homeManagerModules.default
          # ./hm_modules/firefox.nix
          # ./hm_modules/kitty.nix
          # ./hm_modules/git.nix
@@ -46,23 +44,24 @@ in
          # ./colors/colors.nix
     ];
 
-# The home.packages option allows you to install Nix packages into your
-# environment.
-        home.packages = [
-        ];
-
-    # colorScheme = inputs.nix-colors.colorSchemes."${theme}";
-
-# Home Manager is pretty good at managing dotfiles. The primary way to manage
-# plain files is through 'home.file'.
-    home.file = {
-        ".icons/bibata-cursors".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice";
-        ".base16-theme".source = ./colors/base16-themes;
+    # Define Settings For Xresources
+    xresources.properties = {
+        "Xcursor.size" = 24;
     };
 
-    home.sessionVariables = {
+    # Place Files Inside Home Directory
+    home.file."Pictures/Wallpapers" = {
+        source = ../../config/wallpapers;
+        recursive = true;
     };
 
+    home.file.".config/wlogout/icons" = {
+        source = ../../config/wlogout;
+        recursive = true;
+    };
+
+    home.file.".base16-themes".source = ../../config/base16-themes;
+    home.file.".emoji".source = ../../config/emoji;
 
 # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;

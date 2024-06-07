@@ -5,69 +5,41 @@
 { config, pkgs, host, inputs, username, options, ... }:
 
 {
-    imports =[ # Include the results of the hardware scan.
-        ./hardware-configuration.nix
-        inputs.home-manager.nixosModules.home-manager
-        ./modules/de_bundle.nix
-        ./modules/code_bundle.nix
-        ./modules/packages.nix
-        ./../scripts/scripts.nix
-        ./sddm-theme/default.nix
-        ];
-
-    environment.sessionVariables = {
-        FLAKE = "/home/codybense/mysystem";
-    };
-
-    environment.variables.EDITOR = "nvim";
-
-
-    virtualisation.docker.enable = true;
-    virtualisation.docker.enableOnBoot = true;
-
-# Module selection
     nvidia_module.enable = 
     if (host == "desktop")
         then true
         else false;
 
-# programs.npm.enable = true;
+    imports =[ # Include the results of the hardware scan.
+        ./hardware-configuration.nix
+        ./users.nix
+        ../../modules/nix/code_bundle.nix
+        ../../modules/nix/customPackages.nix
+        ../../modules/nix/de_bundle.nix
+        ../../modules/nix/packages.nix
+        # ./modules/de_bundle.nix
+        # ./modules/code_bundle.nix
+        # ./modules/packages.nix
+        # ./../scripts/scripts.nix
+        # ./sddm-theme/default.nix
+        ];
 
-# Shell
-programs.zsh.enable = true;
-users.defaultUserShell = pkgs.zsh;
-
-
-# Home manager
-    home-manager = {
-        extraSpecialArgs = { inherit inputs; };
-        users = {
-            codybense = import ./home.nix;
-        };
+    # Bootloader.
+    boot.loader = {
+        systemd-boot.enable = true;
+        efi.canTouchEfiVariables = true;
     };
 
-# Enable the flake feature and the accompying nix command-line tool
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    # Networking
+    networking = {
+        hostName = "${host}";
+        networkmanager.enable = true;
+    };
 
-# Bootloader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-
-    networking.hostName = "${hostName}";
-# networking.hostName = "cody-laptop"; # Define your hostname.
-# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-# Configure network proxy if necessary
-# networking.proxy.default = "http://user:password@proxy:port/";
-# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-# Enable networking
-    networking.networkmanager.enable = true;
-
-# Set your time zone.
+    # Timezone
     time.timeZone = "America/New_York";
 
-# Select internationalisation properties.
+    # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
 
     i18n.extraLocaleSettings = {
@@ -82,32 +54,66 @@ users.defaultUserShell = pkgs.zsh;
         LC_TIME = "en_US.UTF-8";
     };
 
-
-# Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.codybense = {
-        isNormalUser = true;
-        description = "CodyBense";
-        extraGroups = [ "networkmanager" "wheel" ];
-        packages = with pkgs; [];
+    progarms = {
+        firefox.enable = true;
+        thunar = {
+            enable = true;
+            plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
+        };
     };
 
-# Enable sound with pipewire
-    sound.enable = true;
-    security.rtkit.enable = true;
-    services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-        jack.enable = true;
-    };
-
-# Swaylock
-    security.pam.services.swaylock = {};
-
-# Allow unfree packages
+    # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
+    users = {
+        mutableUsers = true;
+    };
+
+    environment.sessionVariables = {
+        FLAKE = "/home/codybense/mysystem";
+    };
+
+    environment.variables.EDITOR = "nvim";
+
+    services = {
+        pipewire = {
+            enable = true;
+            alsa.enable = true;
+            alsa.support32Bit = true;
+            pulse.enable = true;
+            jack.enable = true;
+        };
+        tlp = {
+            enable = true;
+        };
+        openssh = {
+            enable = true;
+        };
+    };
+
+    sound.enable = true;
+    hardware.pulseaudio.enable = false;
+
+    security = {
+        rtkit.enable = true;
+        pam.services.swaylock = {};
+    };
+
+    nix = {
+        settings = {
+            auto-optimise-store = true;
+            experimental-features = [
+                "nix-command"
+                "flakes"
+            ];
+            substituters = [ "https://hyprland.cachix.org" ];
+        };
+        gc = {
+            automatic = true;
+            dates = "weekly";
+            options = "--delete-older-than 7d";
+        };
+    };
 
 # Fonts
     fonts.packages = with pkgs; [
@@ -118,33 +124,5 @@ users.defaultUserShell = pkgs.zsh;
         mononoki
         noto-fonts-cjk-sans
     ];
-
-    services.tlp.enable = true;
-
-# Some programs need SUID wrappers, can be configured further or are
-# started in user sessions.
-# programs.mtr.enable = true;
-# programs.gnupg.agent = {
-#   enable = true;
-#   enableSSHSupport = true;
-# };
-
-# List services that you want to enable:
-
-# Enable the OpenSSH daemon.
-    services.openssh.enable = true;
-
-# Open ports in the firewall.
-# networking.firewall.allowedTCPPorts = [ ... ];
-# networking.firewall.allowedUDPPorts = [ ... ];
-# Or disable the firewall altogether.
-# networking.firewall.enable = false;
-
-# This value determines the NixOS release from which the default
-# settings for stateful data, like file locations and database versions
-# on your system were taken. It‘s perfectly fine and recommended to leave
-# this value at the release version of the first install of this system.
-# Before changing this value read the documentation for this option
-# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "23.11"; # Did you read the comment?
 }

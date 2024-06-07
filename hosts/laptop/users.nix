@@ -17,7 +17,7 @@ in
             ];
         shell = pkgs.zsh;
         ingnoreShellProgramCheck = true;
-        packages = with pkgs;
+        packages = with pkgs; [];
         };
     };
 }
