@@ -26,8 +26,8 @@ in
         ../../config/wlogout.nix
         ../../modules/home/gtk-qt/default.nix
         ../../modules/home/git.nix
+        ../../modules/home/kitty.nix
          # ./hm_modules/firefox.nix
-         # ./hm_modules/kitty.nix
          # # ./hm_modules/bashrc.nix
          # # ./hm_modules/oh-my-posh.nix
          # ./hm_modules/fzf.nix
