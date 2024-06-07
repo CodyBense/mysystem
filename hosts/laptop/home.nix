@@ -35,7 +35,6 @@ in
          # ./hm_modules/hyprland.nix
          # ./hm_modules/waybar.nix
          # ./hm_modules/hyprlock.nix
-         # ./hm_modules/gtk-qt/default.nix
          # ./hm_modules/lf.nix
          # ./hm_modules/wlogout.nix
          # ./hm_modules/zshrc.nix
@@ -46,9 +45,9 @@ in
     ];
 
     # Define Settings For Xresources
-    xresources.properties = {
-        "Xcursor.size" = 24;
-    };
+    # xresources.properties = {
+    #     "Xcursor.size" = 24;
+    # };
 
     # Place Files Inside Home Directory
     home.file."Pictures/Wallpapers" = {
