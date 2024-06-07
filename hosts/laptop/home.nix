@@ -15,7 +15,7 @@ in
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
     # Set the Colorscheme
-    colorScheme = inputs.nix-colors.colorScheme."${theme}";
+    colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
     # Import Program Configurations
     imports = [
