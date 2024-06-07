@@ -16,7 +16,7 @@ in
                 "lp"
             ];
         shell = pkgs.zsh;
-        ingnoreShellProgramCheck = true;
+        ignoreShellProgramCheck = true;
         packages = with pkgs; [];
         };
     };
