@@ -7,7 +7,7 @@ in
         "${username}" = {
             homeMode = "755";
             isNormalUser = true;
-            descritption = "${gitUsername}";
+            description = "${gitUsername}";
             extraGroups = [
                 "networkmanager"
                 "wheel"
