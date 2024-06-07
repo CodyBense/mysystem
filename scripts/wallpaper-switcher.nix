@@ -8,7 +8,7 @@ for e in ''${arr[@]}; do
     filenames=("''${filenames[@]}" ''${e##*/}) 
 done
 choice=$(printf "%s\n" "''${filenames[@]}" | rofi -dmenu) 
-${pkgs.swww} img ''${DIR}/''${choice} --transition-fps 30 --transition-type any --transition-duration 3 --resize crop
+${pkgs.swww}/bin/swww img ''${DIR}/''${choice} --transition-fps 30 --transition-type any --transition-duration 3 --resize crop
 
 # WALLPAPER=$(find /home/${username}/Pictures/Wallpapers -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
 #   PREVIOUS=$WALLPAPER
