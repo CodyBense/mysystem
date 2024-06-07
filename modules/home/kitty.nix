@@ -61,7 +61,7 @@ in
     #         mark3_background = "#f274bc";
     #     };
     # };
-    kitty = {
+    programs.kitty = {
         enable = true;
         shellIntegration.enableZshIntegration = true;
         font = {
