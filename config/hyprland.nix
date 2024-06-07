@@ -1,10 +1,17 @@
-{ config,... }:
+{ pkgs, config, lib, inputs, username, host, ... }:
+
+let
+    theme = config.colorScheme.palette;
+in
+with lib;
 
 {
     wayland.windowManager.hyprland = {
         enable = true;
+        xwayland.enable = true;
+        systemd.enable = true;
         settings = with config.colorScheme.colors; {
-        # settings = with config.stylix.base16Scheme; {
+        # settings = with config.stylix.theme.base16Scheme; {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
             # exec-once = "bash ~/.config/hypr/start.sh";
@@ -62,17 +69,17 @@
             general = {
                 gaps_in = "3";
                 border_size = "2";
-                "col.active_border" = "rgb(${base0B}) rgb(${base06}) 45deg";
-                "col.inactive_border" = "rgb(${base00}) rgb(${base06}) 45deg";
+                "col.active_border" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
+                "col.inactive_border" = "rgb(${theme.base00}) rgb(${base06}) 45deg";
                 layout = "dwindle";
                 allow_tearing = "true";
                 resize_on_border = "true";
             };
 
             group = {
-                "col.border_active" = "rgb(${base0B}) rgb(${base06}) 45deg";
-                "col.border_inactive" = "rgb(${base00}) rgb(${base06}) 45deg";
-                "col.border_locked_active" = "rgb(${base0B}) rgb(${base06}) 45deg";
+                "col.border_active" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
+                "col.border_inactive" = "rgb(${theme.base00}) rgb(${base06}) 45deg";
+                "col.border_locked_active" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
                 "col.border_locked_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
             };
 
