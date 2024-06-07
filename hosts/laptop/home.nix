@@ -29,19 +29,11 @@ in
         ../../modules/home/kitty.nix
         ../../modules/home/starship.nix
         ../../modules/home/zshrc.nix
-         # ./hm_modules/firefox.nix
-         # # ./hm_modules/bashrc.nix
-         # # ./hm_modules/oh-my-posh.nix
-         # ./hm_modules/fzf.nix
-         # ./hm_modules/direnv.nix
-         # ./hm_modules/hyprland.nix
-         # ./hm_modules/waybar.nix
-         # ./hm_modules/hyprlock.nix
-         # ./hm_modules/lf.nix
-         # ./hm_modules/wlogout.nix
-         # # ./hm_modules/spicetify.nix
-         # ./hm_modules/tmux.nix
-         # ./colors/colors.nix
+        ../../modules/home/firefox.nix
+        ../../modules/home/fzf.nix
+        ../../modules/home/direnv.nix
+        ../../modules/home/lf.nix
+        ../../modules/home/tmux.nix
     ];
 
     # Define Settings For Xresources
