@@ -61,6 +61,12 @@ in
     home.packages = [
         (import ../../scripts/randomPokemon.nix {inherit pkgs;})
         (import ../../scripts/start-hyprland.nix {inherit pkgs;})
+        (import ../../scripts/change-wallpaper.nix {inherit pkgs;})
+        (import ../../scripts/list-hypr-bindings.nix {inherit pkgs;})
+        (import ../../scripts/rofi-launch.nix {inherit pkgs;})
+        (import ../../scripts/rofi-wifi.nix {inherit pkgs;})
+        (import ../../scripts/theme-changer.nix {inherit pkgs;})
+        (import ../../scripts/wallpaper-switcher.nix {inherit pkgs;})
     ];
 
 # Let Home Manager install and manage itself.
