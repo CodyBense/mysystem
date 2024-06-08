@@ -116,7 +116,6 @@ in
             };
 
         style =  ''
-            @import "../waybar/colors/gruv-box.css";
 
             * {
                 border: none;
