@@ -3,7 +3,7 @@
     imports = [ ./lf-icons.nix ];
     home.file = {
         ".config/lf/lfrc" = {
-            source = ./source/lfrc;
+            source = ../../config/lfrc;
         };
     };
     # programs.lf = {
