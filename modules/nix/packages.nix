@@ -6,7 +6,7 @@ in
 
     environment.systemPackages = with pkgs; [
 # Programs
-        firefox
+        # firefox
         spotify
         # ncspot
         # spotify-unwrapped
