@@ -119,7 +119,7 @@ in
 
 
 ## needed for sddm theme
-        sugar.sddm-sugar.dark
+        sugar.sddm-sugar-dark
         libsForQt5.qt5.qtquickcontrols   
         libsForQt5.qt5.qtquickcontrols2   
         libsForQt5.qt5.qtgraphicaleffects
