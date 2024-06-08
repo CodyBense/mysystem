@@ -76,6 +76,15 @@
     environment.variables.EDITOR = "nvim";
 
     services = {
+        xerver = {
+            enable = true;
+            displayManager.sddm = {
+                enable = true;
+                autoNumLock = true;
+                wayland.enable = true;
+                theme = "sugar-dark";
+            };
+        };
         pipewire = {
             enable = true;
             alsa.enable = true;
