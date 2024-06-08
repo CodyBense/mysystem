@@ -115,9 +115,8 @@ in
             };
             };
 
-        # style =  ''
-        style = with config.colorScheme.colors; ''
-            @import "../waybar/colors/gruv-box.css";
+        style =  ''
+            # @import "../waybar/colors/gruv-box.css";
 
             * {
                 border: none;
@@ -128,8 +127,8 @@ in
             }
 
             window#waybar {
-                background-color: #${base00};
-                color: #${base06};
+                background-color: #${palette.base00};
+                color: #${palette.base06};
             }
 
             #clock,
@@ -142,8 +141,8 @@ in
             #workspaces,
             #custom-keybindings,
             #custom-powermenu {
-                color: #${base05};
-                background: #${base01};
+                color: #${palette.base05};
+                background: #${palette.base01};
                 padding: 0 0.6em;
                 margin-right: 4px; 
                 margin-left: 2px;
@@ -155,13 +154,13 @@ in
 
 
             #workspaces button.active {
-                color: #${base06};
-                background: #${base03};
+                color: #${palette.base06};
+                background: #${palette.base03};
             }
 
             #custom-launcher {
-                background-color: #${base0B};
-                color: #${base00};
+                background-color: #${palette.base0B};
+                color: #${palette.base00};
 
                 margin-left: 15px;
                 padding-left: 20px;
@@ -169,8 +168,8 @@ in
             }
 
             #custom-powermenu {
-                background-color: #${base08};
-                color: #${base00};
+                background-color: #${palette.base08};
+                color: #${palette.base00};
 
                 margin-right: 15px;
                 padding-left: 20px;
