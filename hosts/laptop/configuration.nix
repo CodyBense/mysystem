@@ -84,6 +84,10 @@
                 wayland.enable = true;
                 theme = "sugar-dark";
             };
+            xkb = {
+                layout = "us";
+                variant = "";
+            };
         };
         pipewire = {
             enable = true;
