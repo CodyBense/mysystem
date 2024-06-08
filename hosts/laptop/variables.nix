@@ -1,5 +1,7 @@
 {
     host = "laptop";
+    terminal = "kitty";
+    borswer = "firefox";
 
     # Git config
     gitUsername = "Cody Bense";
