@@ -1,10 +1,8 @@
 { pkgs, ... }:
-
+let
+    sugar = pkgs.callPackage ../../pkgs/sddm-sugar-dark.nix { };
+in
 {
-
-    imports = [
-        # ./customPackages.nix
-    ];
 
     environment.systemPackages = with pkgs; [
 # Programs
@@ -121,6 +119,7 @@
 
 
 ## needed for sddm theme
+        sugar.sddm-sugar.dark
         libsForQt5.qt5.qtquickcontrols   
         libsForQt5.qt5.qtquickcontrols2   
         libsForQt5.qt5.qtgraphicaleffects
