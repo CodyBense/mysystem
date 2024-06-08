@@ -6,5 +6,5 @@
     gitEmail = "codyebense@gmail.com";
 
     # Base16 theme
-    theme = "nord";
+    theme = "gruvbox-dark-medium";
 }

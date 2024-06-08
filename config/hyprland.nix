@@ -304,7 +304,7 @@ with lib;
 
                 "$mainMod SHIFT, W, exec, $changeWallpaper"
                 "$mainMod CTRL, W, exec, $wallpaperSwitcher"
-                "$mainMod SHIFT, T, exec, theme-changer"
+                "$mainMod SHIFT, T, exec, theme-selector"
             ];
 
             bindm = [
