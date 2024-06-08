@@ -1,5 +1,5 @@
 {
-    hostName = "laptop";
+    host = "laptop";
 
     # Git config
     gitUsername = "Cody Bense";
