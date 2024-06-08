@@ -35,6 +35,7 @@ in
         ../../modules/home/lf.nix
         ../../modules/home/tmux.nix
         ../../modules/home/hyprlock.nix
+        ../../modules/home/wofi.nix
     ];
 
     # Define Settings For Xresources
