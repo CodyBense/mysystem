@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, host, ... }:
+let
+    inherit (import ../../hosts/${host}/variables.nix) terminal broswer;
+in
 pkgs.writeShellScriptBin "list-hypr-bindings" ''
   yad --width=800 --height=650 \
   --center \
@@ -12,10 +15,10 @@ pkgs.writeShellScriptBin "list-hypr-bindings" ''
   --timeout=90 \
   --timeout-indicator=right \
   " = Windows/Super" "Modifier Key, used for keybindings" "Doesn't really execute anything by itself." \
-  " + T" "Terminal" "kitty" \
+  " + T" "Terminal" "${terminal}" \
   " + SPACE" "Rofi App Launcher" "rofi -show drun" \
   " + Q" "Kill Focused Window" "killactive" \
-  " + F" "Launch Web Browser" "firefox" \
+  " + F" "Launch Web Browser" "${broswer}" \
   " + E" "Launch New File Browser Window" "thunar" \
   " + M" "Launch Spotify" "spotify" \
   " + P" "Pseudo Tiling" "pseudo" \
