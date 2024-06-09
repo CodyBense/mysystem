@@ -67,7 +67,9 @@ with lib;
             };
             
             general = {
-                gaps_in = "3";
+                # gaps_in = "3";
+                gaps_in = "6";
+                gaps_out = "8";
                 border_size = "2";
                 "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
                 "col.inactive_border" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
@@ -138,6 +140,11 @@ with lib;
             xwayland = {
                 force_zero_scaling = "true";
             };
+
+            windowrule = [
+                "noborder,^(wofi)$"
+                "center,^(wofi)$"
+            ];
 
             windowrulev2 = [
                 "suppressevent maximize, class:.*"
