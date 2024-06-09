@@ -15,11 +15,8 @@ in
         version = "1.2";
         dontBuild = true;
         installPhase = ''
-            mkdir -p $out
-            cp -R ./* $out/
-            cd $out/
-            rm Background.jpg
-            cp -r ${image} $out/Background.jpg
+            mkdir -p $out/share/sddm/themes
+            cp -aR $src $out/share/sddm/themes/sugar-dark
         '';
         src = fetchFromGitHub {
             owner = "MarianArlt";
