@@ -9,6 +9,7 @@
         };
         nix-colors.url = "github:misterio77/nix-colors";
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+        spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
     outputs = { nixpkgs, home-manager, ... }@inputs: 
