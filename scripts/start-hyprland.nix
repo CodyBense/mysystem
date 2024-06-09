@@ -2,14 +2,17 @@
 
 pkgs.writeShellScriptBin "start-hyprland" ''
 # initialize wallpaper daemon
-swww-daemon &
+pkillall -q swww
+sleep .5
+swww init
 
-# set wallpaper
-# swww img ~/Pictures/Wallpapers/latios_latias.jpg &
-
+pkillall -q waybar
+sleep .5
 waybar &
 
 nm-applet --indicator &
 
-dunst &
+pkillall -q swaync
+sleep .5
+swaync
 ''
