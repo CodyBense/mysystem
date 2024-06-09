@@ -12,17 +12,17 @@
     };
 
     outputs = { nixpkgs, home-manager, ... }@inputs: 
-        let
+    let
         system = "x86_64-linux";
-    host = "laptop";
-    username = "codybense";
+        host = "laptop";
+        username = "codybense";
 
-    pkgs = import nixpkgs {
-        inherit system;
-        config = {
-            allowUnfree = true;
+        pkgs = import nixpkgs {
+            inherit system;
+            config = {
+                allowUnfree = true;
+            };
         };
-    };
     in
     {
 
