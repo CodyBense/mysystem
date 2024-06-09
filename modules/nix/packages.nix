@@ -90,7 +90,6 @@ in
 ## bar
         waybar
 ## notifiations
-        dunst
         libnotify
 ## wallpaper
         swww
