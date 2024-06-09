@@ -37,6 +37,7 @@ in
         trashy
         pandoc
         wl-clipboard-rs
+        pavucontrol
 
 # Terminal stuff
         tmux
