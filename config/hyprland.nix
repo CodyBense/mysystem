@@ -144,7 +144,6 @@ with lib;
             windowrule = [
                 "noborder,^(wofi)$"
                 "center,^(wofi)$"
-                "noborder,^(yad)$"
                 "center,^(yad)$"
             ];
 
