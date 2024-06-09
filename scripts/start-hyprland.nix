@@ -9,5 +9,7 @@ swww-daemon &
 
 waybar &
 
-dunst
+nm-applet --indicator &
+
+dunst &
 ''

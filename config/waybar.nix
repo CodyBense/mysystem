@@ -25,7 +25,7 @@ with lib;
         ];
         modules-right = [
           "custom/hyprbindings"
-          "custom/themeselector"
+          # "custom/themeselector"
           "custom/notification"
           "custom/exit"
           "battery"
@@ -86,32 +86,32 @@ with lib;
           spacing = 12;
         };
         "pulseaudio" = {
-          format = "{icon} {volume}% {format_source}";
-          format-bluetooth = "{volume}% {icon} {format_source}";
-          format-bluetooth-muted = " {icon} {format_source}";
-          # format-muted = " {format_source}";
-          format-source = " {volume}%";
-          format-source-muted = "";
-          format-icons = {
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
-            default = [
-              ""
-              ""
-              ""
-            ];
-          };
-          on-click = "sleep 0.1 && pavucontrol";
+            format = "{icon} {volume}%";
+            format-bluetooth = "{volume}% {icon}";
+            format-bluetooth-muted = " {icon}";
+            format-muted = "";
+            format-source = " {volume}%";
+            format-source-muted = "";
+            format-icons = {
+                headphone = "";
+                hands-free = "";
+                headset = "";
+                phone = "";
+                portable = "";
+                car = "";
+                default = [
+                    ""
+                    ""
+                    ""
+                ];
+            };
+            on-click = "sleep 0.1 && pavucontrol";
         };
-        "custom/themeselector" = {
-          tooltip = false;
-          format = "";
-          on-click = "sleep 0.1 && theme-selector";
-        };
+        # "custom/themeselector" = {
+        #   tooltip = false;
+        #   format = "";
+        #   on-click = "sleep 0.1 && theme-selector";
+        # };
         "custom/exit" = {
           tooltip = false;
           format = "";
