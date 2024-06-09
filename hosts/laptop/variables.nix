@@ -9,4 +9,8 @@
 
     # Base16 theme
     theme = "gruvbox-dark-medium";
+
+    # waybar settings
+    clock24h = false;
+    waybarAnimations = false;
 }
