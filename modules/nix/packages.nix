@@ -39,7 +39,6 @@ in
         wl-clipboard-rs
         pavucontrol
         swaynotificationcenter
-
 # Terminal stuff
         tmux
         gh

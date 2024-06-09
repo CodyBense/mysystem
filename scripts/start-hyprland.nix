@@ -4,7 +4,7 @@ pkgs.writeShellScriptBin "start-hyprland" ''
 # initialize wallpaper daemon
 pkillall -q swww
 sleep .5
-swww init
+swww-daemon &
 
 pkillall -q waybar
 sleep .5
@@ -14,5 +14,5 @@ nm-applet --indicator &
 
 pkillall -q swaync
 sleep .5
-swaync
+swaync &
 ''
