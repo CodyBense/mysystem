@@ -82,7 +82,7 @@
                 enable = true;
                 autoNumlock = true;
                 wayland.enable = true;
-                theme = "sugar-dark";
+                theme = "tokyo-night";
             };
             xkb = {
                 layout = "us";

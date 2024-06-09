@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
     sugar = pkgs.callPackage ../../pkgs/sddm-sugar-dark.nix { };
+    tokyo-night = pkgs.libsForQt5.callPackage ../../pkgs/sddm-tokyo-night.nix { };
 in
 {
 
@@ -120,6 +121,7 @@ in
 
 ## needed for sddm theme
         sugar.sddm-sugar-dark
+        tokyo-night
         libsForQt5.qt5.qtquickcontrols   
         libsForQt5.qt5.qtquickcontrols2   
         libsForQt5.qt5.qtgraphicaleffects
