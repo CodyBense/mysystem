@@ -24,6 +24,7 @@ in
         ../../config/hyprland.nix
         ../../config/waybar.nix
         ../../config/wlogout.nix
+        ../../config/swaync.nix
         ../../modules/home/gtk-qt/default.nix
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
