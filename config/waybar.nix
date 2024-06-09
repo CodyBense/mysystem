@@ -17,7 +17,7 @@ with lib;
         modules-center = [ "hyprland/workspaces" ];
         modules-left = [
           "custom/startmenu"
-          "hyprland/window"
+          # "hyprland/window"
           "pulseaudio"
           "cpu"
           "memory"
@@ -48,13 +48,13 @@ with lib;
           tooltip = true;
           tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
-        "hyprland/window" = {
-          max-length = 22;
-          separate-outputs = false;
-          rewrite = {
-            "" = " 🙈 No Windows? ";
-          };
-        };
+        # "hyprland/window" = {
+        #   max-length = 22;
+        #   separate-outputs = false;
+        #   rewrite = {
+        #     "" = " 🙈 No Windows? ";
+        #   };
+        # };
         "memory" = {
           interval = 5;
           format = " {}%";
@@ -65,10 +65,10 @@ with lib;
           format = " {usage:2}%";
           tooltip = true;
         };
-        "disk" = {
-          format = " {free}";
-          tooltip = true;
-        };
+        # "disk" = {
+        #   format = " {free}";
+        #   tooltip = true;
+        # };
         "network" = {
           format-icons = [
             "󰤯"
@@ -89,9 +89,9 @@ with lib;
           format = "{icon} {volume}% {format_source}";
           format-bluetooth = "{volume}% {icon} {format_source}";
           format-bluetooth-muted = " {icon} {format_source}";
-          format-muted = " {format_source}";
-          # format-source = " {volume}%";
-          # format-source-muted = "";
+          # format-muted = " {format_source}";
+          format-source = " {volume}%";
+          format-source-muted = "";
           format-icons = {
             headphone = "";
             hands-free = "";
