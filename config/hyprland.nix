@@ -69,17 +69,17 @@ with lib;
             general = {
                 gaps_in = "3";
                 border_size = "2";
-                "col.active_border" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
-                "col.inactive_border" = "rgb(${theme.base00}) rgb(${base06}) 45deg";
+                "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
+                "col.inactive_border" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
                 layout = "dwindle";
                 allow_tearing = "true";
                 resize_on_border = "true";
             };
 
             group = {
-                "col.border_active" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
-                "col.border_inactive" = "rgb(${theme.base00}) rgb(${base06}) 45deg";
-                "col.border_locked_active" = "rgb(${theme.base0B}) rgb(${base06}) 45deg";
+                "col.border_active" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
+                "col.border_inactive" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
+                "col.border_locked_active" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
                 "col.border_locked_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
             };
 
