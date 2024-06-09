@@ -9,7 +9,6 @@
         };
         nix-colors.url = "github:misterio77/nix-colors";
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-        spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
     outputs = { nixpkgs, home-manager, ... }@inputs: 
@@ -37,19 +36,19 @@
                 };
                 modules = [
                     ./hosts/${host}/configuration.nix
-                        home-manager.nixosModules.home-manager
-                        {
-                            home-manager.extraSpecialArgs = {
-                                inherit username;
-                                inherit inputs;
-                                inherit host;
-                                inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
-                            };
-                            home-manager.useGlobalPkgs = true;
-                            home-manager.useUserPackages = true;
-                            home-manager.backupFileExtension = "backup";
-                            home-manager.users.${username} = import ./hosts/${host}/home.nix;
-                        }
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager.extraSpecialArgs = {
+                            inherit username;
+                            inherit inputs;
+                            inherit host;
+                            inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
+                        };
+                        home-manager.useGlobalPkgs = true;
+                        home-manager.useUserPackages = true;
+                        home-manager.backupFileExtension = "backup";
+                        home-manager.users.${username} = import ./hosts/${host}/home.nix;
+                    }
                 ];
             };
         };

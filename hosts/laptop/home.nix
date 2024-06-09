@@ -37,7 +37,6 @@ in
         ../../modules/home/tmux.nix
         ../../modules/home/hyprlock.nix
         ../../modules/home/wofi.nix
-        ../../modules/home/spicetify.nix
     ];
 
     # Define Settings For Xresources
