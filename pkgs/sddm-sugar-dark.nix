@@ -17,7 +17,7 @@ in
         installPhase = ''
             mkdir -p $out/share/sddm/themes
             cp -aR $src $out/share/sddm/themes/sugar-dark
-            cd $out/share/sddm/themes/sugar-dark
+            cd $out/share/sddm/themes/
             cp -r ${image} $out/share/sddm/themes/sugar-dark/Background.jpg
         '';
         src = fetchFromGitHub {
