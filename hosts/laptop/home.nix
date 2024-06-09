@@ -77,6 +77,7 @@ in
             inherit username;
         })
         (import ../../scripts/theme-selector.nix {inherit pkgs;})
+        (import ../../scripts/task-waybar.nix {inherit pkgs;})
     ];
 
 # Let Home Manager install and manage itself.
