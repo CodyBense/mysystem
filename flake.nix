@@ -20,7 +20,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { nixpkgs, home-manager, hy3, ... }@inputs: 
+    outputs = { nixpkgs, home-manager, hy3, spicetify-nix, ... }@inputs: 
     let
         system = "x86_64-linux";
         host = "laptop";
@@ -52,6 +52,8 @@
                             inherit inputs;
                             inherit host;
                             inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
+                            inherit hy3;
+                            inherit spicetify-nix;
                         };
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
