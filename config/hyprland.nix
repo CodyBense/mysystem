@@ -16,9 +16,9 @@ with lib;
             # hyprplugins.hyprexpo
             # hy3.packages.x86_64-linux.hy3
         ];
-        extraConfig = ''
-            plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
-        '';
+        # extraConfig = ''
+        #     plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
+        # '';
         settings = with config.colorScheme.colors; {
         # settings = with config.stylix.theme.base16Scheme; {
             monitor = ",preferred,auto,auto";
