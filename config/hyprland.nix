@@ -2,6 +2,7 @@
 
 let
     theme = config.colorScheme.palette;
+    hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
 with lib;
 
@@ -10,9 +11,13 @@ with lib;
         enable = true;
         xwayland.enable = true;
         systemd.enable = true;
-        extraConfig = ''
-            plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
-        '';
+        plugins = [
+            #hyprplugins.{pluginname}
+            hy3.packages.x86_64-linux.hy3
+        ];
+        # extraConfig = ''
+        #     plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
+        # '';
         settings = with config.colorScheme.colors; {
         # settings = with config.stylix.theme.base16Scheme; {
             monitor = ",preferred,auto,auto";
