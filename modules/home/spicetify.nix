@@ -27,7 +27,7 @@ in
         powerBar
         playlistIcons
         playlistIntersection
-        skipStatus
+        skipStats
         songStats
         history
         fullScreen
