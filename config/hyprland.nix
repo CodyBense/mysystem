@@ -19,8 +19,7 @@ with lib;
         # extraConfig = ''
         #     plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
         # '';
-        settings = with config.colorScheme.colors; {
-        # settings = with config.stylix.theme.base16Scheme; {
+        settings =  {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
             # exec-once = "bash ~/.config/hypr/start.sh";
