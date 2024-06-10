@@ -7,11 +7,7 @@ in
 
     environment.systemPackages = with pkgs; [
 # Programs
-        # firefox
         spotify
-        # ncspot
-        # spotify-unwrapped
-        # spicetify-cli
         desmume
         pokeget-rs
         obsidian
@@ -47,24 +43,19 @@ in
         zoxide
         oh-my-posh
         oh-my-zsh
-        # starship
         imagemagick
 # Office Suite
         onlyoffice-bin
 # PDF
-# xpdf
         sioyek # viewer
         zathura
         okular
-
 # IMG
         swayimg # from terminal using swayimg command
         feh
-
 # Video
         vlc
         mpv
-
 # fonts, icons, and cursors
         nerdfonts
         font-awesome
@@ -75,15 +66,12 @@ in
         noto-fonts-cjk-sans
         material-design-icons
         bibata-cursors
-# bibata-extra-cursors
-
 # File manager
         dolphin
         lf
         xfce.thunar
 ## thunar plugins
         xfce.thunar-archive-plugin
-
 # Hyprland stuff
 ## Color stuff
         pywal # unsupported
@@ -96,8 +84,6 @@ in
 ## wallpaper
         swww
         hyprpaper
-## terminal
-        # kitty
 ## app launcher
         rofi-wayland
 ## login screen
@@ -113,13 +99,10 @@ in
         gtk2
         gtk3
         gtk4
-
 # QT
         qt5ct
         qt6ct
         gsettings-qt
-
-
 ## needed for sddm theme
         sugar.sddm-sugar-dark
         tokyo-night
