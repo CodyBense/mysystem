@@ -55,10 +55,6 @@
     };
 
     programs = {
-        hyprland = {
-            enable = true;
-            package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-        };
         firefox.enable = true;
         thunar = {
             enable = true;
