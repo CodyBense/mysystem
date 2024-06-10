@@ -15,13 +15,23 @@ in
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
+      theme = spicePkgs.themes.Onepunch;
 
       enabledExtensions = with spicePkgs.extensions; [
         fullAppDisplay
-        shuffle # shuffle+ (special characters are sanitized out of ext names)
-        hidePodcasts
-      ];
+        keyboardShortcut
+        bookmark
+        loopyLoop
+        popupLyrics
+        shuffle
+        powerBar
+        playlistIcons
+        playlistIntersection
+        skipStatus
+        songStats
+        history
+        fullScreen
+        historyShortcut
+        ];
     };
 }
