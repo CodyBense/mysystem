@@ -13,7 +13,7 @@ with lib;
         systemd.enable = true;
         plugins = [
             #hyprplugins.{pluginname}
-            hyprplugins.hyprexpo
+            # hyprplugins.hyprexpo
             # hy3.packages.x86_64-linux.hy3
         ];
         # extraConfig = ''
