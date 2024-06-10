@@ -78,6 +78,7 @@ in
         })
         (import ../../scripts/theme-selector.nix {inherit pkgs;})
         (import ../../scripts/task-waybar.nix {inherit pkgs;})
+        (import ../../scripts/web-search.nix {inherit pkgs;})
     ];
 
 # Let Home Manager install and manage itself.
