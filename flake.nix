@@ -17,6 +17,7 @@
             url = "github:outfoxxed/hy3";
             inputs.hyprland.follows = "hyprland";
         };
+        spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
     outputs = { nixpkgs, home-manager, hy3, ... }@inputs: 
