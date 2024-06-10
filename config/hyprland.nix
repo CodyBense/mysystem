@@ -14,6 +14,7 @@ with lib;
         plugins = [
             #hyprplugins.{pluginname}
             # hyprplugins.hyprexpo
+            hyprplugins.hyprbars
             # hy3.packages.x86_64-linux.hy3
         ];
         # extraConfig = ''
