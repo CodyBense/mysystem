@@ -57,6 +57,9 @@
                         home-manager.useUserPackages = true;
                         home-manager.backupFileExtension = "backup";
                         home-manager.users.${username} = import ./hosts/${host}/home.nix;
+                        home-manger.modules = [
+                            ./modules/home/spicetify.nix
+                        ];
                     }
                 ];
             };
