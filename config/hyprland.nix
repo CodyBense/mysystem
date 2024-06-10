@@ -244,6 +244,7 @@ with lib;
                 "$mainMod, F, exec, $browser"
                 "$mainMod, M, exec, spotify"
                 "$mainMod, BACKSPACE, exec, wlogout"
+                "$mainMod, period, exec, emojipicker"
 
                 "$mainMod ALT, L, exec, hyprlock"
 
