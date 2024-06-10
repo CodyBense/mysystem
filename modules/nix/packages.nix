@@ -48,6 +48,7 @@ in
         oh-my-posh
         oh-my-zsh
         # starship
+        imagemagick
 # Office Suite
         onlyoffice-bin
 # PDF
