@@ -8,9 +8,14 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         nix-colors.url = "github:misterio77/nix-colors";
-        hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+        # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+        hyprland.url = "github:hyprwm/Hyprland";
         hyprland-plugins = {
             url = "github:hyprwm/hyprland-plugins";
+            inputs.hyprland.follows = "hyprland";
+        };
+        hy3 = {
+            url = "github:outfoxxed/hy3"
             inputs.hyprland.follows = "hyprland";
         };
     };
