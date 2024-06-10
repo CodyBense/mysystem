@@ -11,7 +11,7 @@ with lib;
         xwayland.enable = true;
         systemd.enable = true;
         plugins = [
-            inputs.hyprland-plugins.packages.${pkgs.system}.hy3;
+            inputs.hyprland-plugins.packages.${pkgs.system}.hy3
         ];
         settings = with config.colorScheme.colors; {
         # settings = with config.stylix.theme.base16Scheme; {
