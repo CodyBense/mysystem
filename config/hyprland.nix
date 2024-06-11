@@ -28,7 +28,7 @@ with lib;
                     }
 
                     autotile {
-                        enable = false
+                        enable = true
                             trigger_width = 800
                             trigger_height = 500
                     }
@@ -264,6 +264,7 @@ with lib;
                 "$mainMod, DELETE, exit, "
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, V, togglefloating, "
+                "$mainMod, SHIFT, V, fullscreen"
                 "$mainMod, SPACE, exec, $menu"
                 # "$mainMode, SPACE, exec, rofi-launch"
                 "$mainMod, P, pseudo, "# dwindle
