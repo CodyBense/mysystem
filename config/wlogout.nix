@@ -192,13 +192,13 @@ in
             }
 
             #hibernate {
-                background-image: image(url("~/.config/wlogout/hibernate"));
+                background-image: image(url("/.config/wlogout/hibernate.png"));
             }
             #hibernate:focus {
-                background-image: image(url("~/.config/wlogout/hibernate"));
+                background-image: image(url("~/.config/wlogout/hibernate.png"));
             }
             #hibernate:hover {
-                background-image: image(url("~/.config/wlogout/hibernate"));
+                background-image: image(url("~/.config/wlogout/hibernate.png"));
             }
         '';
     };
