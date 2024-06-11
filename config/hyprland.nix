@@ -19,8 +19,8 @@ with lib;
         extraConfig = ''
             plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
             plugin {
-                no_gaps_when_only = 1
                 hy3 {
+                    no_gaps_when_only = 2
                     tabs {
                         height = 2
                             padding = 6
