@@ -59,10 +59,6 @@ in
     home.file.".base16-themes".source = ../../config/base16-themes;
     home.file.".emoji".source = ../../config/emoji;
     home.file.".config/starship.toml".source = ../../config/starship.toml;
-    home.file.".config/wlogout/icons" = {
-        source = ../../config/wlogout;
-        recursice = true;
-    };
 
     # Scripts
     home.packages = [
