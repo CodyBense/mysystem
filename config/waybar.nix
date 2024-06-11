@@ -276,7 +276,7 @@ with lib;
         #custom-startmenu {
           color: #${palette.base0D};
           background: #${palette.base01};
-          font-size: 20px;
+          font-size: 24px;
           margin: 0px;
           padding: 0px 30px 0px 15px;
           border-radius: 0px 0px 40px 0px;
