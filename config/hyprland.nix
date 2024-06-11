@@ -264,7 +264,7 @@ with lib;
                 "$mainMod, DELETE, exit, "
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, V, togglefloating, "
-                "$mainMod SHIFT, V, fullscreen"
+                "$mainMod SHIFT, V, fullscreen, 1"
                 "$mainMod, SPACE, exec, $menu"
                 # "$mainMode, SPACE, exec, rofi-launch"
                 "$mainMod, P, pseudo, "# dwindle
