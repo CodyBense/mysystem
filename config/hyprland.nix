@@ -15,11 +15,11 @@ with lib;
             #hyprplugins.{pluginname}
             # hyprplugins.hyprexpo
             # hyprplugins.hyprbars
-            # hy3.packages.x86_64-linux.hy3
         ];
         extraConfig = ''
             plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
             plugin {
+                no_gaps_only_when = 2
                 hy3 {
                     tabs {
                         height = 2
