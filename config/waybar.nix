@@ -17,7 +17,6 @@ with lib;
         modules-center = [ "hyprland/workspaces" ];
         modules-left = [
           "custom/startmenu"
-          # "hyprland/window"
           "pulseaudio"
           "cpu"
           "memory"
@@ -25,7 +24,6 @@ with lib;
         ];
         modules-right = [
           "custom/hyprbindings"
-          # "custom/themeselector"
           "custom/notification"
           "custom/exit"
           "battery"
@@ -48,13 +46,6 @@ with lib;
           tooltip = true;
           tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
-        # "hyprland/window" = {
-        #   max-length = 22;
-        #   separate-outputs = false;
-        #   rewrite = {
-        #     "" = " 🙈 No Windows? ";
-        #   };
-        # };
         "memory" = {
           interval = 5;
           format = " {}%";
@@ -65,10 +56,6 @@ with lib;
           format = " {usage:2}%";
           tooltip = true;
         };
-        # "disk" = {
-        #   format = " {free}";
-        #   tooltip = true;
-        # };
         "network" = {
           format-icons = [
             "󰤯"
@@ -107,11 +94,6 @@ with lib;
             };
             on-click = "sleep 0.1 && pavucontrol";
         };
-        # "custom/themeselector" = {
-        #   tooltip = false;
-        #   format = "";
-        #   on-click = "sleep 0.1 && theme-selector";
-        # };
         "custom/exit" = {
           tooltip = false;
           format = "";
@@ -183,7 +165,7 @@ with lib;
     style = concatStrings [
       ''
         * {
-          font-size: 16px;
+          font-size: 12px;
           border-radius: 0px;
           border: none;
           font-family: JetBrainsMono Nerd Font Mono;
@@ -294,7 +276,7 @@ with lib;
         #custom-startmenu {
           color: #${palette.base0D};
           background: #${palette.base01};
-          font-size: 28px;
+          font-size: 20px;
           margin: 0px;
           padding: 0px 30px 0px 15px;
           border-radius: 0px 0px 40px 0px;
