@@ -21,7 +21,6 @@ with lib;
             plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
             plugin {
                 hy3 {
-                    no_gaps_when_only = 1
                     tabs {
                         height = 2
                             padding = 6
@@ -29,7 +28,7 @@ with lib;
                     }
 
                     autotile {
-                        enable = true
+                        enable = false
                             trigger_width = 800
                             trigger_height = 500
                     }
