@@ -13,13 +13,13 @@ with lib;
         systemd.enable = true;
         plugins = [
             #hyprplugins.{pluginname}
-            hyprplugins.hyprexpo
-            hyprplugins.hyprbars
+            # hyprplugins.hyprexpo
+            # hyprplugins.hyprbars
             # hy3.packages.x86_64-linux.hy3
         ];
-        # extraConfig = ''
-        #     plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
-        # '';
+        extraConfig = ''
+            plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
+        '';
         settings =  {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
