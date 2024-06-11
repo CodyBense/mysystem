@@ -49,7 +49,7 @@ in
            }
         ];
 
-        syle = ''
+        style = ''
             * {
                 font-family: "JetBrainsMono NF", FontAwesome, sans-seriff;
                 background-image: none;
