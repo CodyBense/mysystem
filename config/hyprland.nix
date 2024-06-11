@@ -19,20 +19,6 @@ with lib;
         ];
         extraConfig = ''
             plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
-            plugin {
-                hy3 {
-                    tabs {
-                        height = 2
-                        padding = 6
-                        render_text = false
-                    }
-                    autotile {
-                        enable = true
-                        trigger_width = 800
-                        trigger_height = 500
-                    }
-                }
-            }
         '';
         settings =  {
             monitor = ",preferred,auto,auto";
@@ -258,7 +244,7 @@ with lib;
 
             bind = [
                 "$mainMod, T, exec, $terminal"
-                "$mainMod, Q, hy3:killactive, "
+                "$mainMod, Q, killactive, "
                 "$mainMod, DELETE, exit, "
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, V, togglefloating, "
@@ -272,15 +258,15 @@ with lib;
 
                 "$mainMod ALT, L, exec, hyprlock"
 
-                "$mainMod, H, hy3:movefocus, l"
-                "$mainMod, L, hy3:movefocus, r"
-                "$mainMod, K, hy3:movefocus, u"
-                "$mainMod, J, hy3:movefocus, d"
+                "$mainMod, H, movefocus, l"
+                "$mainMod, L, movefocus, r"
+                "$mainMod, K, movefocus, u"
+                "$mainMod, J, movefocus, d"
 
-                "$mainMod SHIFT, H, hy3:movewindow, l"
-                "$mainMod SHIFT, L, hy3:movewindow, r"
-                "$mainMod SHIFT, K, hy3:movewindow, u"
-                "$mainMod SHIFT, J, hy3:movewindow, d"
+                "$mainMod SHIFT, H, movewindow, l"
+                "$mainMod SHIFT, L, movewindow, r"
+                "$mainMod SHIFT, K, movewindow, u"
+                "$mainMod SHIFT, J, movewindow, d"
 
                 "$mainMod CTRL, H, resizeactive, -30 0"
                 "$mainMod CTRL, L, resizeactive, 30 0"
@@ -298,16 +284,16 @@ with lib;
                 "$mainMod, 9, workspace, 9"
                 "$mainMod, 0, workspace, 10"
 
-                "$mainMod SHIFT, 1, hy3:movetoworkspace, 1"
-                "$mainMod SHIFT, 2, hy3:movetoworkspace, 2"
-                "$mainMod SHIFT, 3, hy3:movetoworkspace, 3"
-                "$mainMod SHIFT, 4, hy3:movetoworkspace, 4"
-                "$mainMod SHIFT, 5, hy3:movetoworkspace, 5"
-                "$mainMod SHIFT, 6, hy3:movetoworkspace, 6"
-                "$mainMod SHIFT, 7, hy3:movetoworkspace, 7"
-                "$mainMod SHIFT, 8, hy3:movetoworkspace, 8"
-                "$mainMod SHIFT, 9, hy3:movetoworkspace, 9"
-                "$mainMod SHIFT, 0, hy3:movetoworkspace, 10"
+                "$mainMod SHIFT, 1, movetoworkspace, 1"
+                "$mainMod SHIFT, 2, movetoworkspace, 2"
+                "$mainMod SHIFT, 3, movetoworkspace, 3"
+                "$mainMod SHIFT, 4, movetoworkspace, 4"
+                "$mainMod SHIFT, 5, movetoworkspace, 5"
+                "$mainMod SHIFT, 6, movetoworkspace, 6"
+                "$mainMod SHIFT, 7, movetoworkspace, 7"
+                "$mainMod SHIFT, 8, movetoworkspace, 8"
+                "$mainMod SHIFT, 9, movetoworkspace, 9"
+                "$mainMod SHIFT, 0, movetoworkspace, 10"
 
                 "$mainMod CTRL, 1, movetoworkspacesilent, 1"
                 "$mainMod CTRL, 2, movetoworkspacesilent, 2"
@@ -321,7 +307,7 @@ with lib;
                 "$mainMod CTRL, 0, movetoworkspacesilent, 10"
 
                 "$mainMod, S, togglespecialworkspace, magic"
-                "$mainMod SHIFT, S, hy3:movetoworkspace, special:magic"
+                "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
                 "$mainMod SHIFT, I, togglesplit,"
 
