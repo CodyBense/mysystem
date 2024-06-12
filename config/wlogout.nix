@@ -8,42 +8,42 @@ in
         layout = [
            {
                label = "lock";
-               action = "suspend 1; hyprlock";
+               action = "sleep 1; hyprlock";
                text = "Lock (L)";
                keybind = "l";
            }
 
            {
                label = "reboot";
-               action = "suspend 1; systemctl reboot";
+               action = "sleep 1; systemctl reboot";
                text = "Reboot (R)";
                keybind = "r";
            }
 
            {
                label = "shutdown";
-               action = "suspend 1; systemctl poweroff";
+               action = "sleep 1; systemctl poweroff";
                text = "Shutdown (S)";
                keybind = "s";
            }
 
            {
                label = "logout";
-               action = "suspend 1; hyprclt dispatch exit";
+               action = "sleep 1; hyprclt dispatch exit";
                text = "Logout (E)";
                keybind = "e";
            }
 
            {
                label = "suspend";
-               action = "suspend 1; systemctl suspend";
+               action = "sleep 1; systemctl suspend";
                text = "Suspend (Z)";
                keybind = "z";
            }
 
            {
                label = "hibernate";
-               action = "suspend 1; systemctl hibernate";
+               action = "sleep 1; systemctl hibernate";
                text = "Hibernate (H)";
                keybind = "h";
            }
