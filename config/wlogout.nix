@@ -49,65 +49,6 @@ in
            }
         ];
 
-        # style = ''
-        #     * {
-        #         font-family: "JetBrainsMono NF", FontAwesome, sans-seriff;
-        #         background-image: none;
-        #         transitions: 20ms;
-        #     }
-        #     window {
-        #         background-color: rgba(12, 12, 12, 0.1)
-        #     }
-        #     button {
-        #         color: #${palette.base05};
-        #         font-size:20px;
-        #         background-repeat: no-repeat;
-        #         background-position: center;
-        #         background-size: 25%;
-        #         border-style: solid;
-        #         background-color: rgba(12, 12, 12, 0.3);
-        #         border: 3px solid #${palette.base05};
-        #         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        #     }
-        #     button:focus,
-        #     button:active,
-        #     button:hover {
-        #       color: #${palette.base0E};
-        #       background-color: rgba(12, 12, 12, 0.5);
-        #       border: 3px solid #${palette.base0E};
-        #     }
-        #     #logout {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/logout.png"));
-        #     }
-        #     #suspend {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/suspend.png"));
-        #     }
-        #     #shutdown {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/shutdown.png"));
-        #     }
-        #     #reboot {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/reboot.png"));
-        #     }
-        #     #lock {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/lock.png"));
-        #     }
-        #     #hibernate {
-        #       margin: 10px;
-        #       border-radius: 20px;
-        #       background-image: image(url("icons/hibernate.png"));
-        #     }
-        # '';
-
         style = ''
             window {
                 font-family: BlexMono Nerd Font;
@@ -144,60 +85,19 @@ in
             #lock {
                 background-image: image(url("/home/codybense/mysystem/config/wlogout/lock.png"));
             }
-            #lock:focus {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/lock-hover.png"));
-            }
-            #lock:hover {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/lock-hover.png"));
-            }
-
             #logout {
                 background-image: image(url("/home/codybense/mysystem/config/wlogout/logout.png"));
             }
-            #logout:focus {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/logout-hover.png"));
-            }
-            #logout:hover {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/logout-hover.png"));
-            }
-
             #suspend {
                 background-image: image(url("/home/codybense/mysystem/config/wlogout/suspend.png"));
             }
-            #suspend:focus {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/suspend-hover.png"));
-            }
-            #suspend:hover {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/suspend-hover.png"));
-            }
-
             #shutdown {
                 background-image: image(url("/home/codybense/mysystem/config/wlogout/power.png"));
             }
-            #shutdown:focus {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/power-hover.png"));
-            }
-            #shutdown:hover {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/power-hover.png"));
-            }
-
             #reboot {
                 background-image: image(url("/home/codybense/mysystem/config/wlogout/restart.png"));
             }
-            #reboot:focus {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/restart-hover.png"));
-            }
-            #reboot:hover {
-                background-image: image(url("/home/codybense/mysystem/config/wlogout/restart-hover.png"));
-            }
-
             #hibernate {
-                background-image: image(url("/home/codybense/.config/wlogout/icons/hibernate.png"));
-            }
-            #hibernate:focus {
-                background-image: image(url("/home/codybense/.config/wlogout/icons/hibernate.png"));
-            }
-            #hibernate:hover {
                 background-image: image(url("/home/codybense/.config/wlogout/icons/hibernate.png"));
             }
         '';
