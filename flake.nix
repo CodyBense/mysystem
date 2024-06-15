@@ -23,9 +23,9 @@
     outputs = { nixpkgs, home-manager, hy3, spicetify-nix, ... }@inputs: 
     let
         system = "x86_64-linux";
-        host = "laptop";
+        host = "desktop";
         username = "codybense";
-
+ 
         pkgs = import nixpkgs {
             inherit system;
             config = {
