@@ -1,5 +1,5 @@
 {
-    host = "desktop";
+    host = "nixos";
     terminal = "kitty";
     borwser = "firefox";
 
