@@ -265,8 +265,8 @@ with lib;
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, V, togglefloating, "
                 "$mainMod SHIFT, V, fullscreen"
-                "$mainMod, SPACE, exec, $menu"
-                # "$mainMode, SPACE, exec, rofi-launch"
+                # "$mainMod, SPACE, exec, $menu"
+                "$mainMode, SPACE, exec, rofi-launch"
                 "$mainMod, P, pseudo, "# dwindle
                 "$mainMod, F, exec, $browser"
                 "$mainMod, M, exec, spotify"
