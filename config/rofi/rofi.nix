@@ -45,7 +45,7 @@
             background-color = mkLiteral "@bg";
           };
           "mainbox" = {
-            padding = mkLiteral "15px";
+            padding = mkLiteral "10px";
             enabled = true;
             orientation = mkLiteral "vertical";
             children = map mkLiteral [
