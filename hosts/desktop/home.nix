@@ -25,6 +25,7 @@ in
         ../../config/waybar.nix
         ../../config/wlogout.nix
         ../../config/swaync.nix
+        ../../config/rofi/rofi.nix
         ../../modules/home/gtk-qt/default.nix
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
@@ -38,6 +39,21 @@ in
         ../../modules/home/hyprlock.nix
         ../../modules/home/wofi.nix
     ];
+
+    # Extra env variables for nividia on Hyprland
+    wayland.windowManager.hyprland = {
+        enable = true;
+        extraConfig = ''
+            env = LIBVA_DIRVER_NAME,nvidia
+            env = XDG_SESSION_TYPE,wayland
+            env = GBM_BACKEND,nvidia-drm
+            env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+
+            cursor {
+                no_hardware_cursors = true
+            }
+        '';
+    };
 
     # Define Settings For Xresources
     xresources.properties = {
