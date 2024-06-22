@@ -34,7 +34,7 @@
             urgent = mkLiteral "#${palette.base0E}";
           };
           "window" = {
-            width = mkLiteral "50%";
+            width = mkLiteral "75%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
