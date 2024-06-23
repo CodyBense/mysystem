@@ -46,7 +46,7 @@ with lib;
             "$fileManager" = "thunar";
             # "$menu" = "rofi -show drun -show-items";
             "$menu" = "wofi";
-            "$browser" = "firefox";
+            "$browser" = "brave";
             "$changeWallpaper" = "change-wallpaper";
             "$wallpaperSwitcher" = "wallpaper-switcher";
 
