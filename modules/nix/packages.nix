@@ -12,6 +12,7 @@ in
         pokeget-rs
         obsidian
         docker
+        brave
 
 # Neovim
         neovim
