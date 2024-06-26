@@ -14,7 +14,5 @@
 
     environment.systemPackages = with pkgs; [
         gcc
-        lua
-        lua54Packages.luarocks-nix
     ];
 }
