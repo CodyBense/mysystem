@@ -1,5 +1,5 @@
 
-{  lib, ... }: {
+{ pkgs, lib, ... }: {
     imports = [
         ./code/python_module.nix
         ./code/rust_module.nix
