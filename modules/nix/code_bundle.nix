@@ -11,4 +11,8 @@
     rust_module.enable = lib.mkDefault true;
     go_module.enable = lib.mkDefault true;
     node_module.enable = lib.mkDefault true;
+
+    environment.systemPackages = with pkgs; [
+        gcc
+    ];
 }
