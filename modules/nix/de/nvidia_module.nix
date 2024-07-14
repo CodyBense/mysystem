@@ -7,7 +7,6 @@
     config = lib.mkIf config.nvidia_module.enable{
         hardware.opengl = {
             enable = true;
-            driSupport = true;
             driSupport32Bit = true;
         };
 
