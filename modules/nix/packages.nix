@@ -13,7 +13,7 @@ in
         obsidian
         docker
         brave
-        kicad
+        # kicad
 
 # Neovim
         neovim
