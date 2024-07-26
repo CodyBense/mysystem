@@ -153,7 +153,7 @@ with lib;
             };
             
             master = {
-                new_is_master = "yes";
+                # new_is_master = "yes";
             };
 
             misc = {
