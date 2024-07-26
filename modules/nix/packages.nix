@@ -15,7 +15,7 @@ in
         brave
         # kicad
         qmk
-        arduino
+        arduino-ide
 
 # Neovim
         neovim
