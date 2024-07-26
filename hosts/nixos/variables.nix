@@ -1,7 +1,7 @@
 {
     host = "nixos";
     terminal = "kitty";
-    borwser = "firefox";
+    borwser = "brave";
 
     # Git config
     gitUsername = "Cody Bense";
