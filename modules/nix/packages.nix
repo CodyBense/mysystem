@@ -14,6 +14,7 @@ in
         docker
         brave
         # kicad
+        qmk
 
 # Neovim
         neovim
