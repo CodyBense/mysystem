@@ -48,6 +48,7 @@ in
         oh-my-posh
         oh-my-zsh
         imagemagick
+        tree
 # Office Suite
         onlyoffice-bin
 # PDF
