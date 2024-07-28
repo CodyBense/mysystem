@@ -16,6 +16,7 @@ in
         # kicad
         qmk
         arduino-ide
+        mysql
 
 # Neovim
         neovim
