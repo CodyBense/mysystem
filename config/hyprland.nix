@@ -98,8 +98,8 @@ with lib;
                 border_size = "2";
                 "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
                 "col.inactive_border" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
-                # layout = "dwindle";
-                layout = "hy3";
+                layout = "dwindle";
+                # layout = "hy3";
                 allow_tearing = "true";
                 resize_on_border = "true";
             };
@@ -150,6 +150,7 @@ with lib;
             dwindle = {
                 pseudotile = "yes";
                 preserve_split = "yes";
+                no_gaps_when_only = "1";
             };
             
             master = {
