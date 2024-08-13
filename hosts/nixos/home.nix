@@ -95,6 +95,7 @@ in
         (import ../../scripts/theme-selector.nix {inherit pkgs;})
         (import ../../scripts/task-waybar.nix {inherit pkgs;})
         (import ../../scripts/emojipicker.nix {inherit pkgs;})
+        (import ../../scripts/w2pc.nix {inherit pkgs;})
     ];
 
 # Let Home Manager install and manage itself.
