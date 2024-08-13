@@ -41,6 +41,7 @@ in
         wl-clipboard-rs
         pavucontrol
         swaynotificationcenter
+        wakeonlan
 # Terminal stuff
         tmux
         gh
