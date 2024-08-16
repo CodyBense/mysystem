@@ -42,6 +42,7 @@ in
         pavucontrol
         swaynotificationcenter
         wakeonlan
+        ripgrep
 # Terminal stuff
         tmux
         gh
