@@ -8,6 +8,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         nix-colors.url = "github:misterio77/nix-colors";
+        stylix.url = "github:danth/stylix";
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
         hyprland-plugins = {
             url = "github:hyprwm/hyprland-plugins";
@@ -20,7 +21,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { nixpkgs, home-manager, hy3, spicetify-nix, ... }@inputs: 
+    outputs = { nixpkgs, home-manager, hy3, spicetify-nix, stylix, ... }@inputs: 
     let
         system = "x86_64-linux";
         host = "laptop";

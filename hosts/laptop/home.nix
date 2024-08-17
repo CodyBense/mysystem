@@ -21,6 +21,7 @@ in
     imports = [
         inputs.nix-colors.homeManagerModules.default
         inputs.hyprland.homeManagerModules.default
+        stylix.homeManagerModules.stylix
         ../../config/hyprland.nix
         ../../config/waybar.nix
         ../../config/wlogout.nix
