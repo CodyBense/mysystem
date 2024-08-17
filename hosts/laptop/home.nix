@@ -1,5 +1,5 @@
 # PROGRAMS to get to dotfile configuration control
-{ config, pkgs, inputs, username, host, gtkThemeFromScheme, stylix, ... }:
+{ config, pkgs, inputs, username, host, gtkThemeFromScheme, ... }:
 let
     palette = config.colorScheme.palette;
     inherit (import ./variables.nix)
@@ -21,7 +21,6 @@ in
     imports = [
         inputs.nix-colors.homeManagerModules.default
         inputs.hyprland.homeManagerModules.default
-        stylix.homeManagerModules.stylix
         ../../config/hyprland.nix
         ../../config/waybar.nix
         ../../config/wlogout.nix

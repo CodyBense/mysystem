@@ -21,7 +21,7 @@
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
-    outputs = { nixpkgs, home-manager, hy3, spicetify-nix, stylix, ... }@inputs: 
+    outputs = { nixpkgs, home-manager, hy3, spicetify-nix, ... }@inputs: 
     let
         system = "x86_64-linux";
         host = "laptop";
@@ -46,6 +46,7 @@
                 };
                 modules = [
                     ./hosts/${host}/configuration.nix
+                    inputs.stylix.nixosModules.stylix
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.extraSpecialArgs = {
