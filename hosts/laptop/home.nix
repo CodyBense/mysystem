@@ -1,5 +1,5 @@
 # PROGRAMS to get to dotfile configuration control
-{ config, pkgs, inputs, username, host, gtkThemeFromScheme, ... }:
+{ config, pkgs, inputs, username, host, gtkThemeFromScheme, stylix, ... }:
 let
     palette = config.colorScheme.palette;
     inherit (import ./variables.nix)
