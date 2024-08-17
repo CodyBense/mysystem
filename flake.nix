@@ -23,7 +23,7 @@
     outputs = { nixpkgs, home-manager, hy3, spicetify-nix, ... }@inputs: 
     let
         system = "x86_64-linux";
-        host = "nixos";
+        host = "laptop";
         username = "codybense";
  
         pkgs = import nixpkgs {
