@@ -40,16 +40,18 @@
     stylix.polarity = "dark";
 
     # Override settings
+    # wayland.windowManager.hyprland.settings.general."col.active_border" =
+    #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
     wayland.windowManager.hyprland.settings.general."col.active_border" =
-        lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
-    wayland.windowManager.hyprland.settings.general."col.inactive_border" =
-        lib.nkForce "rgb(${config.stylix.base16Scheme.base00}) rbg(${config.stylix.base16Scheme.base06}) 45deg";
-    wayland.windowManager.hyprland.settings.group."col.border_active" =
-        lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
-    wayland.windowManager.hyprland.settings.group."col.border_inactive" =
-        lib.nkForce "rgb(${config.stylix.base16Scheme.base00}) rbg(${config.stylix.base16Scheme.base06}) 45deg";
-    wayland.windowManager.hyprland.settings.group."col.border_locked_active" =
-        lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
-    wayland.windowManager.hyprland.settings.group."col.border_locked_inactive" =
-        lib.mkForce "rgb(b4befecc) rgb(6c7086cc) 45deg";
+        lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
+    # wayland.windowManager.hyprland.settings.general."col.inactive_border" =
+    #     lib.nkForce "rgb(${config.stylix.base16Scheme.base00}) rbg(${config.stylix.base16Scheme.base06}) 45deg";
+    # wayland.windowManager.hyprland.settings.group."col.border_active" =
+    #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
+    # wayland.windowManager.hyprland.settings.group."col.border_inactive" =
+    #     lib.nkForce "rgb(${config.stylix.base16Scheme.base00}) rbg(${config.stylix.base16Scheme.base06}) 45deg";
+    # wayland.windowManager.hyprland.settings.group."col.border_locked_active" =
+    #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
+    # wayland.windowManager.hyprland.settings.group."col.border_locked_inactive" =
+    #     lib.mkForce "rgb(b4befecc) rgb(6c7086cc) 45deg";
 }
