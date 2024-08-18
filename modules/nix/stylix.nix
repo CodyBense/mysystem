@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+    stylix.enable = true;
     stylix.autoEnable = true;
     stylix.targets.gtk.enable = true;
 
