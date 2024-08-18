@@ -41,8 +41,8 @@
     stylix.polarity = "dark";
 
     # Override settings
-    wayland.windowManager.hyprland.settings.general."col.active_border" =
-        lib.mkForce "rgb(${config.stylix.base16Scheme.base0B})";
+    # wayland.windowManager.hyprland.settings.general."col.active_border" =
+    #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B})";
     # wayland.windowManager.hyprland.settings.general."col.active_border" =
     #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
     # wayland.windowManager.hyprland.settings.general."col.inactive_border" =
