@@ -38,4 +38,8 @@
     };
 
     stylix.polarity = "dark";
+
+    # Override settings
+    wayland.windowManager.hyprland.settings.general."col.active_border" =
+        lib.mkFore "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06} 45deg";
 }
