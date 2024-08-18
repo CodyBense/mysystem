@@ -43,7 +43,7 @@ in
 
     # Define Settings For Xresources
     xresources.properties = {
-        "Xcursor.size" = 24;
+        # "Xcursor.size" = 24;
     };
 
     # Place Files Inside Home Directory
