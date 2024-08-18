@@ -15,7 +15,7 @@ in
       };
       style = ''
         * {
-          font-family: JetBrainsMono Nerd Font Mono,monospace;
+          # font-family: JetBrainsMono Nerd Font Mono,monospace;
           font-weight: bold;
         }
         #window {
