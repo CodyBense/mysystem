@@ -62,9 +62,6 @@ in
     #   '';
     # };
       style = ''
-        * {
-          font-weight: bold;
-        }
         #window {
           border-radius: 25px;
           border: 2px solid #${palette.base08};
