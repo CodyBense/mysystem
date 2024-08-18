@@ -1,4 +1,4 @@
-{ pkgs, config, lib, inputs, hy3, ... }:
+{ pkgs, config, lib, inputs, ... }:
 
 let
     theme = config.colorScheme.palette;
