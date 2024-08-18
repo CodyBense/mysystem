@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
     stylix.autoEnable = true;
+    stylix.targets.gtk.enable = true;
 
     stylix.base16Scheme = "${pkgs.base16-schemes}/share/themse/gruvbux-dark-soft.yaml";
     stylix.image = "~/Pictures/Wallpapers/latios_latias.jpg";

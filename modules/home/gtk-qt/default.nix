@@ -8,10 +8,10 @@
             size = 12;
             package = pkgs.ubuntu_font_family;
         };
-        # theme = {
-        #     name = "${config.colorScheme.slug}";
-        #     package = gtkThemeFromScheme { scheme = config.colorScheme; };
-        # };
+        theme = {
+            name = "${config.colorScheme.slug}";
+            package = gtkThemeFromScheme { scheme = config.colorScheme; };
+        };
         iconTheme = {
             name = "Papirus-Dark";
             package = pkgs.papirus-icon-theme;
@@ -27,9 +27,9 @@
     qt = {
         enable = true;
         platformTheme = "gtk";
-        # style = {
-        #     name = "adwaita-dark";
-        #     package = pkgs.adwaita-qt;
-        # };
+        style = {
+            name = "adwaita-dark";
+            package = pkgs.adwaita-qt;
+        };
     };
 }
