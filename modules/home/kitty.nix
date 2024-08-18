@@ -14,7 +14,7 @@ in
              package = pkgs.jetbrains-mono;
              size = 10;
          };
-         # theme = "Gruvbox Material Dark Hard";
+         theme = "Gruvbox Material Dark Hard";
          settings = with config.colorScheme.colors;{
          # setting = with config.stylix.base16Scheme; {
              window_padding_width = 25;
