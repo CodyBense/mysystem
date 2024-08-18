@@ -22,6 +22,7 @@ in
         neovim
         vimPlugins.nvim-lspconfig
         lua54Packages.luasnip
+        lazygit
 
 # Utility
         home-manager
