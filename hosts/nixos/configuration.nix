@@ -6,7 +6,7 @@
 
 {
     nvidia_module.enable = 
-    if (host == "nixos")
+    if (host == "desktop")
         then true
         else false;
 
