@@ -5,7 +5,7 @@
     stylix.targets.gtk.enable = true;
 
     stylix.base16Scheme = "${pkgs.base16-schemes}/share/themse/gruvbux-dark-medium.yaml";
-    stylix.image = "~/Pictures/Wallpapers/latios_latias.jpg";
+    stylix.image = ~/Pictures/Wallpapers/latios_latias.jpg;
 
     stylix.cursor.package = pkgs.bibata-cursors;
     stylix.cursor.name = "Bibata-Modern-Ice";
