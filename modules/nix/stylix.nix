@@ -41,7 +41,7 @@
     stylix.polarity = "dark";
 
     # Override settings
-    home-manager.users.codybense.programs.wofi.style = lib.mkForce "*{ font-family: JetBrainsMono Nerd Font Mono,monospace; font-weight: bold;}"
+    home-manager.users.codybense.programs.wofi.style = lib.mkForce "*{ font-family: JetBrainsMono Nerd Font Mono,monospace; font-weight: bold;}";
     # wayland.windowManager.hyprland.settings.general."col.active_border" =
     #     lib.mkForce "rgb(${config.stylix.base16Scheme.base0B})";
     # wayland.windowManager.hyprland.settings.general."col.active_border" =
