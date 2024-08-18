@@ -26,7 +26,7 @@ in
         ../../config/wlogout.nix
         ../../config/swaync.nix
         ../../config/rofi/rofi.nix
-        ../../modules/home/gtk-qt/default.nix
+        # ../../modules/home/gtk-qt/default.nix
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
         ../../modules/home/starship.nix
