@@ -2,9 +2,9 @@
 
 let
     theme = config.colorScheme.palette;
-    hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
+    # hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
-with lib;
+# with lib;
 
 {
     wayland.windowManager.hyprland = {
