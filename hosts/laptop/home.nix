@@ -17,9 +17,6 @@ in
     # Set the Colorscheme
     colorScheme = inputs.nix-colors.colorSchemes."${theme}";
     
-    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themse/gruvbux-dark-medium.yaml";
-    stylix.image = "~/Pictures/Wallpapers/latios_latias.jpg";
-
     # Import Program Configurations
     imports = [
         inputs.nix-colors.homeManagerModules.default
