@@ -15,7 +15,10 @@ in
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
     # Set the Colorscheme
-    colorScheme = inputs.nix-colors.colorSchemes."${theme}";
+    # colorScheme = inputs.nix-colors.colorSchemes."${theme}";
+    
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themse/gruvbux-dark-medium.yaml"
+    stylix.image = "~/Pictures/Wallpapers/latios_latias.jpg"
 
     # Import Program Configurations
     imports = [
