@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, host, inputs, username, options, ... }:
+{ pkgs, host, ... }:
 
 {
     nvidia_module.enable = 
@@ -17,7 +17,7 @@
         # ../../modules/nix/customPackages.nix
         ../../modules/nix/de_bundle.nix
         ../../modules/nix/packages.nix
-        ../../modules/nix/stylix.nix
+        # ../../modules/nix/stylix.nix
         # ./modules/de_bundle.nix
         # ./modules/code_bundle.nix
         # ./modules/packages.nix
