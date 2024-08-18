@@ -16,25 +16,6 @@ in
             # hyprplugins.hyprexpo
             # hyprplugins.hyprbars
         ];
-        extraConfig = ''
-            plugin = ${hy3.packages.x86_64-linux.hy3}/lib/libhy3.so
-            plugin {
-                hy3 {
-                    no_gaps_when_only = 1
-                    tabs {
-                        height = 2
-                            padding = 6
-                            render_text = false
-                    }
-
-                    autotile {
-                        enable = true
-                            trigger_width = 800
-                            trigger_height = 500
-                    }
-                }
-            }
-        '';
         settings =  {
             monitor = ",preferred,auto,auto";
             "$scrPath" = "$HOME/mysystem/scripts"; 
