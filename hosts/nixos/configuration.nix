@@ -76,7 +76,6 @@
     environment.variables.EDITOR = "nvim";
 
     services = {
-        enable = true;
         displayManager.sddm = {
             enable = true;
             autoNumlock = true;
