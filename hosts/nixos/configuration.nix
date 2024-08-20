@@ -76,6 +76,7 @@
     environment.variables.EDITOR = "nvim";
 
     services = {
+        xserver = {
             enable = true;
             displayManager.sddm = {
                 enable = true;
@@ -83,10 +84,10 @@
                 wayland.enable = true;
                 theme = "tokyo-night-sddm";
             };
-    };
-        xkb = {
-            layout = "us";
-            variant = "";
+            xkb = {
+                layout = "us";
+                variant = "";
+            };
         };
         pipewire = {
             enable = true;
