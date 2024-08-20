@@ -76,11 +76,14 @@
     environment.variables.EDITOR = "nvim";
 
     services = {
-        displayManager.sddm = {
-            enable = true;
-            autoNumlock = true;
-            wayland.enable = true;
-            theme = "tokyo-night-sddm";
+        xserver = {
+            enable = tre
+            displayManager.sddm = {
+                enable = true;
+                autoNumlock = true;
+                wayland.enable = true;
+                theme = "tokyo-night-sddm";
+            };
         };
         xkb = {
             layout = "us";
