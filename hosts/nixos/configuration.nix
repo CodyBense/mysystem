@@ -77,7 +77,7 @@
 
     services = {
         xserver = {
-            enable = tre
+            enable = true;
             displayManager.sddm = {
                 enable = true;
                 autoNumlock = true;
