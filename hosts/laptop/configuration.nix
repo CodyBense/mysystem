@@ -17,7 +17,7 @@
         ../../modules/nix/de_bundle.nix
         ../../modules/nix/packages.nix
         ../../modules/nix/docker.nix
-        ../../pkgs/customPkgs/todo_go.nix
+        # ../../pkgs/customPkgs/todo_go.nix
         # ../../modules/nix/customPackages.nix
         # ../../modules/nix/stylix.nix
         # ./modules/de_bundle.nix
