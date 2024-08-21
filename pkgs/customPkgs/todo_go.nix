@@ -4,7 +4,7 @@
     (final: prev: {
       todo = pkgs.buildGoModule rec {
         pname = "todo_go";
-        version = "2.1.0";
+        version = "1.4.0";
         src = pkgs.fetchFromGitHub {
           owner = "CodyBense";
           repo = "todo_go";
