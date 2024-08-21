@@ -1,6 +1,6 @@
 {  pkgs, ... }:
 {
-    todo = pkgs.buildGoApplication rec {
+    todo = pkgs.buildGoApplication {
         goPackagePath = "github.com/CodyBense/todo_go";
 
         src = pkgs.fetchFromGitHub {
