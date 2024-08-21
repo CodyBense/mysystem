@@ -1,15 +1,19 @@
-{  pkgs, ... }:
+{ ... }:
 {
-    todo = pkgs.buildGoApplication {
-        goPackagePath = "github.com/CodyBense/todo_go";
-
+    nixpkgs.overlays = [
+    (final: prev: {
+      todo = pkgs.buildGoModule rec {
+        pname = "todo_go";
+        version = "2.1.0";
         src = pkgs.fetchFromGitHub {
-            onwer = "CodyBense";
-            repo = "todo_go";
-            hash = "";
+          owner = "CodyBense";
+          repo = "todo_go";
+          rev = "v${version}";
+          sha256 = "sha256-CojP1a19b2zKfUMp+wN7FFs+SzSoc8sYqKvXTg4RnOA=";
         };
-        vendorHash = "";
-
-        goDeps = ./todo_go.nix;
-    };
+        vendorHash = "sha256-KO8cbkqdAkGkNrqBh3wIWaQyvf9hqrKjXWbElpQzMpg=";
+        nativeCheckInputs = with pkgs; [ less ];
+      };
+    })
+  ];
 }
