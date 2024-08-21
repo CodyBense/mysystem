@@ -17,6 +17,7 @@
                 extraConfig = ''
                     set -g @plugin 'egel/tmux-gruvbox'
                     set -g @plugin 'egel/tmux-gruvbox'
+                    set -g @plugin 'tmux-plugins/tmux-resurrect'
                 '';
             }
             tmuxPlugins.yank
