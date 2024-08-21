@@ -44,6 +44,7 @@ in
         swaynotificationcenter
         wakeonlan
         ripgrep
+        niv
 # Terminal stuff
         tmux
         gh
