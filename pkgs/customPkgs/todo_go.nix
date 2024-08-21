@@ -1,9 +1,9 @@
-{ buildGoApplication, fetchFromGitHub, ... }:
+{  pkgs, ... }:
 {
-    todo = buildGoApplication rec {
+    todo = pkgs.buildGoApplication rec {
         goPackagePath = "github.com/CodyBense/todo_go";
 
-        src = fetchFromGitHub {
+        src = pkgs.fetchFromGitHub {
             onwer = "CodyBense";
             repo = "todo_go";
             hash = "";
