@@ -2,16 +2,15 @@
 {
     nixpkgs.overlays = [
     (final: prev: {
-      todo = pkgs.buildGoModule rec {
+      todo = pkgs.buildGoModule {
         pname = "todo_go";
-        version = "1.4.0";
         src = pkgs.fetchFromGitHub {
           owner = "CodyBense";
           repo = "todo_go";
-          rev = "v${version}";
-          sha256 = "sha256-CojP1a19b2zKfUMp+wN7FFs+SzSoc8sYqKvXTg4RnOA=";
+          rev = "0eea65f0c2e36bbd538fe939428583d23fa6921b";
+          sha256 = "10h2crpsfdv3i3jsx64nswnvddap912bnv7rhwfl3pwqysqywrbq";
         };
-        vendorHash = "sha256-KO8cbkqdAkGkNrqBh3wIWaQyvf9hqrKjXWbElpQzMpg=";
+        vendorHash = "sha256-eGXusfaY30Edh/lsu0RIV7W2LdeWmK7liGM3p29mAoI=";
         nativeCheckInputs = with pkgs; [ less ];
       };
     })
