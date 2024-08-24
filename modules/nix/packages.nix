@@ -46,7 +46,7 @@ in
         wakeonlan
         ripgrep
         niv
-        libclangd
+        libclang
 # Terminal stuff
         tmux
         gh
