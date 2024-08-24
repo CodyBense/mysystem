@@ -16,6 +16,7 @@ in
         # kicad
         qmk
         arduino-ide
+        arduino-cli
         mysql
 
 # Neovim
@@ -45,6 +46,7 @@ in
         wakeonlan
         ripgrep
         niv
+        libclangd
 # Terminal stuff
         tmux
         gh
