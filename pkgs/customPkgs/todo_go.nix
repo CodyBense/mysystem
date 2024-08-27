@@ -10,7 +10,7 @@
          owner = "CodyBense";
          repo = "todo_go";
          rev = "v${version}";
-         hash = "sha256-Irh9K2Ui9ZEHhJQeoK55TZHrn1jHtwhDbrnZLSzYI2o=";
+         hash = "00e1d5d6a64572d150d3804a54718163fff1151c";
          };
 
          vendorHash = null;
