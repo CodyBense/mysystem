@@ -17,7 +17,7 @@
     imports =[ # Include the results of the hardware scan.
         ./hardware-configuration.nix
         ./users.nix
-        ../../modules/intel-dirvers.nix
+        ../../modules/intel-drivers.nix
         ../../modules/nix/code_bundle.nix
         ../../modules/nix/de_bundle.nix
         ../../modules/nix/packages.nix
