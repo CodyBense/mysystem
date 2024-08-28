@@ -1,4 +1,4 @@
-{ pkgs, config, lib, inputs, ... }:
+{ pkgs, config, lib, inputs, stylix, ... }:
 
 let
     theme = config.colorScheme.palette;
@@ -77,7 +77,8 @@ in
                 gaps_in = "6";
                 gaps_out = "8";
                 border_size = "2";
-                "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
+                # "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
+                "col.active_border" = "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06}) 45deg";
                 "col.inactive_border" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
                 layout = "dwindle";
                 # layout = "hy3";
