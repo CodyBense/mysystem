@@ -9,10 +9,6 @@
     if (host == "desktop")
         then true
         else false;
-    drivers.intel.enale = 
-    if (host == "laptop")
-        then true
-        else false;
 
     imports =[ # Include the results of the hardware scan.
         ./hardware-configuration.nix
@@ -30,6 +26,11 @@
         # ./../scripts/scripts.nix
         # ./sddm-theme/default.nix
         ];
+
+    drivers.intel.enale = 
+        if (host == "laptop")
+            then true
+        else false;
 
     # Bootloader.
     boot.loader = {
