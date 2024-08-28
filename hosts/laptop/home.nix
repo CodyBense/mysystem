@@ -38,10 +38,11 @@ in
         ../../modules/home/lf.nix
         ../../modules/home/tmux.nix
         ../../modules/home/hyprlock.nix
-        # ../../modules/home/gtk-qt/default.nix
-        # ../../modules/home/wofi.nix
-        # ../../modules/home/spicetify.nix
     ];
+
+    stylix.targets.waybar.enable = false;
+    stylix.target.rofi.enable = false;
+    stylix.target.hyprland.enable = false;
 
     # Define Settings For Xresources
     xresources.properties = {
