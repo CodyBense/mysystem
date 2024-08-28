@@ -26,7 +26,8 @@ in
         ../../config/wlogout.nix
         ../../config/swaync.nix
         ../../config/rofi/rofi.nix
-        ../../modules/home/gtk-qt/default.nix
+        ../../config/rofi/config-emoji.nix
+        ../../config/rofi/config-long.nix
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
         ../../modules/home/starship.nix
@@ -37,7 +38,8 @@ in
         ../../modules/home/lf.nix
         ../../modules/home/tmux.nix
         ../../modules/home/hyprlock.nix
-        ../../modules/home/wofi.nix
+        # ../../modules/home/gtk-qt/default.nix
+        # ../../modules/home/wofi.nix
         # ../../modules/home/spicetify.nix
     ];
 

@@ -1,7 +1,7 @@
 { pkgs, config, lib, inputs, stylix, ... }:
 
 let
-    theme = config.colorScheme.palette;
+    terminal = "kitty";
     # hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
 # with lib;
@@ -11,353 +11,192 @@ in
         enable = true;
         xwayland.enable = true;
         systemd.enable = true;
-        plugins = [
-            #hyprplugins.{pluginname}
-            # hyprplugins.hyprexpo
-            # hyprplugins.hyprbars
-        ];
-        settings =  {
-            monitor = ",preferred,auto,auto";
-            "$scrPath" = "$HOME/mysystem/scripts"; 
-            # exec-once = "bash ~/.config/hypr/start.sh";
-            exec-once = "start-hyprland";
-            # exec-once = "hypridle";
-            "$terminal" = "kitty";
-            # "$fileManager" = "dolphin";
-            "$fileManager" = "thunar";
-            # "$menu" = "rofi -show drun -show-items";
-            "$menu" = "wofi";
-            "$browser" = "brave";
-            "$changeWallpaper" = "change-wallpaper";
-            "$wallpaperSwitcher" = "wallpaper-switcher";
+        extraConfig = 
+            let
+                modifier = "SUPER";
+                browser = "brave";
+                username = "codybense";
+                extraMonitorSettings = "";
+            in
+            lib.concatStrings [
+                ''
+                    env = NIXOS_OZONE_WL, 1
+                    env = NIXPKGS_ALLOW_UNFREE, 1
+                    env = XDG_CURRENT_DESKTOP, Hyprland
+                    env = XDG_SESSION_TYPE, wayland
+                    env = XDG_SESSION_DESKTOP, Hyprland
+                    env = GDK_BACKEND, wayland, x11
+                    env = CLUTTER_BACKEND, wayland
+                    env = QT_QPA_PLATFORM=wayland;xcb
+                    env = QT_WAYLAND_DISABLE_WINDOWDECORATION, 1
+                    env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
+                    env = SDL_VIDEODRIVER, x11
+                    env = MOZ_ENABLE_WAYLAND, 1
 
-            env = [
-                "XCURSOR_SIZE,24"
-                "QT_QPA_PLATFORTHEME,qt5ct"
-                "PATH,$PATH:$scrPath"
-                "XDG_CURRENT_DESKTOP,Hyprland"
-                "XDG_SESSION_TYPE,wayland"
-                "XDG_SESSION_DESKTOP,Hyprland"
-                "QT_QPA_PLATFORM,wayland"
-                "QT_QPA_PLATFORMTHEME,qt5ct"
-                "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-                "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-                "MOZ_ENABLE_WAYLAND,1"
-                "GDK_SCALE,1"
-                "GDK_BACKEND,wayland"
-                "GTK_USE_PORTAL,1"
+                    exec-once = dbus-update-activation-environment --systemd --all
+                    exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+                    exec-once = killall -q swww;sleep .5 && swww init
+                    exec-once = killall -q waybar;sleep .5 && waybar
+                    exec-once = killall -q swaync;sleep .5 && swaync
+                    exec-once = nm-applet --indicator
+                    exec-once = lxqt-policykit-agent
+                    exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg
+                    monitor=,preferred,auto,1
+                    ${extraMonitorSettings}
+
+                    general {
+                        gaps_in = 6
+                        gaps_out = 8
+                        border_size = 2
+                        layout = dwindle
+                        resize_on_border = true
+                        col.active_border = rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06}) 45deg 
+                        col.inactive_border = rgb(${config.stylix.base16Scheme.base00}) rgb(${config.stylix.base16Scheme.base06}) 45deg
+                    }
+
+                    input {
+                        kb_layout = us
+                        kb_options = grp:alt_shift_toggle
+                        kb_options = caps:super
+                        follow_mouse = 1
+                        touchpad {
+                            natural_scroll = true
+                            disable_while_typing = true
+                            scroll_factor = 0.8
+                        }
+                        sensitivity = 0
+                    }
+
+                    windowrule = noborder,^(wofi)$
+                    windowrule = center,^(wofi)$
+                    windowrule = center,^(steam)$
+                    windowrule = float, nm-connection-editor|blueman-manager
+                    windowrule = float, swayimg|vlc|Viewnior|pavycontrol
+                    windowrule = float, nwg-lock|qt5ct|mpv
+                    windowrule = float, zoom
+                    windowrulev2 = stayfocused, title:^()$,class:^(steam)$
+                    windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
+                    windowrulev2 = opacity 0.9 0.7, class:^(Brave)$
+                    windowrulev2 = opacity 0.9 0.7, class:^(thunar)$
+
+                    gestures {
+                        workspace_swipe = true
+                        workspace_swipe_fingers = 3
+                    }
+
+                    misc {
+                        initial_workspace_tracking = 0
+                        mouse_move_enables_dpms = true
+                        key_press_enables_dpms = false
+                    }
+
+                    animation {
+                        enabled = yes
+                        bezier = wind, 0.05, 0.9, 0.1, 1.05
+                        bezier = winIn, 0.1, 1.1, 0.1, 1.1
+                        bezier = winOut, 0.3, -0.3, 0, 1
+                        bezier = liner, 1, 1, 1, 1
+                        animation = windows, 1, 6, wind, slide
+                        animation = windowsIn, 1, 6, winIn, slide
+                        animaiton = windowsOut, 1, 5, winOut, slide
+                        animation = windowsMove, 1, 5, wind, slide
+                        animation = border, 1, 1, liner
+                        animation = fade, 1, 10, default
+                        animation = workspaces, 1, 5, wind
+                    }
+
+                    decoration {
+                        rounding = 10
+                        drop_shadow = false
+                        shadow_range = 4
+                        shadow_range_power = 3
+                        col.shadow = rgba(1a1a1aee)
+                        blur {
+                            enabled = true
+                            size = 5
+                            passes = 3
+                            new_optimizations = on
+                            ignore_opacity = off
+                        }
+                    }
+
+                    dwindle {
+                        psudotile = true
+                        preserve_split = true
+                        no_gaps_when_only = 1
+                    }
+
+                    bind = ${modifier}, T, exec, ${terminal}
+                    bind = ${modifier}, Space, exec, rofi-launcher
+                    bind = ${modifier}SHIFT, W, exec, web-search
+                    bind = ${modifier}ALT, W, exec, wallsetter
+                    bind = ${modifier}, F, exec, ${browser}
+                    bind = ${modifier}, PERIOD, exec, emojipicker
+                    bind = ${modifier}, E, exec, thunar
+                    bind = ${modifier}, M, exec, spotify
+                    bind = ${modifier}, Q, exec, killactive
+                    bind = ${modifier}, DELETE, exit, 
+                    bind = ${modifier}, V, togglefloating,
+                    bind = ${modifier} SHIFT, V, fullscreen
+                    bind = ${modifier}, P, pseudo,
+                    bind = ${modifier}, BACKSPACE, exec, wlogout
+                    bind = ${modifier} ALT, L, exec, hyprlock
+                    bind = ${modifier}, H, movefocus, l
+                    bind = ${modifier}, L, movefocus, r
+                    bind = ${modifier}, K, movefocus, u
+                    bind = ${modifier}, J, movefocus, d
+                    bind = ${modifier}SHIFT, H, movewindow, l
+                    bind = ${modifier}SHIFT, L, movewindow, r
+                    bind = ${modifier}SHIFT, K, movewindow, u
+                    bind = ${modifier}SHIFT, J, movewindow, d
+                    bind = ${modifier}CTRL, H, resizeactive, -30 0
+                    bind = ${modifier}CTRL, L, resizeactive, 30 0
+                    bind = ${modifier}CTRL, K, resizeactive, 0 -30
+                    bind = ${modifier}CTRL, J, resizeactive, 0 30
+                    bind = ${modifier}, 1, workspace, 1
+                    bind = ${modifier}, 2, workspace, 2
+                    bind = ${modifier}, 3, workspace, 3
+                    bind = ${modifier}, 4, workspace, 4
+                    bind = ${modifier}, 5, workspace, 5
+                    bind = ${modifier}, 6, workspace, 6
+                    bind = ${modifier}, 7, workspace, 7
+                    bind = ${modifier}, 8, workspace, 8
+                    bind = ${modifier}, 9, workspace, 9
+                    bind = ${modifier}, 0, workspace, 10
+                    bind = ${modifier}SHIFT 1, movetoworkspace, 1
+                    bind = ${modifier}SHIFT 2, movetoworkspace, 2
+                    bind = ${modifier}SHIFT 3, movetoworkspace, 3
+                    bind = ${modifier}SHIFT 4, movetoworkspace, 4
+                    bind = ${modifier}SHIFT 5, movetoworkspace, 5
+                    bind = ${modifier}SHIFT 6, movetoworkspace, 6
+                    bind = ${modifier}SHIFT 7, movetoworkspace, 7
+                    bind = ${modifier}SHIFT 8, movetoworkspace, 8
+                    bind = ${modifier}SHIFT 9, movetoworkspace, 9
+                    bind = ${modifier}SHIFT 0, movetoworkspace, 10
+                    bind = ${modifier}CTRL 1, movetoworkspacesilent, 1
+                    bind = ${modifier}CTRL 2, movetoworkspacesilent, 2
+                    bind = ${modifier}CTRL 3, movetoworkspacesilent, 3
+                    bind = ${modifier}CTRL 4, movetoworkspacesilent, 4
+                    bind = ${modifier}CTRL 5, movetoworkspacesilent, 5
+                    bind = ${modifier}CTRL 6, movetoworkspacesilent, 6
+                    bind = ${modifier}CTRL 7, movetoworkspacesilent, 7
+                    bind = ${modifier}CTRL 8, movetoworkspacesilent, 8
+                    bind = ${modifier}CTRL 9, movetoworkspacesilent, 9
+                    bind = ${modifier}CTRL 0, movetoworkspacesilent, 10
+                    bind = ${modifier}, S, togglespecialworkspace, magic
+                    bind = ${modifier}SHIFT, S, movetoworkspace, special:magic
+                    bind = ${modifier}SHIFT, I, togglesplit
+                    bind = ${modifier}, mouse_down, workspace, e+1
+                    bind = ${modifier}, mouse_up, workspace, e-1
+                    bind = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+                    bind = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- 
+                    bind = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+                    bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+                    bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+
+                    bindm = ${modifier}, mouse:272, movewindow
+                    bindm = ${modifier}, mouse:273, resizewondow
+                ''
             ];
-
-            input = {
-                kb_layout = "us";
-                kb_model = "";
-                kb_options = "";
-                kb_rules = "";
-
-                follow_mouse = "2";
-                touchpad = {
-                    natural_scroll = "no";
-                };
-
-                sensitivity = "0";
-            };
-
-            device = {
-                name = "epic-mouse-v1";
-                sensitivity = "-0.5";
-            };
-
-            gestures = {
-                workspace_swipe = "true";
-                workspace_swipe_fingers = "3";
-            };
-            
-            general = {
-                # gaps_in = "3";
-                gaps_in = "6";
-                gaps_out = "8";
-                border_size = "2";
-                # "col.active_border" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
-                "col.active_border" = "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06}) 45deg";
-                "col.inactive_border" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
-                layout = "dwindle";
-                # layout = "hy3";
-                allow_tearing = "true";
-                resize_on_border = "true";
-            };
-
-            group = {
-                "col.border_active" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
-                "col.border_inactive" = "rgb(${theme.base00}) rgb(${theme.base06}) 45deg";
-                "col.border_locked_active" = "rgb(${theme.base0B}) rgb(${theme.base06}) 45deg";
-                "col.border_locked_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
-            };
-
-            decoration = {
-                rounding = "10";
-                drop_shadow = "false";
-                dim_special = "0.3";
-                blur = {
-                    enabled = "yes";
-                    size = "6";
-                    passes = "3";
-                    new_optimizations = "on";
-                    ignore_opacity = "on";
-                    xray = "false";
-                    special = "true";
-                };
-            };
-            
-            animations = {
-                enabled = "yes";
-                bezier = [
-                    "wind, 0.05, 0.9, 0.1, 1.05"
-                    "winIn, 0.1, 1.1, 0.1, 1.1"
-                    "winOut, 0.3, -0.3, 0, 1"
-                    "liner, 1, 1, 1, 1"
-                ];
-
-                animation = [
-                    "windows, 1, 6, wind, slide"
-                    "windowsIn, 1, 6, winIn, slide"
-                    "windowsOut, 1, 5, winOut, slide"
-                    "windowsMove, 1, 5, wind, slide"
-                    "border, 1, 1, liner"
-                    "borderangle, 1, 30, liner, loop"
-                    "fade, 1, 10, default"
-                    "workspaces, 1, 5, wind"
-                ];
-            };
-
-            dwindle = {
-                pseudotile = "yes";
-                preserve_split = "yes";
-                no_gaps_when_only = "1";
-            };
-            
-            master = {
-                # new_is_master = "yes";
-            };
-
-            misc = {
-                vrr = "0";
-                disable_hyprland_logo = "true";
-                disable_splash_rendering = "true";
-                force_default_wallpaper = "0";
-            };
-
-            xwayland = {
-                force_zero_scaling = "true";
-            };
-
-            windowrule = [
-                "noborder,^(wofi)$"
-                "center,^(wofi)$"
-                "center,^(yad)$"
-            ];
-
-            windowrulev2 = [
-                "suppressevent maximize, class:.*"
-                "opacity 0.90 0.90,class:^(firefox)$"
-                "opacity 0.90 0.90,class:^(Brave-browser)$"
-                "opacity 0.80 0.80,class:^(Steam)$"
-                "opacity 0.80 0.80,class:^(Steam)$"
-                "opacity 0.80 0.80,class:^(steamwebhelper)$"
-                "opacity 0.80 0.80,class:^(Spotify)$"
-                "opacity 0.80 0.80,class:^(Spotify Free)$"
-                "opacity 0.80 0.80,class:^(code-oss)$"
-                "opacity 0.80 0.80,class:^(Code)$"
-                "opacity 0.80 0.80,class:^(code-url-handler)$"
-                "opacity 0.80 0.80,class:^(kitty)$"
-                "opacity 0.80 0.80,class:^(org.kde.dolphin)$"
-                "opacity 0.80 0.80,class:^(org.kde.ark)$"
-                "opacity 0.80 0.80,class:^(nwg-look)$"
-                "opacity 0.80 0.80,class:^(qt5ct)$"
-                "opacity 0.80 0.80,class:^(qt6ct)$"
-                "opacity 0.80 0.80,class:^(kvantummanager)$"
-
-                "opacity 0.90 0.90,class:^(com.github.rafostar.Clapper)$" #Clapper-Gtk
-                "opacity 0.80 0.80,class:^(com.github.tchx84.Flatseal)$" #Flatseal-Gtk
-                "opacity 0.80 0.80,class:^(hu.kramo.Cartridges)$" #Cartridges-Gtk
-                "opacity 0.80 0.80,class:^(com.obsproject.Studio)$" #Obs-Qt
-                "opacity 0.80 0.80,class:^(gnome-boxes)$" #Boxes-Gtk
-                "opacity 0.80 0.80,class:^(discord)$" #Discord-Electron
-                "opacity 0.80 0.80,class:^(WebCord)$" #WebCord-Electron
-                "opacity 0.80 0.80,class:^(ArmCord)$" #ArmCord-Electron
-                "opacity 0.80 0.80,class:^(app.drey.Warp)$" #Warp-Gtk
-                "opacity 0.80 0.80,class:^(net.davidotek.pupgui2)$" #ProtonUp-Qt
-                "opacity 0.80 0.80,class:^(yad)$" #Protontricks-Gtk
-                "opacity 0.80 0.80,class:^(Signal)$" #Signal-Gtk
-                "opacity 0.80 0.80,class:^(io.github.alainm23.planify)$" #planify-Gtk
-                "opacity 0.80 0.80,class:^(io.gitlab.theevilskeleton.Upscaler)$" #Upscaler-Gtk
-                "opacity 0.80 0.80,class:^(com.github.unrud.VideoDownloader)$" #VideoDownloader-Gtk
-
-                "opacity 0.80 0.70,class:^(pavucontrol)$"
-                "opacity 0.80 0.70,class:^(blueman-manager)$"
-                "opacity 0.80 0.70,class:^(nm-applet)$"
-                "opacity 0.80 0.70,class:^(nm-connection-editor)$"
-                "opacity 0.80 0.70,class:^(org.kde.polkit-kde-authentication-agent-1)$"
-
-                "float,class:^(org.kde.dolphin)$,title:^(Progress Dialog — Dolphin)$"
-                "float,class:^(org.kde.dolphin)$,title:^(Copying — Dolphin)$"
-                "float,title:^(Picture-in-Picture)$"
-                "float,class:^(firefox)$,title:^(Library)$"
-                "float,class:^(vlc)$"
-                "float,class:^(kvantummanager)$"
-                "float,class:^(qt5ct)$"
-                "float,class:^(qt6ct)$"
-                "float,class:^(nwg-look)$"
-                "float,class:^(org.kde.ark)$"
-                "float,class:^(Signal)$" #Signal-Gtk
-                "float,class:^(com.github.rafostar.Clapper)$" #Clapper-Gtk
-                "float,class:^(app.drey.Warp)$" #Warp-Gtk
-                "float,class:^(net.davidotek.pupgui2)$" #ProtonUp-Qt
-                "float,class:^(yad)$" #Protontricks-Gtk
-                "float,class:^(eog)$" #Imageviewer-Gtk
-                "float,class:^(io.github.alainm23.planify)$" #planify-Gtk
-                "float,class:^(io.gitlab.theevilskeleton.Upscaler)$" #Upscaler-Gtk
-                "float,class:^(com.github.unrud.VideoDownloader)$" #VideoDownloader-Gkk
-                "float,class:^(pavucontrol)$"
-                "float,class:^(blueman-manager)$"
-                "float,class:^(nm-applet)$"
-                "float,class:^(nm-connection-editor)$"
-                "float,class:^(org.kde.polkit-kde-authentication-agent-1)$"
-                "opacity 0.80 0.80,class:^(org.freedesktop.impl.portal.desktop.gtk)$"
-                "opacity 0.80 0.80,class:^(org.freedesktop.impl.portal.desktop.hyprland)$"
-            ];
-
-            layerrule = [
-                "blur,rofi"
-                "ignorezero,rofi"
-                "blur,notifications"
-                "ignorezero,notifications"
-                "blur,swaync-notification-window"
-                "ignorezero,swaync-notification-window"
-                "blur,swaync-control-center"
-                "ignorezero,swaync-control-center"
-                "blur,logout_dialog"
-                "blur,waybar"
-            ];
-
-            "$mainMod" = "SUPER";
-
-            bind = [
-                "$mainMod, T, exec, $terminal"
-                # "$mainMod, Q, hy3:killactive, "
-                "$mainMod, Q, killactive, "
-                "$mainMod, DELETE, exit, "
-                "$mainMod, E, exec, $fileManager"
-                "$mainMod, V, togglefloating, "
-                "$mainMod SHIFT, V, fullscreen"
-                # "$mainMod, SPACE, exec, $menu"
-                "$mainMode, SPACE, exec, rofi-launch"
-                "$mainMod, P, pseudo, "# dwindle
-                "$mainMod, F, exec, $browser"
-                "$mainMod, M, exec, spotify"
-                "$mainMod, BACKSPACE, exec, wlogout"
-                "$mainMod, PERIOD, exec, emojipicker"
-
-                "$mainMod ALT, L, exec, hyprlock"
-
-                # "$mainMod, H, hy3:movefocus, l"
-                # "$mainMod, L, hy3:movefocus, r"
-                # "$mainMod, K, hy3:movefocus, u"
-                # "$mainMod, J, hy3:movefocus, d"
-                #
-                # "$mainMod SHIFT, H, hy3:movewindow, l"
-                # "$mainMod SHIFT, L, hy3:movewindow, r"
-                # "$mainMod SHIFT, K, hy3:movewindow, u"
-                # "$mainMod SHIFT, J, hy3:movewindow, d"
-                "$mainMod, H, movefocus, l"
-                "$mainMod, L, movefocus, r"
-                "$mainMod, K, movefocus, u"
-                "$mainMod, J, movefocus, d"
-
-                "$mainMod SHIFT, H, movewindow, l"
-                "$mainMod SHIFT, L, movewindow, r"
-                "$mainMod SHIFT, K, movewindow, u"
-                "$mainMod SHIFT, J, movewindow, d"
-
-                "$mainMod CTRL, H, resizeactive, -30 0"
-                "$mainMod CTRL, L, resizeactive, 30 0"
-                "$mainMod CTRL, J, resizeactive, 0 -30"
-                "$mainMod CTRL, K, resizeactive, 0 30"
-
-                "$mainMod, 1, workspace, 1"
-                "$mainMod, 2, workspace, 2"
-                "$mainMod, 3, workspace, 3"
-                "$mainMod, 4, workspace, 4"
-                "$mainMod, 5, workspace, 5"
-                "$mainMod, 6, workspace, 6"
-                "$mainMod, 7, workspace, 7"
-                "$mainMod, 8, workspace, 8"
-                "$mainMod, 9, workspace, 9"
-                "$mainMod, 0, workspace, 10"
-
-                # "$mainMod SHIFT, 1, hy3:movetoworkspace, 1, follow"
-                # "$mainMod SHIFT, 2, hy3:movetoworkspace, 2, follow"
-                # "$mainMod SHIFT, 3, hy3:movetoworkspace, 3, follow"
-                # "$mainMod SHIFT, 4, hy3:movetoworkspace, 4, follow"
-                # "$mainMod SHIFT, 5, hy3:movetoworkspace, 5, follow"
-                # "$mainMod SHIFT, 6, hy3:movetoworkspace, 6, follow"
-                # "$mainMod SHIFT, 7, hy3:movetoworkspace, 7, follow"
-                # "$mainMod SHIFT, 8, hy3:movetoworkspace, 8, follow"
-                # "$mainMod SHIFT, 9, hy3:movetoworkspace, 9, follow"
-                # "$mainMod SHIFT, 0, hy3:movetoworkspace, 10,follow"
-                "$mainMod SHIFT, 1, movetoworkspace, 1"
-                "$mainMod SHIFT, 2, movetoworkspace, 2"
-                "$mainMod SHIFT, 3, movetoworkspace, 3"
-                "$mainMod SHIFT, 4, movetoworkspace, 4"
-                "$mainMod SHIFT, 5, movetoworkspace, 5"
-                "$mainMod SHIFT, 6, movetoworkspace, 6"
-                "$mainMod SHIFT, 7, movetoworkspace, 7"
-                "$mainMod SHIFT, 8, movetoworkspace, 8"
-                "$mainMod SHIFT, 9, movetoworkspace, 9"
-                "$mainMod SHIFT, 0, movetoworkspace, 10"
-
-
-                "$mainMod CTRL, 1, movetoworkspacesilent, 1"
-                "$mainMod CTRL, 2, movetoworkspacesilent, 2"
-                "$mainMod CTRL, 3, movetoworkspacesilent, 3"
-                "$mainMod CTRL, 4, movetoworkspacesilent, 4"
-                "$mainMod CTRL, 5, movetoworkspacesilent, 5"
-                "$mainMod CTRL, 6, movetoworkspacesilent, 6"
-                "$mainMod CTRL, 7, movetoworkspacesilent, 7"
-                "$mainMod CTRL, 8, movetoworkspacesilent, 8"
-                "$mainMod CTRL, 9, movetoworkspacesilent, 9"
-                "$mainMod CTRL, 0, movetoworkspacesilent, 10"
-
-                "$mainMod, S, togglespecialworkspace, magic"
-                "$mainMod SHIFT, S, movetoworkspace, special:magic"
-
-                "$mainMod SHIFT, I, togglesplit,"
-
-                "$mainMod, mouse_down, workspace, e+1"
-                "$mainMod, mouse_up, workspace, e-1"
-
-                ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-                ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-                ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-
-                ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-                ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
-
-                "$mainMod SHIFT, W, exec, $changeWallpaper"
-                "$mainMod CTRL, W, exec, $wallpaperSwitcher"
-                "$mainMod SHIFT, T, exec, theme-selector"
-            ];
-
-            bindm = [
-                "$mainMod, mouse:272, movewindow"
-                "$mainMod, mouse:273, resizewindow"
-            ];
-
-            exec = [
-                "hyprctl setcursor Bibata-Modern-Ice 20"
-                "gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'"
-                "gsettings set org.gnome.desktop.interface cursor-size 20"
-            ];
-
-        };
     };
 }

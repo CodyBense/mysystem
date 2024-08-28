@@ -19,22 +19,21 @@
       theme =
         let
           inherit (config.lib.formats.rasi) mkLiteral;
-          palette = config.colorScheme.palette;
         in
         {
           "*" = {
-            bg = mkLiteral "#${palette.base00}";
-            bg-alt = mkLiteral "#${palette.base09}";
-            foreground = mkLiteral "#${palette.base01}";
-            selected = mkLiteral "#${palette.base08}";
-            active = mkLiteral "#${palette.base0B}";
-            text-selected = mkLiteral "#${palette.base00}";
-            text-color = mkLiteral "#${palette.base05}";
-            border-color = mkLiteral "#${palette.base0F}";
-            urgent = mkLiteral "#${palette.base0E}";
+            bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
+            bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
+            foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
+            selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
+            active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
+            text-selected = mkLiteral "#${config.stylix.base16Scheme.base00}";
+            text-color = mkLiteral "#${config.stylix.base16Scheme.base05}";
+            border-color = mkLiteral "#${config.stylix.base16Scheme.base0F}";
+            urgent = mkLiteral "#${config.stylix.base16Scheme.base0E}";
           };
           "window" = {
-            width = mkLiteral "75%";
+            width = mkLiteral "50%";
             transparency = "real";
             orientation = mkLiteral "vertical";
             cursor = mkLiteral "default";
@@ -66,7 +65,7 @@
               "dummy"
               "mode-switcher"
             ];
-            background-image = mkLiteral ''url("~/Pictures/Wallpapers/latios_latias.jpg", width)'';
+            background-image = mkLiteral ''url("~/Pictures/Wallpapers/beautifulmountainscape.jpg", width)'';
           };
           "entry" = {
             enabled = true;
