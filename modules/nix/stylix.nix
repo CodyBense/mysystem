@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     stylix = {
-        enable = true;
+        enable = false;
         image = ../../config/wallpapers/latios_latias.jpg;
         polarity = "dark";
         cursor.package = pkgs.bibata-cursors;
