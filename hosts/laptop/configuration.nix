@@ -27,7 +27,7 @@
         # ./sddm-theme/default.nix
         ];
 
-    drivers.intel.enale = 
+    drivers.intel.enable = 
         if (host == "laptop")
             then true
         else false;
