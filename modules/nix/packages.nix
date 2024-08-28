@@ -48,6 +48,7 @@ in
         ripgrep
         niv
         libclang
+        esptool
 # Terminal stuff
         tmux
         gh
