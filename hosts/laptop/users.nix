@@ -1,4 +1,4 @@
-{ pkgs, config, username, host, ... }:
+{ pkgs,  username, ... }:
 let
     inherit (import ./variables.nix) gitUsername;
 in

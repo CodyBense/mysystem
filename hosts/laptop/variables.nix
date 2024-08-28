@@ -1,16 +1,16 @@
 {
-    host = "laptop";
-    terminal = "kitty";
-    borwser = "brave";
+    # Git
+    gitUsername = "CodyBense";
+    gitEmail = "codybense@gmail.com";
 
-    # Git config
-    gitUsername = "Cody Bense";
-    gitEmail = "codyebense@gmail.com";
+    # Hyprland Settings
+    extraMonitorSettings = "";
 
-    # Base16 theme
-    theme = "gruvbox-dark-medium";
-
-    # waybar settings
+    # Waybar Settings
     clock24h = false;
-    waybarAnimations = false;
+
+    # Program options
+    browser = "brave";
+    terminal = "kitty";
+    keyBoardLayout = "us";
 }

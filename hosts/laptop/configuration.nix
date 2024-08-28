@@ -9,15 +9,20 @@
     if (host == "desktop")
         then true
         else false;
+    drivers.intel.enale = 
+    if (host == "laptop")
+        then true
+        else false;
 
     imports =[ # Include the results of the hardware scan.
         ./hardware-configuration.nix
         ./users.nix
+        ../../modules/intel-dirvers.nix
         ../../modules/nix/code_bundle.nix
         ../../modules/nix/de_bundle.nix
         ../../modules/nix/packages.nix
         ../../modules/nix/docker.nix
-        # ../../modules/nix/stylix.nix
+        ../../modules/nix/stylix.nix
         # ../../modules/nix/customPackages.nix
         # ./modules/de_bundle.nix
         # ./modules/code_bundle.nix

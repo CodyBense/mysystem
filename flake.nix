@@ -7,17 +7,12 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        nix-colors.url = "github:misterio77/nix-colors";
         stylix.url = "github:danth/stylix";
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
         hyprland-plugins = {
             url = "github:hyprwm/hyprland-plugins";
             inputs.hyprland.follows = "hyprland";
         };
-        # hy3 = {
-        #     url = "github:outfoxxed/hy3";
-        #     inputs.hyprland.follows = "hyprland";
-        # };
         spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
 
@@ -26,13 +21,6 @@
         system = "x86_64-linux";
         host = "laptop";
         username = "codybense";
- 
-        pkgs = import nixpkgs {
-            inherit system;
-            config = {
-                allowUnfree = true;
-            };
-        };
     in
     {
 
@@ -53,7 +41,6 @@
                             inherit username;
                             inherit inputs;
                             inherit host;
-                            inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
                             inherit spicetify-nix;
                         };
                         home-manager.useGlobalPkgs = true;

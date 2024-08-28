@@ -1,12 +1,7 @@
 # PROGRAMS to get to dotfile configuration control
-{ config, pkgs, inputs, username, host, gtkThemeFromScheme, ... }:
+{  pkgs,  username, host, inputs, ... }:
 let
-    palette = config.colorScheme.palette;
-    inherit (import ./variables.nix)
-        gitUsername
-        gitEmail
-        theme
-        ;
+    inherit (import ./variables/nix) gitUsername gitEmail;
 in
 {
     # Home Manager settings
@@ -14,20 +9,19 @@ in
     home.homeDirectory = "/home/${username}";
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
-    # Set the Colorscheme
-    colorScheme = inputs.nix-colors.colorSchemes."${theme}";
-    
     # Import Program Configurations
     imports = [
-        inputs.nix-colors.homeManagerModules.default
         inputs.hyprland.homeManagerModules.default
+        ../../config/emoji.nix
+        ../../config/fastfetch
         ../../config/hyprland.nix
-        ../../config/waybar.nix
-        ../../config/wlogout.nix
-        ../../config/swaync.nix
         ../../config/rofi/rofi.nix
         ../../config/rofi/config-emoji.nix
         ../../config/rofi/config-long.nix
+        ../../config/swaync.nix
+        ../../config/waybar.nix
+        ../../config/wlogout.nix
+
         ../../modules/home/git.nix
         ../../modules/home/kitty.nix
         ../../modules/home/starship.nix
@@ -40,30 +34,29 @@ in
         ../../modules/home/hyprlock.nix
     ];
 
-    # stylix.targets.waybar.enable = false;
-    # stylix.target.rofi.enable = false;
-    # stylix.target.hyprland.enable = false;
-
-    # Define Settings For Xresources
-    xresources.properties = {
-        "Xcursor.size" = 24;
-    };
-
     # Place Files Inside Home Directory
     home.file."Pictures/Wallpapers" = {
         source = ../../config/wallpapers;
         recursive = true;
     };
-
     home.file.".config/wlogout/icons" = {
         source = ../../config/wlogout;
         recursive = true;
     };
-
     home.file.".base16-themes".source = ../../config/base16-themes;
     home.file.".emoji".source = ../../config/emoji;
     home.file.".config/starship.toml".source = ../../config/starship.toml;
 
+    xdg = {
+        userDirs = {
+            enable = true;
+            createDirectories = true;
+        };
+    };
+
+# stylix.targets.waybar.enable = false;
+# stylix.target.rofi.enable = false;
+# stylix.target.hyprland.enable = false;
     # Scripts
     home.packages = [
         (import ../../scripts/randomPokemon.nix {inherit pkgs;})
