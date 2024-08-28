@@ -40,9 +40,9 @@ in
         ../../modules/home/hyprlock.nix
     ];
 
-    stylix.targets.waybar.enable = false;
-    stylix.target.rofi.enable = false;
-    stylix.target.hyprland.enable = false;
+    # stylix.targets.waybar.enable = false;
+    # stylix.target.rofi.enable = false;
+    # stylix.target.hyprland.enable = false;
 
     # Define Settings For Xresources
     xresources.properties = {
