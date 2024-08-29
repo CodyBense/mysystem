@@ -45,6 +45,7 @@ in
         recursive = true;
     };
     home.file.".config/starship.toml".source = ../../config/starship.toml;
+    home.file.".base16-themes".source = ../../config/base16-themes;
 
     xdg = {
         userDirs = {
