@@ -4,7 +4,7 @@
 
 { pkgs, host, config, ... }:
 let
-    inherit (import ./variables.nix) keyBoardLayout;
+    inherit (import ./variables.nix) keyboardLayout;
 in
 {
     nvidia_module.enable = 
