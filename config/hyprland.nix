@@ -1,10 +1,14 @@
-{ pkgs, config, lib, inputs, stylix, ... }:
+{ lib, username, host, config, ... }:
 
 let
-    terminal = "kitty";
+    inherit (import ../hosts/${host}/variables.nix)
+    browser
+    terminal
+    extraMonitorSettings
+    keyboardLayout
+    ;
 in
-# with lib;
-
+with lib;
 {
     wayland.windowManager.hyprland = {
         enable = true;
@@ -13,20 +17,19 @@ in
         extraConfig = 
             let
                 modifier = "SUPER";
-                browser = "brave";
-                username = "codybense";
-                extraMonitorSettings = "";
             in
             lib.concatStrings [
                 ''
                     env = NIXOS_OZONE_WL, 1
                     env = NIXPKGS_ALLOW_UNFREE, 1
+                    env = QT_QPA_PLATFORTHEME, qt5ct
+                    env = PATH, $PATH:$scrPath
                     env = XDG_CURRENT_DESKTOP, Hyprland
                     env = XDG_SESSION_TYPE, wayland
                     env = XDG_SESSION_DESKTOP, Hyprland
-                    env = GDK_BACKEND, wayland, x11
+                    env = GDK_BACKEND, wayland
                     env = CLUTTER_BACKEND, wayland
-                    env = QT_QPA_PLATFORM=wayland;xcb
+                    env = QT_QPA_PLATFORM, wayland
                     env = QT_WAYLAND_DISABLE_WINDOWDECORATION, 1
                     env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
                     env = SDL_VIDEODRIVER, x11
@@ -58,7 +61,7 @@ in
                         kb_layout = us
                         kb_options = grp:alt_shift_toggle
                         kb_options = caps:super
-                        follow_mouse = 1
+                        follow_mouse = 2
                         touchpad {
                             natural_scroll = false
                             disable_while_typing = true
