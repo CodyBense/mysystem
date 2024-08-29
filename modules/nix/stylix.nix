@@ -3,7 +3,7 @@
     stylix = {
         enable = true;
         image = ../../config/wallpapers/awesome.jpg;
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbux-dark-medium.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
         polarity = "dark";
         cursor.package = pkgs.bibata-cursors;
         cursor.name = "Bibata-Modern-Ice";
