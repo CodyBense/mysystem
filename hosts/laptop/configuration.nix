@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, host, config, ... }:
-
+let
+    inherit (import ./variables.nix) keyboardLayout;
+in
 {
     nvidia_module.enable = 
     if (host == "desktop")
@@ -93,7 +95,7 @@
                 theme = "tokyo-night-sddm";
             };
             xkb = {
-                layout = "us";
+                layout = "${keyboardLayout}";
                 variant = "";
             };
         };
