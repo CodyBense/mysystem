@@ -134,7 +134,7 @@ in
                     bind = ${modifier}, PERIOD, exec, emojipicker
                     bind = ${modifier}, E, exec, thunar
                     bind = ${modifier}, M, exec, spotify
-                    bind = ${modifier}, Q, exec, killactive
+                    bind = ${modifier}, Q, killactive,
                     bind = ${modifier}, DELETE, exit, 
                     bind = ${modifier}, V, togglefloating,
                     bind = ${modifier} SHIFT, V, fullscreen
