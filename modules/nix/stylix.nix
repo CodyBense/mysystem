@@ -2,7 +2,7 @@
 {
     stylix = {
         enable = true;
-        image = ../../config/wallpapers/latios_latias.jpg;
+        image = ../../config/wallpapers/awesome.jpg;
         polarity = "dark";
         cursor.package = pkgs.bibata-cursors;
         cursor.name = "Bibata-Modern-Ice";
