@@ -12,5 +12,5 @@
     # Program options
     browser = "brave";
     terminal = "kitty";
-    keyBoardLayout = "us";
+    keyboardLayout = "us";
 }
