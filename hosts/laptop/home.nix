@@ -54,9 +54,9 @@ in
         };
     };
 
-    stylix.target.waybar.enable = false;
-    stylix.target.rofi.enable = false;
-    stylix.target.hyprland.enable = false;
+    stylix.targets.waybar.enable = false;
+    stylix.targets.rofi.enable = false;
+    stylix.targets.hyprland.enable = false;
     # Scripts
     home.packages = [
         (import ../../scripts/randomPokemon.nix {inherit pkgs;})

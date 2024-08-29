@@ -193,7 +193,7 @@ with lib;
           margin: 0px 3px;
           border-radius: 16px;
           color: #${config.stylix.base16Scheme.base00};
-          background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0E}, #${palette.base0F}, #${palette.base0D}, #${palette.base09});
+          background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0E}, #${config.stylix.base16Scheme.base0F}, #${config.stylix.base16Scheme.base0D}, #${config.stylix.base16Scheme.base09});
           background-size: 300% 300%;
           ${
             if waybarAnimations == true then
