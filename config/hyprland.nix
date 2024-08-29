@@ -90,7 +90,7 @@ in
                         key_press_enables_dpms = false
                     }
 
-                    animation {
+                    animations {
                         enabled = yes
                         bezier = wind, 0.05, 0.9, 0.1, 1.05
                         bezier = winIn, 0.1, 1.1, 0.1, 1.1
@@ -98,7 +98,7 @@ in
                         bezier = liner, 1, 1, 1, 1
                         animation = windows, 1, 6, wind, slide
                         animation = windowsIn, 1, 6, winIn, slide
-                        animaiton = windowsOut, 1, 5, winOut, slide
+                        animation = windowsOut, 1, 5, winOut, slide
                         animation = windowsMove, 1, 5, wind, slide
                         animation = border, 1, 1, liner
                         animation = fade, 1, 10, default
@@ -109,7 +109,7 @@ in
                         rounding = 10
                         drop_shadow = false
                         shadow_range = 4
-                        shadow_range_power = 3
+                        shadow_render_power = 3
                         col.shadow = rgba(1a1a1aee)
                         blur {
                             enabled = true
@@ -121,7 +121,7 @@ in
                     }
 
                     dwindle {
-                        psudotile = true
+                        pseudotile = true
                         preserve_split = true
                         no_gaps_when_only = 1
                     }
@@ -163,26 +163,26 @@ in
                     bind = ${modifier}, 8, workspace, 8
                     bind = ${modifier}, 9, workspace, 9
                     bind = ${modifier}, 0, workspace, 10
-                    bind = ${modifier}SHIFT 1, movetoworkspace, 1
-                    bind = ${modifier}SHIFT 2, movetoworkspace, 2
-                    bind = ${modifier}SHIFT 3, movetoworkspace, 3
-                    bind = ${modifier}SHIFT 4, movetoworkspace, 4
-                    bind = ${modifier}SHIFT 5, movetoworkspace, 5
-                    bind = ${modifier}SHIFT 6, movetoworkspace, 6
-                    bind = ${modifier}SHIFT 7, movetoworkspace, 7
-                    bind = ${modifier}SHIFT 8, movetoworkspace, 8
-                    bind = ${modifier}SHIFT 9, movetoworkspace, 9
-                    bind = ${modifier}SHIFT 0, movetoworkspace, 10
-                    bind = ${modifier}CTRL 1, movetoworkspacesilent, 1
-                    bind = ${modifier}CTRL 2, movetoworkspacesilent, 2
-                    bind = ${modifier}CTRL 3, movetoworkspacesilent, 3
-                    bind = ${modifier}CTRL 4, movetoworkspacesilent, 4
-                    bind = ${modifier}CTRL 5, movetoworkspacesilent, 5
-                    bind = ${modifier}CTRL 6, movetoworkspacesilent, 6
-                    bind = ${modifier}CTRL 7, movetoworkspacesilent, 7
-                    bind = ${modifier}CTRL 8, movetoworkspacesilent, 8
-                    bind = ${modifier}CTRL 9, movetoworkspacesilent, 9
-                    bind = ${modifier}CTRL 0, movetoworkspacesilent, 10
+                    bind = ${modifier}SHIFT, 1, movetoworkspace, 1
+                    bind = ${modifier}SHIFT, 2, movetoworkspace, 2
+                    bind = ${modifier}SHIFT, 3, movetoworkspace, 3
+                    bind = ${modifier}SHIFT, 4, movetoworkspace, 4
+                    bind = ${modifier}SHIFT, 5, movetoworkspace, 5
+                    bind = ${modifier}SHIFT, 6, movetoworkspace, 6
+                    bind = ${modifier}SHIFT, 7, movetoworkspace, 7
+                    bind = ${modifier}SHIFT, 8, movetoworkspace, 8
+                    bind = ${modifier}SHIFT, 9, movetoworkspace, 9
+                    bind = ${modifier}SHIFT, 0, movetoworkspace, 10
+                    bind = ${modifier}CTRL, 1, movetoworkspacesilent, 1
+                    bind = ${modifier}CTRL, 2, movetoworkspacesilent, 2
+                    bind = ${modifier}CTRL, 3, movetoworkspacesilent, 3
+                    bind = ${modifier}CTRL, 4, movetoworkspacesilent, 4
+                    bind = ${modifier}CTRL, 5, movetoworkspacesilent, 5
+                    bind = ${modifier}CTRL, 6, movetoworkspacesilent, 6
+                    bind = ${modifier}CTRL, 7, movetoworkspacesilent, 7
+                    bind = ${modifier}CTRL, 8, movetoworkspacesilent, 8
+                    bind = ${modifier}CTRL, 9, movetoworkspacesilent, 9
+                    bind = ${modifier}CTRL, 0, movetoworkspacesilent, 10
                     bind = ${modifier}, S, togglespecialworkspace, magic
                     bind = ${modifier}SHIFT, S, movetoworkspace, special:magic
                     bind = ${modifier}SHIFT, I, togglesplit
