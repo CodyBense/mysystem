@@ -92,7 +92,7 @@ in
 ## eww
         eww
 ## bar
-        waybar
+        # waybar
 ## notifiations
         libnotify
 ## wallpaper
