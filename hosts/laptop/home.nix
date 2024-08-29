@@ -44,7 +44,6 @@ in
         source = ../../config/wlogout;
         recursive = true;
     };
-    home.file.".base16-themes".source = ../../config/base16-themes;
     home.file.".config/starship.toml".source = ../../config/starship.toml;
 
     xdg = {
