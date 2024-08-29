@@ -44,7 +44,6 @@ in
         recursive = true;
     };
     home.file.".base16-themes".source = ../../config/base16-themes;
-    home.file.".emoji".source = ../../config/emoji;
     home.file.".config/starship.toml".source = ../../config/starship.toml;
 
     xdg = {
