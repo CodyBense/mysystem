@@ -2,7 +2,6 @@
 
 let
     terminal = "kitty";
-    # hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
 # with lib;
 
@@ -45,13 +44,14 @@ in
                     ${extraMonitorSettings}
 
                     general {
-                        gaps_in = 6
-                        gaps_out = 8
+                        allow_tearing = true
                         border_size = 2
-                        layout = dwindle
-                        resize_on_border = true
                         col.active_border = rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base06}) 45deg 
                         col.inactive_border = rgb(${config.stylix.base16Scheme.base00}) rgb(${config.stylix.base16Scheme.base06}) 45deg
+                        gaps_in = 6
+                        gaps_out = 8
+                        layout = dwindle
+                        resize_on_border = true
                     }
 
                     input {
@@ -60,7 +60,7 @@ in
                         kb_options = caps:super
                         follow_mouse = 1
                         touchpad {
-                            natural_scroll = true
+                            natural_scroll = false
                             disable_while_typing = true
                             scroll_factor = 0.8
                         }
@@ -106,24 +106,32 @@ in
                     }
 
                     decoration {
-                        rounding = 10
+                        blur {
+                            enabled = true
+                                ignore_opacity = off
+                                new_optimizations = on
+                                passes = 3
+                                size = 5
+                                special = true
+                                xray = false
+                        }
+                        dim_special = 0.3
                         drop_shadow = false
+                        rounding = 10
                         shadow_range = 4
                         shadow_render_power = 3
                         col.shadow = rgba(1a1a1aee)
-                        blur {
-                            enabled = true
-                            size = 5
-                            passes = 3
-                            new_optimizations = on
-                            ignore_opacity = off
-                        }
+                    }
+
+                    device {
+                        name = epic-mouse-v1
+                        sensitivity = -0.5
                     }
 
                     dwindle {
-                        pseudotile = true
-                        preserve_split = true
                         no_gaps_when_only = 1
+                        preserve_split = true
+                        pseudotile = true
                     }
 
                     bind = ${modifier}, T, exec, ${terminal}
