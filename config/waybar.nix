@@ -195,14 +195,6 @@ with lib;
           color: #${config.stylix.base16Scheme.base00};
           background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0E}, #${config.stylix.base16Scheme.base0F}, #${config.stylix.base16Scheme.base0D}, #${config.stylix.base16Scheme.base09});
           background-size: 300% 300%;
-          ${
-            if waybarAnimations == true then
-              ''
-                animation: gradient_horizontal 15s ease infinite;
-              ''
-            else
-              ''''
-          }
           opacity: 0.5;
           transition: ${betterTransition};
         }
@@ -214,14 +206,6 @@ with lib;
           color: #${config.stylix.base16Scheme.base00};
           background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0E}, #${palette.base0F}, #${palette.base0D}, #${palette.base09});
           background-size: 300% 300%;
-          ${
-            if waybarAnimations == true then
-              ''
-                animation: gradient_horizontal 15s ease infinite;
-              ''
-            else
-              ''''
-          }
           transition: ${betterTransition};
           opacity: 1.0;
           min-width: 40px;
@@ -232,14 +216,6 @@ with lib;
           color: #${config.stylix.base16Scheme.base00};
           background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0E}, #${palette.base0F}, #${palette.base0D}, #${palette.base09});
           background-size: 300% 300%;
-          ${
-            if waybarAnimations == true then
-              ''
-                animation: gradient_horizontal 15s ease infinite;
-              ''
-            else
-              ''''
-          }
           opacity: 0.8;
           transition: ${betterTransition};
         }
@@ -302,14 +278,6 @@ with lib;
           color: #${config.stylix.base16Scheme.base00};
           background: linear-gradient(45deg, #${config.stylix.base16Scheme.base0C}, #${palette.base0F}, #${palette.base0B}, #${palette.base08});
           background-size: 300% 300%;
-          ${
-            if waybarAnimations == true then
-              ''
-                animation: gradient_horizontal 15s ease infinite;
-              ''
-            else
-              ''''
-          }
           margin: 0px;
           padding: 0px 15px 0px 30px;
           border-radius: 0px 0px 0px 40px;
