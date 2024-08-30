@@ -65,7 +65,7 @@ in
         (import ../../scripts/list-hypr-bindings.nix {inherit pkgs;})
         (import ../../scripts/rofi-launch.nix {inherit pkgs;})
         (import ../../scripts/rofi-wifi.nix {inherit pkgs;})
-        (import ../../scripts/wallpaper-switcher.nix {
+        (import ../../scripts/wallsetter.nix {
             inherit pkgs;
             inherit username;
         })
