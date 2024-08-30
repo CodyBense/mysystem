@@ -57,6 +57,7 @@ in
     stylix.targets.waybar.enable = false;
     stylix.targets.rofi.enable = false;
     stylix.targets.hyprland.enable = false;
+    stylix.targets.nvim.enable = false;
     # Scripts
     home.packages = [
         (import ../../scripts/randomPokemon.nix {inherit pkgs;})
