@@ -109,6 +109,7 @@ in
         hypridle
 ## Logout
         wlogout
+## Theming
 # GTK
         gtk2
         gtk3
