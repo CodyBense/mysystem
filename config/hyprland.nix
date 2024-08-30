@@ -138,7 +138,7 @@ with lib;
                     }
 
                     bind = ${modifier}, T, exec, ${terminal}
-                    bind = ${modifier}, Space, exec, rofi-launcher
+                    bind = ${modifier}, Space, exec, rofi-launch
                     bind = ${modifier}SHIFT, W, exec, web-search
                     bind = ${modifier}ALT, W, exec, wallsetter
                     bind = ${modifier}, F, exec, ${browser}
